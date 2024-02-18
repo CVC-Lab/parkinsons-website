@@ -1,0 +1,42 @@
+{
+  "name": "parkinsons-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "parkinsons-website",
+  "author": "ava",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "gatsby": "^5.12.4",
+    "gatsby-plugin-image": "^3.12.3",
+    "gatsby-plugin-manifest": "^5.12.3",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-remark-autolink-headers": "^6.12.3",
+    "gatsby-remark-copy-linked-files": "^6.12.0",
+    "gatsby-remark-grid-tables": "^0.1.0",
+    "gatsby-remark-images": "^7.12.3",
+    "gatsby-remark-katex": "^7.12.0",
+    "gatsby-remark-static-images": "^1.2.1",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-remark": "^6.12.3",
+    "gatsby-transformer-sharp": "^5.12.3",
+    "katex": "^0.16.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scroll": "^1.9.0",
+    "remark-grid-tables": "^2.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  }
+}
