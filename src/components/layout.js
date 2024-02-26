@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
           menuLinks {
             name
             link
+            type
           }
         }
       }

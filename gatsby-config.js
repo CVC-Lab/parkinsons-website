@@ -10,25 +10,48 @@
       //   link:'/abstract',
       // },
       {
+        name:'Home',
+        link:'/',
+      },
+      {
         name:'Introduction',
         link:'/introduction',
+        type:'background'
       },
       {
         name:'Preliminaries and Related Work',
         link:'/preliminaries',
+        type:'background'
       },
       {
         name:'Methodology',
         link:'/methodology',
+        type:'background'
       },
       {
         name:'Experiments',
         link:'/experiments',
+        type:'background'
       },
-      // {
-      //   name:'Discussion',
-      //   link:'/discussion',
-      // }
+      {
+        name:'Background',
+        link:'/background',
+        type:'background'
+      },
+      {
+        name:'Donors',
+        link:'/donors',
+      }
+    ],
+    donors:[
+      {
+        name: 'Michael J. Fox Foundation',
+        link: 'https://www.michaeljfox.org'
+      },
+      {
+        name: 'Jim Holland',
+        link: 'https://www.backcountry.com/explore/jim-holland'
+      }
     ],
     title: `parkinsons-website`,
     siteUrl: `https://www.yourdomain.tld`
