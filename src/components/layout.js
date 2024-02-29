@@ -14,7 +14,6 @@ const Layout = ({ children }) => {
           menuLinks {
             name
             link
-            type
           }
         }
       }
@@ -26,7 +25,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header 
-        siteTitle="Quick and Efficient Extraction of Patient Specific SBR ratios for Parkinson’s Disease" 
+        siteTitle="Quick and Efficient Extraction of Patient Specific SBR Ratios for Parkinson’s Disease" 
         menuLinks={menuLinks} 
       />
       <div className="content-container">

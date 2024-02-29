@@ -9,7 +9,7 @@ export default function ProjectTemplate({ data: { markdownRemark } }) {
     <Layout>
       <div>
         <div>
-          <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="text-block" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
 

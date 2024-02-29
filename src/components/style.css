@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Charis SIL", serif;
+  font-family: "Libre Franklin", sans-serif;
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -78,18 +78,20 @@ figcaption {
 }
 
 .documentation-links,
-.donor-links li {
+.donor-links,
+.research-links li {
   margin-bottom: 0.625rem;
 }
 
 .documentation-links,
-.donor-links a {
+.donor-links,
+.research-links a {
   text-decoration: none;
-  font-weight: bold;
 }
 
 .documentation-links,
-.donor-links a:hover {
+.donor-links,
+.research-links a:hover {
   opacity: var(--link-hover-opacity);
 }
 
@@ -211,25 +213,53 @@ nav ul li a.active {
 
 .content-flex {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .text-block {
   flex: 1;
-}
-.image-container {
-    flex: 1; 
-    display: flex;
-    justify-content: center; 
-    align-items: flex-start;
-    padding: 0 1rem
+  line-height: 1.6;
 }
 
+.text-block li {
+  margin-bottom: 10px; 
+}
+
+.text-block p, .text-block ol, .text-block ul {
+  margin-bottom: 20px;
+}
+
+.image-container {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .image-container img {
-    max-height: 100%; 
-    width: auto; 
-  }
+  padding: 0;
+  max-height: 650px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.background-flex {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+}
+
+.text-content {
+  flex: 1; 
+}
+
+.section-image {
+  margin-left: 20px;
+}
 
 @media (max-width: 768px) {
   .content-flex {

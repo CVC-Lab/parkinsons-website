@@ -5,38 +5,13 @@
   pathPrefix: "/parkinsons-website",
   siteMetadata: {
     menuLinks:[
-      // {
-      //   name:'Abstract',
-      //   link:'/abstract',
-      // },
       {
         name:'Home',
         link:'/',
       },
       {
-        name:'Introduction',
-        link:'/introduction',
-        type:'background'
-      },
-      {
-        name:'Preliminaries and Related Work',
-        link:'/preliminaries',
-        type:'background'
-      },
-      {
-        name:'Methodology',
-        link:'/methodology',
-        type:'background'
-      },
-      {
-        name:'Experiments',
-        link:'/experiments',
-        type:'background'
-      },
-      {
         name:'Background',
-        link:'/background',
-        type:'background'
+        link:'/background'
       },
       {
         name:'Donors',
