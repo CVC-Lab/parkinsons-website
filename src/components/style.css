@@ -216,6 +216,7 @@ nav ul li a.active {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  max-width: 100%;
 }
 
 .text-block {
@@ -231,21 +232,13 @@ nav ul li a.active {
   margin-bottom: 20px;
 }
 
-.image-container {
+.image-container div{
   padding: 0;
+  display: block;
   justify-content: center;
   align-items: center;
-  max-height: 650px; 
-  margin: auto;
-}
-
-
-.image-container img {
-  padding: 0;
-  max-height: 650px;
+  max-height: 45rem;
   max-width: 100%;
-  width: auto;
-  height: auto;
   margin: auto;
 }
 

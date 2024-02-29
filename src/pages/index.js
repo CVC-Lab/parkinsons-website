@@ -56,6 +56,7 @@ export default function IndexPage({ data }) {
                 src="../images/primary_data.png"
                 alt="Table of primary data used in early detection"
                 placeholder="blurred"
+                imgStyle = {{ objectFit: 'contain', maxWidth: '100%', maxHeight: '45rem' }}
               />
             </div>
           </div>
@@ -89,6 +90,7 @@ export default function IndexPage({ data }) {
                 src="../images/brain_diagram.png"
                 alt="Diagram pointing to different sections of the brain"
                 placeholder="blurred"
+                imgStyle = {{ objectFit: 'contain', maxWidth: '100%', maxHeight: '45rem' }}
               />
             </div>
           </div>
@@ -121,6 +123,7 @@ export default function IndexPage({ data }) {
                 src="../images/dti_images.png"
                 alt="DTI images with overlays"
                 placeholder="blurred"
+                imgStyle = {{ objectFit: 'contain', maxWidth: '100%', maxHeight: '45rem' }}
               />
             </div>
           </div>
