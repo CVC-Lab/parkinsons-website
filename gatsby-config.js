@@ -26,6 +26,9 @@
       {
         name: 'Jim Holland',
         link: 'https://www.backcountry.com/explore/jim-holland'
+      },
+      {
+        name: 'Michael and Connie Rasor, 8745 Heatherstone Place Zionsville, IN 46077'
       }
     ],
     title: `parkinsons-website`,
