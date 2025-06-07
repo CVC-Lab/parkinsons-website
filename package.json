@@ -16,28 +16,35 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^5.14.1",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-manifest": "^5.12.3",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-remark-autolink-headers": "^6.12.3",
-    "gatsby-remark-copy-linked-files": "^6.12.0",
-    "gatsby-remark-images": "^7.12.3",
-    "gatsby-remark-katex": "^7.12.0",
+    "gatsby": "^5.14.4",
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-remark-autolink-headers": "^6.14.0",
+    "gatsby-remark-copy-linked-files": "^6.14.0",
+    "gatsby-remark-images": "^7.14.0",
+    "gatsby-remark-katex": "^7.14.0",
     "gatsby-remark-static-images": "^1.2.1",
-    "gatsby-source-filesystem": "^5.12.1",
-    "gatsby-transformer-remark": "^6.12.3",
-    "gatsby-transformer-sharp": "^5.13.1",
-    "katex": "^0.16.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scroll": "^1.9.0"
+    "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-remark": "^6.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
+    "katex": "^0.16.22",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "gh-pages": "^6.2.0"
   },
   "overrides": {
-    "webpack-dev-middleware": "5.3.4",
-    "katex": "^0.16.10"
+    "webpack": "^5.97.1",
+    "katex": "^0.16.22",
+    "tar-fs": "^3.0.9",
+    "nanoid": "^3.3.8",
+    "@babel/runtime": "^7.26.10",
+    "@babel/helpers": "^7.26.10",
+    "cookie": "^0.7.2",
+    "multer": "^1.4.5-lts.2",
+    "path-to-regexp": "^0.1.12"
   }
 }
