@@ -20,12 +20,12 @@ const Layout = ({ children }) => {
     }
   `);
 
-  const {menuLinks } = data.site.siteMetadata;
+  const { menuLinks, title } = data.site.siteMetadata;
 
   return (
     <>
       <Header 
-        siteTitle="Quick and Efficient Extraction of Patient Specific SBR Ratios for Parkinson’s Disease" 
+        siteTitle={title}
         menuLinks={menuLinks} 
       />
       <div className="content-container">

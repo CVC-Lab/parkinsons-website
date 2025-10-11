@@ -10,8 +10,20 @@
         link:'/',
       },
       {
+        name:'Research',
+        link:'/research',
+      },
+      {
         name:'Background',
         link:'/background'
+      },
+      {
+        name:'Team',
+        link:'/team',
+      },
+      {
+        name:'Resources',
+        link:'/resources',
       },
       {
         name:'Donors',
@@ -28,11 +40,17 @@
         link: 'https://www.backcountry.com/explore/jim-holland'
       },
       {
-        name: 'Michael and Connie Rasor'
+        name: 'Michael and Connie Rasor',
+        link: 'https://www.utexas.edu'
+      },
+      {
+        name: 'Oden Institute for Computational Engineering and Sciences',
+        link: 'https://www.oden.utexas.edu'
       }
     ],
-    title: `parkinsons-website`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Progressive AI for Parkinson's Disease`,
+    description: `UT Austin Oden Institute research program advancing progressive AI agents, multimodal biomarkers, and clinical decision support for Parkinson's disease.`,
+    siteUrl: `https://cvc-lab.github.io/parkinsons-website`
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -63,6 +63,29 @@ export default function IndexPage({ data }) {
     },
   ];
 
+  const focusPoints = [
+    "Quantify dopaminergic, cholinergic, and cerebello-thalamo-cortical network disruption using joint imaging-biologic embeddings.",
+    "Fuse biospecimens, genetics, and digital phenotypes into longitudinal state estimators that surface prodromal change points.",
+    "Stress-test treatment policies against simulated trajectories to expose when symptom control or side-effect risk becomes dominant.",
+    "Deliver clinician-auditable reasoning layers that highlight biomarkers driving each recommendation."
+  ];
+
+  const therapeuticFocus = [
+    "Motor symptom optimization: levodopa/carbidopa (including Rytary®), dopamine agonists, and MAO-B inhibitors with safinamide add-on for extended “ON” time.",
+    "Advanced delivery pathways: enteral Duopa® gel, continuous levodopa/carbidopa infusion (Vyalev™, 2024), and subcutaneous apomorphine infusion (Onapgo™, 2025).",
+    "Procedural interventions: bilateral staged MR-guided focused ultrasound approved in July 2025 alongside established STN/GPi deep brain stimulation protocols.",
+    "Non-motor management: SSRIs/SNRIs for mood, melatonin or clonazepam for REM sleep behavior disorder, and structured tapers plus CBT for impulse-control disorders.",
+    "Autonomic care: droxidopa or midodrine for orthostatic hypotension, botulinum toxin for sialorrhea, polyethylene glycol for constipation, and mirabegron for overactive bladder."
+  ];
+
+  const translationalMilestones = [
+    "SegFormer v2 deployment reduces striatal segmentation time from ~330 minutes (manual/Freesurfer) to ~12 minutes per subject with reproducible SBR extraction.",
+    "Hamiltonian policy optimization (Nguyen & Bajaj, 2025) provides stable continuous control updates for partially observed Parkinson’s trajectories.",
+    "Variational co-clustering exposes PPMI subgroups with accelerated motor decline linked to pars opercularis volume loss and asymmetrical gait features.",
+    "ActionIntel and Free Motion dashboards integrate sensor-clinical correlation scores, making divergences between wearable data and UPDRS trajectories explicit.",
+    "UT Austin’s federally funded expansion adds remote olfactory testing, transcriptomics, and smartwatch-based levodopa response studies to the core cohort."
+  ];
+
   return (
     <Layout>
       <div className="page-container home-page">
@@ -100,32 +123,40 @@ export default function IndexPage({ data }) {
 
         <section className="section">
           <h2 className="section-title">Why progressive intelligence matters in 2025</h2>
-          <div className="content-flex">
-            <div className="text-block">
+          <div className="dense-section two-column">
+            <div className="column-text">
               <p>
-                Parkinson’s disease manifests across dopaminergic, cholinergic,
-                and cerebello-thalamo-cortical networks, creating motor and
-                non-motor burdens that evolve over decades. Standard-of-care
-                interventions—from levodopa formulations and MAO-B inhibitors to
-                July 2025 FDA-cleared bilateral focused ultrasound—are powerful
-                yet still largely reactive and population-based.
+                Parkinson’s disease manifests across dopaminergic, cholinergic, and
+                cerebello-thalamo-cortical networks, creating motor and non-motor
+                burdens that evolve over decades. Current standards—from refined
+                levodopa titrations to July 2025 FDA-cleared bilateral focused
+                ultrasound—remain reactive and population-based even when they
+                incorporate advanced neuromodulation.
               </p>
               <p>
-                We are building models that anticipate progression, quantify
-                symptom trajectories, and surface optimal therapies by fusing
-                neuroimaging, biospecimens, genomics, and high-frequency sensor
-                data. The result is a precision roadmap that neurologists and
-                patients can trust.
+                Our program concentrates on anticipating disease inflection points,
+                quantifying symptom trajectories, and recommending precise therapy
+                sequences by fusing neuroimaging, biospecimens, genomics, and
+                high-frequency sensor data. Each update is benchmarked against
+                clinician practice patterns to verify safety and interpretability.
               </p>
+            </div>
+            <div>
+              <h3>2025 systems focus</h3>
+              <ul className="tight-list">
+                {focusPoints.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="section">
           <h2 className="section-title">Research pillars</h2>
-          <div className="card-grid">
+          <div className="dense-section two-column">
             {researchPillars.map((pillar) => (
-              <article key={pillar.title} className="card">
+              <article key={pillar.title} className="dense-brief">
                 <h3>{pillar.title}</h3>
                 <p>{pillar.description}</p>
               </article>
@@ -158,96 +189,149 @@ export default function IndexPage({ data }) {
 
         <section className="section">
           <h2 className="section-title">Data foundations we are scaling</h2>
-          <div className="content-flex data-foundations">
-            <div className="text-block">
+          <div className="dense-section two-column">
+            <article className="dense-brief">
               <h3>PPMI and allied cohorts</h3>
               <p>
-                Multi-year clinical assessments (MDS-UPDRS-III, UPSIT, REM sleep
-                questionnaires), biospecimens (CSF, plasma, urine, skin), and
-                comprehensive genetics provide longitudinal anchors for our
-                models.
+                Multi-year clinical assessments, biospecimens, genetics, and imaging
+                archives provide longitudinal anchors for our models while ensuring
+                harmonized metadata and regulatory compliance.
               </p>
-              <p>
-                Structural MRI, DaT-SPECT, DTI/DKI/NODDI, and transcriptomics
-                enable high-resolution views into dopaminergic loss and network
-                remodeling.
-              </p>
-            </div>
-            <div className="text-block">
+              <ul className="tight-list">
+                <li>MDS-UPDRS-III, UPSIT olfaction, REM/Epworth sleep scales, QUIP, SCOPA-AUT, cognitive batteries.</li>
+                <li>CSF, plasma, urine, skin biopsies plus whole-genome sequencing and transcriptomics.</li>
+                <li>Structural MRI, DaT-SPECT, DTI/DKI/NODDI for dopaminergic loss and microstructural remodeling.</li>
+              </ul>
+            </article>
+            <article className="dense-brief">
               <h3>Digital phenotyping</h3>
               <p>
-                Wearable accelerometer and gyroscope signals from gait, tremor,
-                and fine-motor tasks fuel Level 2 feature engineering and motion
-                code extraction.
+                High-frequency wearable and smartphone signals are distilled into Level 2 motion codes and sensor-clinical concordance scores that capture daily life function.
               </p>
-              <p>
-                Smartphone tapping, keyboard dynamics, handwriting trajectories,
-                and home-based levodopa response studies extend monitoring into
-                daily life while preserving privacy.
-              </p>
-            </div>
+              <ul className="tight-list">
+                <li>Accelerometer and gyroscope traces for gait, tremor, arm swing, and levodopa response.</li>
+                <li>Handwriting, keyboard dynamics, tapping tasks, and home fine-motor assessments.</li>
+                <li>Privacy-preserving ingestion pipelines with artifact detection and context labeling.</li>
+              </ul>
+            </article>
           </div>
         </section>
 
         <section className="section">
-          <div className="text-block">
-            <h2 className="section-title">Clinically grounded collaboration</h2>
-            <p>
-              Weekly design reviews with neurologists, including Dr. Conor
-              Fearon (Mater Misericordiae University Hospital, Dublin),
-              pressure-test interpretability, confirm symptom priorities, and
-              align intervention policies with frontline care pathways.
-            </p>
-            <p>
-              Our multidisciplinary team spans computer science, biomedical
-              engineering, and neuroscience—uniting graduate researchers Aaron
-              Dominick, Ashwin Vinod, Aditya Sai, Jasmin Khalil, Priyanshi
-              Kedia, Ojas Phirke, Thribhuvan Rapolu, Aditya Rajnarayan, Harsh
-              Trilekhar, and faculty lead Professor Chandrajit Bajaj.
-            </p>
-          </div>
-          <div className="image-container" style={{ maxWidth: '600px', margin: '2rem auto 0' }}>
-            <StaticImage
-              src="../images/brain_diagram.png"
-              alt="Neurobiological circuits impacted by Parkinson's disease"
-              placeholder="blurred"
-            />
+          <h2 className="section-title">Clinically grounded collaboration</h2>
+          <div className="content-flex">
+            <div className="text-block column-text">
+              <p>
+                Weekly design reviews with neurologists, including Dr. Conor Fearon
+                (Mater Misericordiae University Hospital, Dublin), pressure-test
+                interpretability, confirm symptom priorities, and align intervention
+                policies with frontline care pathways.
+              </p>
+              <p>
+                Our multidisciplinary team spans computer science, biomedical
+                engineering, and neuroscience—uniting graduate researchers Aaron
+                Dominick, Ashwin Vinod, Aditya Sai, Jasmin Khalil, Priyanshi Kedia,
+                Ojas Phirke, Thribhuvan Rapolu, Aditya Rajnarayan, Harsh Trilekhar,
+                and faculty lead Professor Chandrajit Bajaj.
+              </p>
+              <ul className="tight-list">
+                <li>Clinical Q/A sessions capture unmet needs in gait, cognition, and autonomic domains.</li>
+                <li>ActionIntel prototypes are validated against anonymized case logs before deployment.</li>
+                <li>Regulatory advisors review model documentation for clinical study readiness.</li>
+              </ul>
+            </div>
+            <div className="image-container" style={{ maxWidth: "420px", margin: "0 auto" }}>
+              <StaticImage
+                src="../images/brain_diagram.png"
+                alt="Neurobiological circuits impacted by Parkinson's disease"
+                placeholder="blurred"
+              />
+            </div>
           </div>
         </section>
 
         <section className="section">
           <h2 className="section-title">Tools and upcoming releases</h2>
-          <div className="card-grid">
-            <article className="card">
+          <div className="dense-section two-column">
+            <article className="dense-brief">
               <h3>ActionIntel</h3>
               <p>
-                Interactive inference and visualization environment for
-                clinician-facing exploration of patient trajectories, risk
-                surfaces, and recommended interventions.
+                Interactive inference environment aligning projected trajectories,
+                counterfactual therapy simulations, and uncertainty bounds with
+                neurologist workflows. A regulatory-ready technical note is in
+                preparation for Fall 2025.
               </p>
             </article>
-            <article className="card">
+            <article className="dense-brief">
               <h3>Free Motion</h3>
               <p>
-                Animated gait and arm swing reconstructions spotlight movements
-                that deviate from standard tests and expose asymmetry in real
-                time.
+                Animated gait and arm swing reconstructions surface asymmetry not
+                captured by standard in-clinic tests, with controls for patient
+                selection, animation speed, and sensor segment inspection.
               </p>
             </article>
-            <article className="card">
+            <article className="dense-brief">
               <h3>Sensor-clinical correlation scores</h3>
               <p>
-                Reference dashboards quantifying how closely digital phenotypes
-                mirror in-clinic MDS-UPDRS trends to flag discrepancies early.
+                Benchmark dashboards quantify concordance between digital phenotypes
+                and MDS-UPDRS trends, flagging divergence events for targeted review.
+              </p>
+            </article>
+            <article className="dense-brief">
+              <h3>Open-source roadmap</h3>
+              <p>
+                Containerized SegFormer pipelines, Hamiltonian policy notebooks, and
+                Dash visualization templates will roll out in staged releases through
+                December 2025.
               </p>
             </article>
           </div>
-          <div className="text-block centered">
-            <p>
-              We will publish open technical notes, sample datasets, and code
-              snippets throughout Fall 2025. Join the mailing list on our{" "}
-              <Link to="/resources">resources page</Link> to stay informed.
-            </p>
+          <p className="text-block centered">
+            Subscribe on the <Link to="/resources">resources page</Link> to receive
+            dataset drops, code announcements, and clinical trial milestones.
+          </p>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Therapeutic landscape we model</h2>
+          <div className="dense-section two-column">
+            <article className="dense-brief">
+              <h3>Intervention portfolio</h3>
+              <p>
+                Treatment policies are calibrated against contemporary medical,
+                device, and behavioral pathways so that clinical recommendations
+                remain grounded in what patients can access today.
+              </p>
+              <ul className="tight-list">
+                {therapeuticFocus.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="dense-brief">
+              <h3>Real-world deployment checks</h3>
+              <p>
+                Each simulated recommendation is evaluated for dosage safety,
+                contraindications, and practical sequencing (e.g., taper schedules,
+                rehab integration) before inclusion in our ActionIntel playbooks.
+              </p>
+              <p>
+                Policy revisions incorporate new FDA approvals, consensus statements,
+                and clinician feedback to keep the agent synchronized with evolving
+                care standards.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Translational milestones</h2>
+          <div className="dense-section">
+            <ul className="tight-list">
+              {translationalMilestones.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </section>
 
