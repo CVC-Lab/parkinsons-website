@@ -47,6 +47,8 @@
     "multer": "^2.0.2",
     "form-data": "^4.0.4",
     "on-headers": "^1.1.0",
-    "path-to-regexp": "^0.1.12"
+    "path-to-regexp": "^0.1.12",
+    "@parcel/reporter-dev-server": "^2.16.0",
+    "tmp": "^0.2.5"
   }
 }
