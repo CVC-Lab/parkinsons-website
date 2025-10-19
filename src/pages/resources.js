@@ -19,7 +19,7 @@ const dataResources = [
     name: "Mindboggle-101",
     description:
       "Anatomically labeled T1-weighted MRIs used for SegFormer pretraining and validation.",
-    link: "http://www.mindboggle.info/data.html",
+    link: "https://mindboggle.info/data.html",
   },
 ];
 

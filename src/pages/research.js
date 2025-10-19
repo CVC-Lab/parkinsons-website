@@ -4,6 +4,12 @@ import "../components/style.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
+const problemPoints = [
+  "PD is heterogeneous and multisystem; our work targets mechanisms beyond dopamine to move past symptomatic care.",
+  "Clinic scales are noisy and episodic, so we engineer longitudinal markers from imaging and wearables.",
+  "Rich datasets exist, but siloed modalities block patient-level inference—our pipelines integrate them end-to-end."
+];
+
 const experimentMetrics = [
   { method: "Nearest Neighbors", f1: "0.960", roc: "0.900" },
   { method: "Random Forest", f1: "0.950", roc: "0.858" },
@@ -18,25 +24,17 @@ export default function ResearchPage() {
       <div className="page-container home-page">
         <section className="hero-section">
           <div className="hero-text">
-            <h1>Research Program</h1>
+            <h1>Progressive, multimodal AI for Parkinson’s care.</h1>
             <p>
-              Our lab designs progressive AI agents that cross-correlate
-              multimodal signals—clinical assessments, imaging, biospecimens,
-              genetics, and digital phenotypes—to produce individualized
-              intervention roadmaps for Parkinson’s disease.
+              We differentially diagnose prevalent mechanisms and map individualized
+              interventions by cross-correlating imaging (DaT/MRI/DTI), biospecimens,
+              gait sensors, genetics, and clinical scores, delivering clinician-ready
+              tools for actionable insight.
             </p>
             <p className="hero-subtext">
-              The work spans data engineering, neuroimaging analytics,
-              reinforcement learning, and clinician-centered visualization.
+              This page details how we operationalize that promise across
+              segmentation, multimodal integration, and progressive policy learning.
             </p>
-            <div className="hero-cta">
-              <Link className="button primary" to="/background">
-                Disease background
-              </Link>
-              <Link className="button secondary" to="/resources">
-                Access datasets &amp; code
-              </Link>
-            </div>
           </div>
           <div className="hero-visual">
             <StaticImage
@@ -45,6 +43,15 @@ export default function ResearchPage() {
               placeholder="blurred"
             />
           </div>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Why this matters</h2>
+          <ul className="tight-list">
+            {problemPoints.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </section>
 
         <section className="section">

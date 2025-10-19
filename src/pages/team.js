@@ -7,47 +7,36 @@ const faculty = [
   {
     name: "Chandrajit Bajaj, Ph.D.",
     title: "Professor of Computer Science",
-    focus:
-      "Principal Investigator directing progressive AI, computational imaging, and real-time visualization for precision neurology.",
   },
 ];
 
 const researchers = [
   {
     name: "Aaron Dominick",
-    focus: "Leads SegFormer deployment, DaT-SPECT alignment, and SBR automation.",
   },
   {
     name: "Ashwin Vinod",
-    focus: "Designs Hamiltonian policy optimization and continual-learning agents.",
   },
   {
     name: "Aditya Sai",
-    focus: "Develops multimodal co-clustering and interpretable latent spaces.",
   },
   {
     name: "Jasmin Khalil",
-    focus: "Coordinates biospecimen integration and molecular biomarker studies.",
   },
   {
     name: "Priyanshi Kedia",
-    focus: "Builds ActionIntel clinician dashboards and sensor-clinical correlation scoring.",
   },
   {
     name: "Ojas Phirke",
-    focus: "Engineers wearable signal preprocessing and motion code extraction.",
   },
   {
     name: "Thribhuvan Rapolu",
-    focus: "Architects data pipelines and privacy-preserving cohort harmonization.",
   },
   {
     name: "Aditya Rajnanarayan",
-    focus: "Works on reinforcement learning evaluation and simulation environments.",
   },
   {
     name: "Harsh Trilekhar",
-    focus: "Supports diffusion imaging analytics and explainable segmentation.",
   },
 ];
 
@@ -56,22 +45,18 @@ const collaborators = [
     name: "Dr. Conor Fearon, MD PhD",
     affiliation:
       "Mater Misericordiae University Hospital, Dublin, Ireland",
-    focus:
-      "Neurology partner advising on clinical endpoints, device pathways, and patient selection.",
   },
   {
     name: "Oden Institute Research Computing",
     affiliation: "University of Texas at Austin",
-    focus:
-      "Provides GPU clusters, high-memory nodes, and secure data enclaves for model training.",
   },
 ];
 
 export default function TeamPage() {
   return (
     <Layout>
-      <div className="page-container home-page">
-        <section className="hero-section">
+      <div className="page-container team-page">
+        <section className="hero-section team-hero">
           <div className="hero-text">
             <h1>The Progressive AI Team</h1>
             <p>
@@ -88,42 +73,39 @@ export default function TeamPage() {
           </div>
         </section>
 
-        <section className="section">
+        <section className="section team-block">
           <h2 className="section-title">Faculty leadership</h2>
-          <div className="dense-section two-column">
+          <ul className="team-list">
             {faculty.map((member) => (
-              <article key={member.name} className="dense-brief">
-                <h3>{member.name}</h3>
-                <p><strong>{member.title}</strong></p>
-                <p>{member.focus}</p>
-              </article>
+              <li key={member.name}>
+                <strong>{member.name}</strong>
+                {member.title && <span>{member.title}</span>}
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
-        <section className="section">
+        <section className="section team-block">
           <h2 className="section-title">Graduate and undergraduate researchers</h2>
-          <div className="dense-section two-column">
+          <ul className="team-list">
             {researchers.map((member) => (
-              <article key={member.name} className="dense-brief">
-                <h3>{member.name}</h3>
-                <p>{member.focus}</p>
-              </article>
+              <li key={member.name}>
+                <strong>{member.name}</strong>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
-        <section className="section">
+        <section className="section team-block">
           <h2 className="section-title">Clinical and infrastructure collaborators</h2>
-          <div className="dense-section two-column">
+          <ul className="team-list">
             {collaborators.map((member) => (
-              <article key={member.name} className="dense-brief">
-                <h3>{member.name}</h3>
-                <p><strong>{member.affiliation}</strong></p>
-                <p>{member.focus}</p>
-              </article>
+              <li key={member.name}>
+                <strong>{member.name}</strong>
+                <span>{member.affiliation}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
         <section className="section final-callout">

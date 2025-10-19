@@ -64,10 +64,9 @@ export default function IndexPage({ data }) {
   ];
 
   const focusPoints = [
-    "Quantify dopaminergic, cholinergic, and cerebello-thalamo-cortical network disruption using joint imaging-biologic embeddings.",
-    "Fuse biospecimens, genetics, and digital phenotypes into longitudinal state estimators that surface prodromal change points.",
-    "Stress-test treatment policies against simulated trajectories to expose when symptom control or side-effect risk becomes dominant.",
-    "Deliver clinician-auditable reasoning layers that highlight biomarkers driving each recommendation."
+    "PD is heterogeneous and multisystem; current therapies remain largely symptomatic with no definitive disease-modifying success.",
+    "Clinic scales are noisy and episodic—objective, longitudinal markers from imaging and wearables tighten risk stratification.",
+    "Data exists but stays siloed; integrated inference across imaging, biospecimen, genetics, gait, and clinical sources unlocks patient-level decisions."
   ];
 
   const therapeuticFocus = [
@@ -79,11 +78,11 @@ export default function IndexPage({ data }) {
   ];
 
   const translationalMilestones = [
-    "SegFormer v2 deployment reduces striatal segmentation time from ~330 minutes (manual/Freesurfer) to ~12 minutes per subject with reproducible SBR extraction.",
-    "Hamiltonian policy optimization (Nguyen & Bajaj, 2025) provides stable continuous control updates for partially observed Parkinson’s trajectories.",
-    "Variational co-clustering exposes PPMI subgroups with accelerated motor decline linked to pars opercularis volume loss and asymmetrical gait features.",
-    "ActionIntel and Free Motion dashboards integrate sensor-clinical correlation scores, making divergences between wearable data and UPDRS trajectories explicit.",
-    "UT Austin’s federally funded expansion adds remote olfactory testing, transcriptomics, and smartwatch-based levodopa response studies to the core cohort."
+    "SegFormer v2 deployment trims striatal segmentation from about 330 minutes to roughly 12 minutes per subject while preserving reproducibility.",
+    "Hamiltonian policy optimization stabilizes progressive reinforcement learning for individualized therapy sequencing under partial observability.",
+    "Variational co-clustering surfaces multimodal subgroups with accelerated motor decline, guiding targeted studies and risk stratification.",
+    "ActionIntel, Free Motion, and sensor-clinical correlation dashboards translate multimodal inference into clinician-auditable decisions.",
+    "UT Austin’s expansion adds remote olfactory testing, transcriptomics, and smartwatch levodopa-response studies feeding the progressive pipeline and staged open-source releases through December 2025."
   ];
 
   return (
@@ -91,26 +90,13 @@ export default function IndexPage({ data }) {
       <div className="page-container home-page">
         <section className="hero-section">
           <div className="hero-text">
-            <h1>Progressive AI for Parkinson’s Precision Care</h1>
+            <h1>Progressive, multimodal AI for Parkinson’s care.</h1>
             <p>
-              We are an interdisciplinary AI team at the Oden Institute for
-              Computational Engineering and Sciences, charged with accelerating
-              biomarker discovery and decision support for Parkinson’s disease
-              through federally funded translational research.
+              We differentially diagnose prevalent mechanisms and map individualized
+              interventions by robustly cross-correlating imaging (DaT/MRI/DTI),
+              biospecimens, gait sensors, genetics, and clinical scores—with
+              clinician-facing tools for actionable insight.
             </p>
-            <p className="hero-subtext">
-              Our mission: deliver actionable differential diagnosis and
-              individualized intervention guidance that adapts with every clinic
-              visit, wearable trace, and imaging study.
-            </p>
-            <div className="hero-cta">
-              <Link className="button primary" to="/research">
-                Explore our research
-              </Link>
-              <Link className="button secondary" to="/background">
-                Understand Parkinson’s disease
-              </Link>
-            </div>
           </div>
           <div className="hero-visual">
             <StaticImage
@@ -121,35 +107,38 @@ export default function IndexPage({ data }) {
           </div>
         </section>
 
-        <section className="section">
-          <h2 className="section-title">Why progressive intelligence matters in 2025</h2>
-          <div className="dense-section two-column">
-            <div className="column-text">
-              <p>
-                Parkinson’s disease manifests across dopaminergic, cholinergic, and
-                cerebello-thalamo-cortical networks, creating motor and non-motor
-                burdens that evolve over decades. Current standards—from refined
-                levodopa titrations to July 2025 FDA-cleared bilateral focused
-                ultrasound—remain reactive and population-based even when they
-                incorporate advanced neuromodulation.
-              </p>
-              <p>
-                Our program concentrates on anticipating disease inflection points,
-                quantifying symptom trajectories, and recommending precise therapy
-                sequences by fusing neuroimaging, biospecimens, genomics, and
-                high-frequency sensor data. Each update is benchmarked against
-                clinician practice patterns to verify safety and interpretability.
-              </p>
+        <section className="section progressive-ai-section">
+          <div className="progressive-ai-content">
+            <div className="progressive-ai-image">
+              <StaticImage
+                src="../images/progressive_ai.jpg"
+                alt="Diagram of progressive AI decision-making pipeline"
+                placeholder="blurred"
+              />
             </div>
-            <div>
-              <h3>2025 systems focus</h3>
+            <div className="text-block">
+              <h2 className="section-title">Progressive decision stack</h2>
               <ul className="tight-list">
-                {focusPoints.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
+                <li>Continually active decision-making agents balance risk and reward with clinician oversight.</li>
+                <li>Robust causal cross-correlation links DaT, MRI, DTI, genetic, clinical, biologic, and gait/arm swing signals.</li>
+                <li>Stochastic policy optimization on Hamiltonian manifolds keeps reinforcement learning stable and adaptive.</li>
               </ul>
+              <h3 className="subheading">How this helps patients</h3>
+              <p>
+                Progressive AI agents synthesize multimodal patient data to differentially diagnose mechanisms and guide individualized
+                interventions throughout the course of Parkinson’s disease care.
+              </p>
             </div>
           </div>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Why this matters</h2>
+          <ul className="tight-list">
+            {focusPoints.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </section>
 
         <section className="section">
@@ -175,14 +164,14 @@ export default function IndexPage({ data }) {
             </div>
             <div className="text-block">
               <h2 className="section-title">Progressive biomarker pipeline</h2>
-              <ul className="pipeline-list">
+              <ol className="pipeline-steps">
                 {pipeline.map((item) => (
                   <li key={item.step}>
                     <strong>{item.step}</strong>
-                    <span>{item.detail}</span>
+                    <p>{item.detail}</p>
                   </li>
                 ))}
-              </ul>
+              </ol>
             </div>
           </div>
         </section>

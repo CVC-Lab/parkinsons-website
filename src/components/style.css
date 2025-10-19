@@ -207,6 +207,12 @@ nav ul li a.active {
   gap: 1.75rem;
 }
 
+.team-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .section {
   margin-bottom: 2rem;
 }
@@ -217,6 +223,31 @@ nav ul li a.active {
   font-size: 1.45rem;
   border-left: 4px solid #bf5700;
   padding-left: 0.75rem;
+}
+
+.team-block {
+  margin-bottom: 0.75rem;
+}
+
+.progressive-ai-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.progressive-ai-image .gatsby-image-wrapper,
+.progressive-ai-image picture,
+.progressive-ai-image img {
+  width: 100% !important;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.progressive-ai-section .subheading {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #bf5700;
 }
 
 .content-flex {
@@ -274,15 +305,21 @@ nav ul li a.active {
 .hero-section {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
-  align-items: flex-start;
+  gap: 1.5rem;
+  align-items: stretch;
   padding-bottom: 0.85rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #e4ded8;
 }
 
+.team-hero {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .hero-section .hero-text {
-  max-width: 650px;
+  max-width: none;
 }
 
 .hero-section h1 {
@@ -300,9 +337,16 @@ nav ul li a.active {
 }
 
 .hero-section .hero-visual {
-  max-width: 360px;
   width: 100%;
-  align-self: center;
+}
+
+.hero-section .hero-visual .gatsby-image-wrapper,
+.hero-section .hero-visual picture,
+.hero-section .hero-visual img {
+  width: 100% !important;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-cta {
@@ -362,26 +406,16 @@ nav ul li a.active {
   margin: 2rem auto 0;
 }
 
-.pipeline-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.pipeline-steps {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin: 1rem 0 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
-.pipeline-list li {
-  background-color: #f7f2ec;
-  border: 1px solid #eadfd2;
-  border-radius: 0.5rem;
-  padding: 0.85rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.pipeline-list li strong {
+.pipeline-steps strong {
   color: #bf5700;
 }
 
@@ -480,6 +514,31 @@ nav ul li a.active {
   color: #bf5700;
 }
 
+.team-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.team-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 1rem;
+}
+
+.team-list strong {
+  color: #2a2520;
+}
+
+.team-list span {
+  color: #726657;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 768px) {
   .content-flex {
     flex-direction: column;
@@ -512,26 +571,18 @@ nav ul li a.active {
 }
 
 @media (min-width: 900px) {
-  .hero-section {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2.5rem;
-  }
-
-  .content-flex {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
+  .hero-section,
+  .content-flex,
   .content-flex.reverse {
-    flex-direction: row-reverse;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .column-text {
-    column-count: 2;
+    column-count: 1;
   }
 
   .dense-section.two-column {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
