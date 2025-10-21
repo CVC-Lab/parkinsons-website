@@ -21,10 +21,16 @@ const researchers = [
     name: "Aditya Sai",
   },
   {
-    name: "Jasmin Khalil",
+    name: "Aparna Dev",
   },
   {
-    name: "Priyanshi Kedia",
+    name: "Shubham Bhardwaj",
+  },
+  {
+    name: "Jasmine Khalil",
+  },
+  {
+    name: "Priyanshi Yadav",
   },
   {
     name: "Ojas Phirke",
@@ -33,10 +39,10 @@ const researchers = [
     name: "Thribhuvan Rapolu",
   },
   {
-    name: "Aditya Rajnanarayan",
+    name: "Aditya Rajnarayan",
   },
   {
-    name: "Harsh Trilekhar",
+    name: "Harsh Tirhekar",
   },
 ];
 
