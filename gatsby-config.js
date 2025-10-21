@@ -14,6 +14,10 @@
         link:'/research',
       },
       {
+        name:'Silo1',
+        link:'/silo1',
+      },
+      {
         name:'Background',
         link:'/background'
       },
