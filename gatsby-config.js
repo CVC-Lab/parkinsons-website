@@ -4,43 +4,39 @@
  module.exports = {
   pathPrefix: "/parkinsons-website",
   siteMetadata: {
-    menuLinks:[
+    menuLinks: [
       {
-        name:'Home',
-        link:'/',
+        name: 'Home',
+        link: '/',
       },
       {
-        name:'Research',
-        link:'/research',
+        name: 'Approach',
+        link: '/approach',
       },
       {
-        name:'Silo1',
-        link:'/silo1',
+        name: 'Thrusts',
+        link: '/thrusts',
       },
       {
-        name:'Silo2',
-        link:'/silo2',
+        name: 'Workflows',
+        link: '/workflows',
       },
       {
-        name:'Silo3',
-        link:'/silo3',
+        name: 'Outcomes',
+        link: '/outcomes',
       },
       {
-        name:'Background',
-        link:'/background'
+        name: 'Team',
+        link: '/team',
       },
       {
-        name:'Team',
-        link:'/team',
+        name: 'Partners',
+        link: '/partners',
       },
       {
-        name:'Resources',
-        link:'/resources',
+        name: 'Resources',
+        link: '/resources',
       },
-      {
-        name:'Donors',
-        link:'/donors',
-      }
     ],
     donors:[
       {
@@ -100,7 +96,6 @@
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              path: `${__dirname}/src/images/`,
             },
           },
           'gatsby-remark-static-images',

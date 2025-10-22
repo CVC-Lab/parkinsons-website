@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import "../components/style.css";
 import { StaticImage } from "gatsby-plugin-image";
@@ -17,7 +17,32 @@ export const query = graphql`
   }
 `;
 
-export default function DonorsPage({ data }) {
+const clinicalPartners = [
+  {
+    name: "Dr. Conor Fearon, MD PhD",
+    affiliation: "Mater Misericordiae University Hospital, Dublin, Ireland",
+  },
+  {
+    name: "Dr. Barbara Marebwa",
+    affiliation: "Senior Scientist, Michael J. Fox Foundation",
+  },
+];
+
+const infrastructurePartners = [
+  {
+    name: "Oden Institute for Computational Engineering and Sciences",
+    detail:
+      "Shared compute, secure enclaves, and administrative support for cross-campus deployments.",
+  },
+  {
+    name: "Texas Advanced Computing Center (TACC)",
+    detail:
+      "High-performance GPU clusters for large-scale diffusion modeling and reinforcement learning.",
+    link: "https://www.tacc.utexas.edu/use-tacc/allocations/",
+  },
+];
+
+export default function PartnersPage({ data }) {
   const donors = data.site.siteMetadata.donors;
 
   return (
@@ -25,12 +50,11 @@ export default function DonorsPage({ data }) {
       <div className="page-container home-page">
         <section className="hero-section">
           <div className="hero-text">
-            <h1>Our Funding Partners</h1>
+            <h1>Partners powering progressive AI</h1>
             <p>
-              Philanthropic support accelerates our ability to build progressive
-              AI agents, curate multimodal datasets, and deploy clinician-ready
-              tools for Parkinson’s disease. Thank you for investing in precision
-              neurology that puts patients first.
+              Philanthropy, clinical collaborators, and infrastructure teams jointly enable
+              our multimodal Parkinson’s program—from cohort acquisition and secure storage
+              to validation and bedside translation.
             </p>
           </div>
           <div className="hero-visual">
@@ -43,7 +67,7 @@ export default function DonorsPage({ data }) {
         </section>
 
         <section className="section">
-          <h2 className="section-title">Major supporters</h2>
+          <h2 className="section-title">Funding partners</h2>
           <ul className="tight-list">
             {donors.map((donor) => (
               <li key={donor.name}>
@@ -57,6 +81,52 @@ export default function DonorsPage({ data }) {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Clinical collaborators</h2>
+          <ul className="tight-list">
+            {clinicalPartners.map((partner) => (
+              <li key={partner.name}>
+                <strong>{partner.name}</strong> — {partner.affiliation}
+              </li>
+            ))}
+          </ul>
+          <p className="text-block">
+            Clinical design reviews with neurologists guide feature priorities, interpretation
+            checks, and deployment protocols for ActionIntel and Free Motion tools.
+          </p>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Infrastructure and data partners</h2>
+          <div className="dense-section two-column">
+            {infrastructurePartners.map((partner) => (
+              <article key={partner.name} className="dense-brief">
+                <h3>{partner.name}</h3>
+                <p>{partner.detail}</p>
+                {partner.link && (
+                  <p>
+                    <a
+                      href={partner.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Learn more
+                    </a>
+                  </p>
+                )}
+              </article>
+            ))}
+            <article className="dense-brief">
+              <h3>Data governance</h3>
+              <p>
+                We operate within UT Austin’s secure data enclaves with audited access logs,
+                HIPAA-compliant storage, and sponsor-aligned governance. See the{" "}
+                <Link to="/resources">resources page</Link> for intake forms and SOPs.
+              </p>
+            </article>
+          </div>
         </section>
 
         <section className="section">
@@ -88,7 +158,7 @@ export default function DonorsPage({ data }) {
         </section>
 
         <section className="section final-callout">
-          <h2 className="section-title">Partner with us</h2>
+          <h2 className="section-title">Join the collaboration network</h2>
           <p>
             To discuss endowed gifts, corporate partnerships, or multi-year
             research sponsorships, please contact the Oden Institute development
@@ -109,6 +179,10 @@ export default function DonorsPage({ data }) {
               UT Austin giving page
             </a>
             .
+          </p>
+          <p>
+            Interested in clinical validation or data-sharing agreements? Introduce your project
+            through the forms on our <Link to="/resources">resources page</Link>.
           </p>
         </section>
       </div>

@@ -205,8 +205,11 @@ export default function BackgroundPage({ data }) {
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark {
+  query BackgroundPage {
+    allMarkdownRemark(
+      filter: { frontmatter: { id: { ne: null } } }
+      sort: { frontmatter: { id: ASC } }
+    ) {
       edges {
         node {
           id

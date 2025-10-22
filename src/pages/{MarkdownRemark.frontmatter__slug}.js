@@ -7,12 +7,12 @@ export default function ProjectTemplate({ data: { markdownRemark } }) {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <div>
-        <div>
+      <div className="page-container">
+        <article className="markdown-page">
+          <h1 className="page-title">{frontmatter.title}</h1>
           <div className="text-block" dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+        </article>
       </div>
-
     </Layout>
   );
 }
