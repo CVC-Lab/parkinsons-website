@@ -18,6 +18,14 @@
         link:'/silo1',
       },
       {
+        name:'Silo2',
+        link:'/silo2',
+      },
+      {
+        name:'Silo3',
+        link:'/silo3',
+      },
+      {
         name:'Background',
         link:'/background'
       },
