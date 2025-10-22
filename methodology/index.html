@@ -91,26 +91,42 @@ using information from PPMI’s CONCOHORT section.</p>
 <p>The segmentation of the MRI images was conducted using a transformer based semantic segmentation model known as Segformer by Xie et.al. <a href="#references">[5]</a>. Segformer differs from other transformer based segmentation models through its unique hierarchical encoder and multilayer perceptron (MLP) decoder. The hierarchical encoder utilizes 4x4 patch sizes which allows for the generation of both fine and course level features at 1/4, 1/8, 1/16, and 1/32 the original resolution. The MLP decoder then combines the information from all resolution levels into quick and accurate results. Semantic segmentation is the classification of individual pixels into a specific category. We utilized this model to assign each pixel of the MRI to one of 62 labels provided by the Desikan-Killiany-Tourville cortical labeling protocol <a href="#references">[3]</a>. The left and right caudate and putamen are the regions of the brain that can be used to overlay onto the DaTSCAN images and extract the SBR ratio. To utilize the model for the 3D MRI's, the MRI's were sliced into 2D images across the coronal, saggital, and axial planes. The 2D images were then loaded into the model with an output being a 2D matrix of the same size of the MRI slice with the values being the assigned labels to the pixels.</p>
 <figure id='analysis'>
     <span class='gatsby-resp-image-wrapper' style='position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; '>
-      <a class='gatsby-resp-image-link' href='/static/073c6d4a69b25afee9bdc898e132995a/f098e/analysis.png' style='display: block' target='_blank' rel='noopener'>
+      <a class='gatsby-resp-image-link' href='/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/f098e/analysis.png' style='display: block' target='_blank' rel='noopener'>
     <span class='gatsby-resp-image-background-image' style="padding-bottom: 59.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB/ElEQVR42nVT2XKbQBDk/38keUlSecnxkFQpjispjG4ZIUAIJEeyEAhxrFgQ0JldHVbseKq2dnZnpqd7DwVX5jgOur0+7rQ2TNOWe3VdyyHsUNXgxQEHWlq2DU3T4Loe6qZBeajkrKRpijhJZMFyk+HLzRifWvfSPwNW1RHQWSZotT2ouo/HIEaa7LD0d2hpLr5S3cJnUK4Z7POcOjuSXZ7zFwyjaAfTsuF6cxRFIfc4zaN7HVq7gzhOoIgA58dixjIMBn30ej1k2TXDSvpBEFCsC5vklmV5OqgGjHLjOEYjJGenhbCEpI/HY+i6Lv3nDMMwhKreYTKZXAFCst3v99JXzptpmuFxvZaHbVoW/M0GjJJE1yfJEYbDoby8VwFFgTDPMWGNR/BmNuYzC1PLwIPnyJiQLAA21KTT6dAZmxLg3OgfwITkpoyjDF1wf4o88FCQn5NfBLML4Gg4gDf3MBoNsVjMYRgG1qToVYbL7md4t28x//0Of9T3NNNQP5LsHME2QuS0UbId+MpExYjEwwg8CY6AdKkvzrDIIvB4Q0kheBoip2Sebk/3SCwpviDWfaMFfaZh67soCaSiVy4ukDF2BBTI58Vr1uCowlrpUKe/oFo3cFZTGLZBD3xJKtjlaSlPVc3/x/O4+IJ1iZ/6N3z48Qa3xneUVXFJ+wvZlpBzjdjQFwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"></span>
-  <img class='gatsby-resp-image-image' alt='Analysis Process Flowchart' title='' src='/static/073c6d4a69b25afee9bdc898e132995a/5a190/analysis.png' srcset='/static/073c6d4a69b25afee9bdc898e132995a/772e8/analysis.png 200w,
-/static/073c6d4a69b25afee9bdc898e132995a/e17e5/analysis.png 400w,
-/static/073c6d4a69b25afee9bdc898e132995a/5a190/analysis.png 800w,
-/static/073c6d4a69b25afee9bdc898e132995a/c1b63/analysis.png 1200w,
-/static/073c6d4a69b25afee9bdc898e132995a/f098e/analysis.png 1506w' sizes='(max-width: 800px) 100vw, 800px' style='width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;' loading='lazy' decoding='async'>
+  <picture>
+          <source srcset='/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/ba381/analysis.webp 200w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/7f61c/analysis.webp 400w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/d00b9/analysis.webp 800w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/92f8c/analysis.webp 1200w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/e830a/analysis.webp 1506w' sizes='(max-width: 800px) 100vw, 800px' type='image/webp'>
+          <source srcset='/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/772e8/analysis.png 200w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/e17e5/analysis.png 400w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/5a190/analysis.png 800w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/c1b63/analysis.png 1200w,
+/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/f098e/analysis.png 1506w' sizes='(max-width: 800px) 100vw, 800px' type='image/png'>
+          <img class='gatsby-resp-image-image' src='/parkinsons-website/static/073c6d4a69b25afee9bdc898e132995a/5a190/analysis.png' alt='Analysis Process Flowchart' title='' loading='lazy' decoding='async' style='width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;'>
+        </picture>
   </a>
     </span>
     <figcaption>Figure 1: Analysis Process Flowchart.</figcaption>
 </figure>
 <figure id='3images'>
     <span class='gatsby-resp-image-wrapper' style='position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; '>
-      <a class='gatsby-resp-image-link' href='/static/db92ab562535ae99e00c5f3b3602ecc1/9de76/3Images.png' style='display: block' target='_blank' rel='noopener'>
+      <a class='gatsby-resp-image-link' href='/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/9de76/3Images.png' style='display: block' target='_blank' rel='noopener'>
     <span class='gatsby-resp-image-background-image' style="padding-bottom: 41%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAACI0lEQVR42j2S3U9ScRjHfyXaZm6tcm05epmt1ubBowJyOHAOmIqQRPkGMhXwLQw1VN5ClKyWW6uLtMxFI7rysrkx/75PBy66+G7Pc/PZ9/t8H5FOp1EUBV3X8Xg8uFwuNF1jc+01i/6XRPQFot44s56YMcdI+Jc4SP4iNfqT7GiFoq9KcazKkuuYr8U6wu12I4RowoLBIBbJ0twVm8rdtkd0m3oYuRfE0+XngUnCfOU+43IGt8gyLvL4xRsmW4rYRYoV33eE0+lElmUqlQqHh4dUq1XMd8wM9jmwXLUTVRK8CmXJRnLMOZd53G5hYaDMjHjHasceO7cLbN4oERAF8oEqohE1HA5zdnbG0dERtd81XG4XA5IVR+cQqWcb5BMFthJFlsbT9F8fJNG7R0R84JNrkWPPAh+1dYKG29JYDTE8PEy5XKZer1Or1Tg/PycyGzGANka6g2Sn9shNldiZ3GdrYhdnl06sp8S84TDZXmDVtMv6tRIvRI6y7w+iUUgqleLi4qIZueF06Im3CVRueZvAdKjAxtMMa6Nb9N8cJCbvM3/pPbHLZeItb1luOzBOUKDkNxyqqkprayuZTIZ8Pk8gEPhfitn0EHunxpyyzERvFKnD3iwlJOfwGhEnDE0boEYpithgzXeCSCaTSJKEw+FA0zSsVityv8xKfJWoHidkm2FanWvquS1svM88xdgPEuo31tUTttVT0u5Ton1f+Lz9l3/HmTix07NezAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"></span>
-  <img class='gatsby-resp-image-image' alt='Overview of Segformer Process' title='' src='/static/db92ab562535ae99e00c5f3b3602ecc1/5a190/3Images.png' srcset='/static/db92ab562535ae99e00c5f3b3602ecc1/772e8/3Images.png 200w,
-/static/db92ab562535ae99e00c5f3b3602ecc1/e17e5/3Images.png 400w,
-/static/db92ab562535ae99e00c5f3b3602ecc1/5a190/3Images.png 800w,
-/static/db92ab562535ae99e00c5f3b3602ecc1/c1b63/3Images.png 1200w,
-/static/db92ab562535ae99e00c5f3b3602ecc1/9de76/3Images.png 1423w' sizes='(max-width: 800px) 100vw, 800px' style='width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;' loading='lazy' decoding='async'>
+  <picture>
+          <source srcset='/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/ba381/3Images.webp 200w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/7f61c/3Images.webp 400w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/d00b9/3Images.webp 800w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/92f8c/3Images.webp 1200w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/fb6f1/3Images.webp 1423w' sizes='(max-width: 800px) 100vw, 800px' type='image/webp'>
+          <source srcset='/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/772e8/3Images.png 200w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/e17e5/3Images.png 400w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/5a190/3Images.png 800w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/c1b63/3Images.png 1200w,
+/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/9de76/3Images.png 1423w' sizes='(max-width: 800px) 100vw, 800px' type='image/png'>
+          <img class='gatsby-resp-image-image' src='/parkinsons-website/static/db92ab562535ae99e00c5f3b3602ecc1/5a190/3Images.png' alt='Overview of Segformer Process' title='' loading='lazy' decoding='async' style='width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;'>
+        </picture>
   </a>
     </span>
     <figcaption>Figure 2: Overview of Segformer Process. a) T1-Weighted MRI b) Mask generated from Segformer overlaid on MRI c) Mask generated from Segformer overlaid on DaTSCAN.</figcaption>
@@ -126,6 +142,6 @@ using information from PPMI’s CONCOHORT section.</p>
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-ebc239dc3c6b607aacad.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-43cd08c3ab4d4c7c67e1.js\"],\"component---src-pages-approach-js\":[\"/component---src-pages-approach-js-04e4117a5d51605b4b03.js\"],\"component---src-pages-background-js\":[\"/component---src-pages-background-js-1e83ba2eaf001c4e938c.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-d2d3e0136d2c25103adf.js\"],\"component---src-pages-markdown-remark-frontmatter-slug-js\":[\"/component---src-pages-markdown-remark-frontmatter-slug-js-e5cecd619360b98680b2.js\"],\"component---src-pages-outcomes-js\":[\"/component---src-pages-outcomes-js-d089f52bdbb95e34b302.js\"],\"component---src-pages-partners-js\":[\"/component---src-pages-partners-js-683a7875768495ebdc34.js\"],\"component---src-pages-resources-js\":[\"/component---src-pages-resources-js-c2974cbc863579dc617a.js\"],\"component---src-pages-team-js\":[\"/component---src-pages-team-js-e4283ba6569e7f01b565.js\"],\"component---src-pages-thrusts-js\":[\"/component---src-pages-thrusts-js-a035a495b33f061d8e46.js\"],\"component---src-pages-workflows-js\":[\"/component---src-pages-workflows-js-e2fcc71a62cb693ecd23.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-99428888202d8d747cab.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-43cd08c3ab4d4c7c67e1.js\"],\"component---src-pages-approach-js\":[\"/component---src-pages-approach-js-04e4117a5d51605b4b03.js\"],\"component---src-pages-background-js\":[\"/component---src-pages-background-js-1e83ba2eaf001c4e938c.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-d2d3e0136d2c25103adf.js\"],\"component---src-pages-markdown-remark-frontmatter-slug-js\":[\"/component---src-pages-markdown-remark-frontmatter-slug-js-e5cecd619360b98680b2.js\"],\"component---src-pages-outcomes-js\":[\"/component---src-pages-outcomes-js-d089f52bdbb95e34b302.js\"],\"component---src-pages-partners-js\":[\"/component---src-pages-partners-js-683a7875768495ebdc34.js\"],\"component---src-pages-resources-js\":[\"/component---src-pages-resources-js-c2974cbc863579dc617a.js\"],\"component---src-pages-team-js\":[\"/component---src-pages-team-js-e4283ba6569e7f01b565.js\"],\"component---src-pages-thrusts-js\":[\"/component---src-pages-thrusts-js-a035a495b33f061d8e46.js\"],\"component---src-pages-workflows-js\":[\"/component---src-pages-workflows-js-e2fcc71a62cb693ecd23.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="0fed25bdcb58bbb71d89";</script><script src="/parkinsons-website/webpack-runtime-f914e217d3734d831c18.js" async></script><script src="/parkinsons-website/framework-245fa2868dad64d12943.js" async></script><script src="/parkinsons-website/app-ebc239dc3c6b607aacad.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="d33a01500a93d22925e1";</script><script src="/parkinsons-website/webpack-runtime-f914e217d3734d831c18.js" async></script><script src="/parkinsons-website/framework-245fa2868dad64d12943.js" async></script><script src="/parkinsons-website/app-99428888202d8d747cab.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
