@@ -96,6 +96,9 @@
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
+              linkImagesToOriginal: true,
+              withWebp: true,
+              backgroundColor: 'transparent',
             },
           },
           'gatsby-remark-static-images',
