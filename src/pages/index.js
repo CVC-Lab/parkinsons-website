@@ -38,6 +38,13 @@ export default function IndexPage({ data }) {
               </Link>
             </div>
           </div>
+          <div className="hero-visual">
+            <StaticImage
+              src="../images/progressive_ai.jpg"
+              alt="Progressive AI decision-making pipeline"
+              placeholder="blurred"
+            />
+          </div>
         </section>
 
         <section className="section">
@@ -73,6 +80,13 @@ export default function IndexPage({ data }) {
             phenotypes, plus ActionIntel tooling that grounds recommendations
             in real-world practice.
           </p>
+          <div className="image-container">
+            <StaticImage
+              src="../images/discovery.png"
+              alt="Multimodal biomarker discovery"
+              placeholder="blurred"
+            />
+          </div>
         </section>
 
         <section className="section">
