@@ -19,10 +19,10 @@ export default function IndexPage({ data }) {
       <div className="page-container home-page">
         <section className="hero-section">
           <div className="hero-text">
-            <h1>Progressive AI for Parkinson’s care</h1>
+            <h1>Progressive AI for Parkinson's care</h1>
             <p>
               We build actionable, multimodal agents that differentially diagnose
-              Parkinson’s mechanisms, surface subtype-specific biomarkers, and
+              Parkinson's mechanisms, surface subtype-specific biomarkers, and
               keep neurologists in the loop with interactive decision support.
             </p>
             <p className="hero-subtext">
@@ -37,13 +37,6 @@ export default function IndexPage({ data }) {
                 View the workflows
               </Link>
             </div>
-          </div>
-          <div className="hero-visual">
-            <StaticImage
-              src="../images/progressive_ai.jpg"
-              alt="Progressive AI decision-making pipeline"
-              placeholder="blurred"
-            />
           </div>
         </section>
 
@@ -67,35 +60,24 @@ export default function IndexPage({ data }) {
         </section>
 
         <section className="section">
-          <div className="content-flex">
-            <div className="text-block">
-              <h2 className="section-title">Our architecture</h2>
-              <p>
-                We harmonize PPMI and allied cohort assets—DaT-SPECT, T1 and
-                diffusion MRI, biospecimens, genetics, gait sensors, and rich
-                clinical batteries—into progressive agents that reason over time.
-                Modality-specific thrusts extract stable features, while workflows
-                coordinate generative modeling and clinician delivery.
-              </p>
-              <p>
-                The result: multimodal latent spaces that expose severity-aligned
-                phenotypes, plus ActionIntel tooling that grounds recommendations
-                in real-world practice.
-              </p>
-            </div>
-            <div className="image-container">
-              <StaticImage
-                src="../images/discovery.png"
-                alt="Multimodal biomarker discovery"
-                placeholder="blurred"
-              />
-            </div>
-          </div>
+          <h2 className="section-title">Our architecture</h2>
+          <p>
+            We harmonize PPMI and allied cohort assets—DaT-SPECT, T1 and
+            diffusion MRI, biospecimens, genetics, gait sensors, and rich
+            clinical batteries—into progressive agents that reason over time.
+            Modality-specific thrusts extract stable features, while workflows
+            coordinate generative modeling and clinician delivery.
+          </p>
+          <p>
+            The result: multimodal latent spaces that expose severity-aligned
+            phenotypes, plus ActionIntel tooling that grounds recommendations
+            in real-world practice.
+          </p>
         </section>
 
         <section className="section">
           <h2 className="section-title">Four coordinated thrusts</h2>
-          <div className="dense-section two-column">
+          <div className="dense-section">
             {thrusts.map(({ node }) => (
               <article key={node.id} className="dense-brief">
                 <h3>
@@ -113,7 +95,7 @@ export default function IndexPage({ data }) {
 
         <section className="section">
           <h2 className="section-title">Two translating workflows</h2>
-          <div className="dense-section two-column">
+          <div className="dense-section">
             {workflows.map(({ node }) => (
               <article key={node.id} className="dense-brief">
                 <h3>
