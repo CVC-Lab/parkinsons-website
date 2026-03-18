@@ -64,17 +64,17 @@ export default function TeamPage() {
       <div className="page-container team-page">
         <section className="hero-section team-hero">
           <div className="hero-text">
-            <h1>The Progressive AI Team</h1>
+            <h1>The Parkinson’s Biomarker Team</h1>
             <p>
               We unite computational scientists, engineers, and clinicians at
-              the Oden Institute to advance AI-guided care for Parkinson’s
-              disease. Our culture emphasizes reproducible science, clinical
-              partnership, and ethically grounded deployment.
+              the Oden Institute to advance multimodal biomarker-driven care for
+              Parkinson’s disease. Our culture emphasizes reproducible science,
+              clinical partnership, and ethically grounded deployment.
             </p>
             <p className="hero-subtext">
-              Weekly stand-ups coordinate segmentation, reinforcement learning,
-              and visualization tracks, ensuring our agents remain aligned with
-              frontline neurologist needs.
+              Weekly stand-ups coordinate imaging, wearable, and clinical
+              integration tracks, keeping our work aligned with frontline
+              neurologist needs.
             </p>
           </div>
         </section>

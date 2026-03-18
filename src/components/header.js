@@ -9,7 +9,7 @@ const Header = ({ siteTitle, menuLinks }) => (
       <div className="header-container">
         <div className="logo-title-container">
           <Link to="/">
-            <img src={oden} alt="Logo" className="header-logo" />
+            <img src={oden} alt="Oden Institute Logo" className="header-logo" />
           </Link>
           <div className="title-container">
             <h1>

@@ -10,32 +10,20 @@
         link: '/',
       },
       {
-        name: 'Approach',
-        link: '/approach',
+        name: 'Clinician Workflow',
+        link: '/clinician-workflow',
       },
       {
-        name: 'Thrusts',
+        name: 'Domain Thrusts',
         link: '/thrusts',
       },
       {
-        name: 'Workflows',
-        link: '/workflows',
-      },
-      {
-        name: 'Outcomes',
-        link: '/outcomes',
-      },
-      {
-        name: 'Team',
-        link: '/team',
+        name: 'Related Papers',
+        link: '/related-papers',
       },
       {
         name: 'Partners',
         link: '/partners',
-      },
-      {
-        name: 'Resources',
-        link: '/resources',
       },
     ],
     donors:[
@@ -56,8 +44,8 @@
         link: 'https://www.oden.utexas.edu'
       }
     ],
-    title: `Progressive AI for Parkinson's Disease`,
-    description: `UT Austin Oden Institute research program advancing progressive AI agents, multimodal biomarkers, and clinical decision support for Parkinson's disease.`,
+    title: `Multimodal Biomarkers for Parkinson's Disease`,
+    description: `UT Austin Oden Institute research program integrating imaging, diffusion, wearable, and clinical data into biomarker-defined subgroups for differential diagnosis and precision Parkinson's care.`,
     siteUrl: `https://cvc-lab.github.io/parkinsons-website`
   },
   plugins: [

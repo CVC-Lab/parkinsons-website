@@ -50,7 +50,7 @@ export default function PartnersPage({ data }) {
       <div className="page-container home-page">
         <section className="hero-section">
           <div className="hero-text">
-            <h1>Partners powering progressive AI</h1>
+            <h1>Partners powering precision Parkinson's care</h1>
             <p>
               Philanthropy, clinical collaborators, and infrastructure teams jointly enable
               our multimodal Parkinson’s program—from cohort acquisition and secure storage
@@ -137,7 +137,7 @@ export default function PartnersPage({ data }) {
               <p>
                 Philanthropy sustains secure acquisition of imaging, biospecimen, and wearable
                 datasets across UT Austin and partner clinics—critical for training and validating
-                our progressive agents.
+                our multimodal biomarker models.
               </p>
             </article>
             <article className="dense-brief">

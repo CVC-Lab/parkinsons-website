@@ -16,10 +16,9 @@ export default function ThrustsPage({ data }) {
             <h1>Domain Thrusts</h1>
             <p>
               Four coordinated thrusts extract, harmonize, and interpret multimodal
-              biomarkers that fuel our progressive AI stack. Each thrust tackles a
-              distinct vantage point—imaging, diffusion-clinical integration,
-              wearable cognition, and mechanistic inference—while sharing common
-              quality controls and translational goals.
+              biomarkers. Each thrust tackles a distinct modality -- imaging, diffusion-clinical
+              integration, wearable-cognitive phenotyping, and mechanistic inference -- while
+              sharing common quality controls and translational goals.
             </p>
             <p className="hero-subtext">
               Dive into the thrusts below for deeper technical walkthroughs,
@@ -38,7 +37,9 @@ export default function ThrustsPage({ data }) {
                 </h3>
                 {node.frontmatter.summary && <p>{node.frontmatter.summary}</p>}
                 <p>
-                  <Link to={node.frontmatter.slug}>Read the full thrust brief →</Link>
+                  <Link to={node.frontmatter.slug} className="button secondary" style={{ fontSize: 'var(--text-sm)', padding: 'var(--spacing-2) var(--spacing-4)' }}>
+                    Read full thrust brief &rarr;
+                  </Link>
                 </p>
               </article>
             ))}

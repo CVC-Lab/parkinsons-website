@@ -23,4 +23,4 @@ Workflow 1 constructs harmonized latent representations from imaging, diffusion
 - Quality-controlled, analysis-ready tables for replication and external validation.
 - Diagnostics that flag outliers and monitor modality drift.
 
-Workflow 1 underpins the Progressive AI agent stack by supplying stable, interpretable state estimates rooted in multimodal evidence.
+Workflow 1 underpins the biomarker program by supplying stable, interpretable state estimates rooted in multimodal evidence.

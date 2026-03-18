@@ -56,8 +56,8 @@ export default function ResourcesPage() {
             <h1>Resources &amp; Collaboration</h1>
             <p>
               Access the datasets, documentation, and engagement channels that
-              power our progressive AI program. We emphasize responsible data
-              stewardship and transparent sharing.
+              power our multimodal biomarker program. We emphasize responsible
+              data stewardship and transparent sharing.
             </p>
           </div>
         </section>

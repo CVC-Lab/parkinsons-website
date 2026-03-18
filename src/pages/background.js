@@ -120,7 +120,7 @@ export default function BackgroundPage({ data }) {
           </div>
           <p className="text-block centered">
             These interventions are powerful, yet they are prescribed largely on
-            population averages. Our progressive agents learn which combination,
+            population averages. Our multimodal approach learns which combination,
             sequence, and timing work best for each individual patient profile.
           </p>
         </section>

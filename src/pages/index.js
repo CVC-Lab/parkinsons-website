@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
+import PipelineSteps from "../components/PipelineSteps";
 import "../components/style.css";
 
 export default function IndexPage({ data }) {
@@ -9,89 +10,159 @@ export default function IndexPage({ data }) {
     () => data?.thrusts?.edges?.slice(0, 4) ?? [],
     [data]
   );
-  const workflows = React.useMemo(
-    () => data?.workflows?.edges?.slice(0, 2) ?? [],
-    [data]
-  );
 
   return (
     <Layout>
       <div className="page-container home-page">
+
+        {/* Hero */}
         <section className="hero-section">
           <div className="hero-text">
-            <h1>Progressive AI for Parkinson's care</h1>
+            <h1>Multimodal biomarkers for differential diagnosis and precision Parkinson's care</h1>
             <p>
-              We build actionable, multimodal agents that differentially diagnose
-              Parkinson's mechanisms, surface subtype-specific biomarkers, and
-              keep neurologists in the loop with interactive decision support.
+              We integrate imaging, diffusion, wearable, and clinical data to
+              differentiate Parkinson's disease from look-alikes and to identify
+              patient subgroups that respond to different care strategies.
             </p>
             <p className="hero-subtext">
-              Two coordinated pillars—domain thrusts and clinical workflows—move
-              harmonized data from cohorts into bedside insight.
+              Four domain thrusts extract features; a clinician-facing workflow
+              places each patient within a population-level map and surfaces
+              actionable monitoring priorities.
             </p>
             <div className="hero-cta">
-              <Link className="button primary" to="/thrusts">
-                Explore the thrusts
+              <Link className="button primary" to="/clinician-workflow">
+                See the clinician workflow
               </Link>
-              <Link className="button secondary" to="/workflows">
-                View the workflows
+              <Link className="button secondary" to="/thrusts">
+                Explore domain thrusts
               </Link>
             </div>
           </div>
           <div className="hero-visual">
             <StaticImage
               src="../images/progressive_ai.jpg"
-              alt="Progressive AI decision-making pipeline"
+              alt="Multimodal biomarker pipeline for Parkinson's care"
               placeholder="blurred"
             />
           </div>
         </section>
 
+        {/* What makes our approach different */}
         <section className="section">
-          <h2 className="section-title">The problem we are solving</h2>
-          <ul className="tight-list">
+          <h2 className="section-title">What makes our approach different</h2>
+          <ul className="tight-list prose">
             <li>
-              Parkinson’s disease is heterogeneous and multisystem; current care
-              pathways remain largely symptomatic with limited disease-modifying
-              success.
+              <strong>Multimodal:</strong> Imaging, diffusion, wearable sensors,
+              biospecimens, and clinical scales fused in a shared representation
+              rather than analyzed in isolation.
             </li>
             <li>
-              Clinical scales are episodic and noisy—objective imaging, diffusion,
-              biospecimen, and wearable markers tighten risk stratification.
+              <strong>Longitudinal:</strong> Time-aware modeling tracks disease
+              progression rather than relying on single-visit snapshots.
             </li>
             <li>
-              Multimodal data remains siloed; coordinated inference unlocks
-              individualized trajectories and intervention planning.
+              <strong>Subgroup-based:</strong> Population-level discovery identifies
+              clusters of patients who share biology and trajectory, enabling
+              precision stratification.
+            </li>
+            <li>
+              <strong>Clinician-in-the-loop:</strong> Every inference surfaces in
+              interactive tools designed with neurologists, not as a black-box
+              prediction.
             </li>
           </ul>
         </section>
 
+        {/* What we differentiate */}
         <section className="section">
-          <h2 className="section-title">Our architecture</h2>
-          <p>
-            We harmonize PPMI and allied cohort assets—DaT-SPECT, T1 and
-            diffusion MRI, biospecimens, genetics, gait sensors, and rich
-            clinical batteries—into progressive agents that reason over time.
-            Modality-specific thrusts extract stable features, while workflows
-            coordinate generative modeling and clinician delivery.
-          </p>
-          <p>
-            The result: multimodal latent spaces that expose severity-aligned
-            phenotypes, plus ActionIntel tooling that grounds recommendations
-            in real-world practice.
-          </p>
-          <div className="image-container">
-            <StaticImage
-              src="../images/discovery.png"
-              alt="Multimodal biomarker discovery"
-              placeholder="blurred"
-            />
-          </div>
+          <h2 className="section-title">What we differentiate</h2>
+          <ul className="tight-list prose">
+            <li>
+              <strong>Differential diagnosis:</strong> Molecular evidence such as
+              CSF alpha-synuclein seed amplification helps disambiguate Parkinson's
+              disease from look-alikes including MSA, PSP, and DLB.
+            </li>
+            <li>
+              <strong>Precision stratification:</strong> Pathway-weighted profiles
+              define subgroups within Parkinson's disease, each with distinct
+              biology and clinical trajectory.
+            </li>
+            <li>
+              <strong>Nearest-neighbor comparison:</strong> New patients are placed
+              against the closest population subgroup, surfacing comparable cases
+              and their longitudinal outcomes.
+            </li>
+          </ul>
         </section>
 
+        {/* Clinician workflow */}
         <section className="section">
-          <h2 className="section-title">Four coordinated thrusts</h2>
-          <div className="dense-section">
+          <h2 className="section-title">Clinician workflow</h2>
+          <p className="prose">
+            From data collection to decision support in four steps:
+          </p>
+          <PipelineSteps />
+        </section>
+
+        {/* What the clinician sees */}
+        <section className="section">
+          <h2 className="section-title">What the clinician sees</h2>
+          <dl className="clinician-outputs">
+            <dt>Subgroup</dt>
+            <dd>
+              A biomarker-defined subgroup label with population context,
+              indicating which cluster the patient most closely resembles.
+            </dd>
+            <dt>Nearest neighbors</dt>
+            <dd>
+              The closest patients in the population map, with their
+              trajectories and outcomes for clinical comparison.
+            </dd>
+            <dt>Pathway burden</dt>
+            <dd>
+              A profile of motor, cognitive, and autonomic pathway contributions
+              weighted by the patient's multimodal signature.
+            </dd>
+            <dt>Monitoring priorities</dt>
+            <dd>
+              Domain-specific flags highlighting which motor, cognitive, or gait
+              measures warrant closest follow-up.
+            </dd>
+          </dl>
+        </section>
+
+        {/* Evidence highlights */}
+        <section className="section">
+          <h2 className="section-title">Evidence highlights</h2>
+          <ul className="evidence-list">
+            <li>
+              Circuit-level imaging signatures reveal patient subtypes with
+              distinct motor and cognitive profiles across six neuroanatomical
+              pathways.
+              <span className="evidence-label">Vinod et al.</span>
+            </li>
+            <li>
+              Wearable arm-swing asymmetry and dual-task gait cost detect
+              motor-cognitive network involvement non-invasively.
+              <span className="evidence-label">Tirhekar et al.</span>
+            </li>
+            <li>
+              LRRK2 G2019S carriers show measurably higher motor severity,
+              enabling genetic risk stratification and personalized counseling.
+              <span className="evidence-label">Tirhekar et al.</span>
+            </li>
+            <li>
+              Bayesian clustering identifies four motor phenotypes with
+              transparent model selection via Evidence Lower Bound.
+              <span className="evidence-label">Tirhekar et al.</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Four domain thrusts */}
+        <section className="section">
+          <h2 className="section-title">Four domain thrusts</h2>
+          <div className="dense-section two-column">
             {thrusts.map(({ node }) => (
               <article key={node.id} className="dense-brief">
                 <h3>
@@ -107,76 +178,19 @@ export default function IndexPage({ data }) {
           </p>
         </section>
 
-        <section className="section">
-          <h2 className="section-title">Two translating workflows</h2>
-          <div className="dense-section">
-            {workflows.map(({ node }) => (
-              <article key={node.id} className="dense-brief">
-                <h3>
-                  <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
-                </h3>
-                {node.frontmatter.summary && <p>{node.frontmatter.summary}</p>}
-              </article>
-            ))}
-          </div>
-          <p className="text-block centered">
-            Learn how modeling meets care on the{" "}
-            <Link to="/workflows">Workflows page</Link>.
-          </p>
-        </section>
-
-        <section className="section">
-          <h2 className="section-title">Recent findings</h2>
-          <ul className="tight-list">
-            <li>
-              Diffusion metrics fused with clinical scales uncover severity-aligned
-              latent subtypes with interpretable diffusion asymmetries.
-            </li>
-            <li>
-              Automated DaT-SPECT and T1 MRI processing differentiates CSFSAA
-              positive vs. negative Parkinsonisms with AUC 0.93 ± 0.04 when fused
-              with clinical and biologic anchors.
-            </li>
-            <li>
-              Wearable-derived gait and arm-swing metrics partner with cognition to
-              predict CSFSAA status non-invasively (AUC 0.93 ± 0.07).
-            </li>
-            <li>
-              Mechanism inference links multimodal signatures to pathways such as
-              LRRK2 kinase hyperactivity and brainstem α-synucleinopathy.
-            </li>
-          </ul>
-        </section>
-
-        <section className="section">
-          <h2 className="section-title">Status &amp; near-term priorities</h2>
-          <ul className="tight-list">
-            <li>
-              Core imaging pipelines, diffusion–clinical co-clustering, and wearable
-              phenotyping are trained on harmonized cohorts.
-            </li>
-            <li>
-              Clinician-facing prototypes integrate patient timelines, motion
-              analysis, and policy recommendations for case review.
-            </li>
-            <li>
-              Upcoming work: prospective validation across sites, device-drift
-              audits, subgroup fairness reporting, and SOP finalization for
-              longitudinal follow-up.
-            </li>
-          </ul>
-        </section>
-
+        {/* Partner with us */}
         <section className="section final-callout">
           <h2 className="section-title">Partner with us</h2>
           <p>
             Strategic philanthropy, industry collaborations, and clinical trial
-            partnerships accelerate progressive AI deployment. Visit the{" "}
+            partnerships accelerate translation of multimodal biomarkers into
+            care. Visit the{" "}
             <Link to="/partners">partners page</Link> to learn how funding and
             clinical collaborators engage, or connect through the{" "}
             <Link to="/resources">resources portal</Link>.
           </p>
         </section>
+
       </div>
     </Layout>
   );
@@ -186,22 +200,6 @@ export const query = graphql`
   query HomePage {
     thrusts: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "thrust" } } }
-      sort: { frontmatter: { order: ASC } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            slug
-            summary
-            order
-          }
-        }
-      }
-    }
-    workflows: allMarkdownRemark(
-      filter: { frontmatter: { category: { eq: "workflow" } } }
       sort: { frontmatter: { order: ASC } }
     ) {
       edges {
