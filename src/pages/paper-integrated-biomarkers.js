@@ -9,9 +9,9 @@ export default function PaperIntegratedBiomarkers() {
     <Layout>
       <div className="page-container home-page">
 
-        <section className="hero-section" style={{ flexDirection: 'column' }}>
+        <section className="hero-section hero-stack">
           <div className="hero-text">
-            <p style={{ marginBottom: 'var(--spacing-2)' }}>
+            <p className="hero-back-link">
               <Link to="/related-papers">&larr; Back to Related Papers</Link>
             </p>
             <h1>Integrated Genetic, Molecular, and Wearable Sensor Biomarkers Enable Bayesian Machine Learning-Driven Precision Stratification in Parkinson's Disease</h1>

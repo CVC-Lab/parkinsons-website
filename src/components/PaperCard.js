@@ -15,7 +15,7 @@ const PaperCard = ({ title, authors, status, summary, link, detailsLink }) => (
     <h3>{title}</h3>
     <p className="paper-authors">{authors}</p>
     <p className="paper-summary">{summary}</p>
-    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+    <div className="paper-link-row">
       {detailsLink && (
         <Link to={detailsLink} className="paper-link">
           View details &rarr;

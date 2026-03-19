@@ -37,7 +37,7 @@ export default function ThrustsPage({ data }) {
                 </h3>
                 {node.frontmatter.summary && <p>{node.frontmatter.summary}</p>}
                 <p>
-                  <Link to={node.frontmatter.slug} className="button secondary" style={{ fontSize: 'var(--text-sm)', padding: 'var(--spacing-2) var(--spacing-4)' }}>
+                  <Link to={node.frontmatter.slug} className="button secondary button-compact">
                     Read full thrust brief &rarr;
                   </Link>
                 </p>

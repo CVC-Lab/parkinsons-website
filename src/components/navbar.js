@@ -13,13 +13,13 @@ const Navbar = ({ menuLinks }) => {
       <nav>
         {/* Desktop nav */}
         <ul className="navbar-list nav-desktop">
-          <li style={{ listStyleType: 'none', paddingLeft: '1rem', paddingRight: '1rem' }}>
+          <li className="navbar-item">
             <a href="https://cvc-lab.github.io/" className="back-to-cvc">
               &larr; CVC Projects
             </a>
           </li>
           {menuLinks.map(link => (
-            <li key={link.name} style={{ listStyleType: 'none', paddingLeft: '1rem', paddingRight: '1rem' }}>
+            <li key={link.name} className="navbar-item">
               <Link to={link.link}>
                 {link.name}
               </Link>

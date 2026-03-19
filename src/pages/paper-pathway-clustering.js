@@ -9,9 +9,9 @@ export default function PaperPathwayClustering() {
     <Layout>
       <div className="page-container home-page">
 
-        <section className="hero-section" style={{ flexDirection: 'column' }}>
+        <section className="hero-section hero-stack">
           <div className="hero-text">
-            <p style={{ marginBottom: 'var(--spacing-2)' }}>
+            <p className="hero-back-link">
               <Link to="/related-papers">&larr; Back to Related Papers</Link>
             </p>
             <h1>Pathway Anchored Multimodal Clustering Reveals Circuit Level Signatures in Parkinson's Disease</h1>

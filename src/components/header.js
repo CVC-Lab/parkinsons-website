@@ -13,7 +13,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           </Link>
           <div className="title-container">
             <h1>
-              <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+              <Link to="/" className="title-link">
                 {siteTitle}
               </Link>
             </h1>

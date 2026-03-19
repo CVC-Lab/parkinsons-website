@@ -112,6 +112,7 @@
   /* Container */
   --container-max-width: 1280px;
   --container-padding: var(--spacing-4);
+  --content-max-width: 860px;
 
   /* Page sections */
   --section-padding-y: var(--spacing-16);

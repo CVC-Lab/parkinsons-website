@@ -13,7 +13,7 @@ export default function ClinicianWorkflowPage({ data }) {
       <div className="page-container home-page">
 
         {/* Hero */}
-        <section className="hero-section" style={{ flexDirection: 'column' }}>
+        <section className="hero-section hero-stack">
           <div className="hero-text">
             <h1>How clinicians use multimodal insights</h1>
             <p>

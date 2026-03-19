@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import PipelineSteps from "../components/PipelineSteps";
 import "../components/style.css";
 
 export default function IndexPage({ data }) {
@@ -10,26 +9,27 @@ export default function IndexPage({ data }) {
     () => data?.thrusts?.edges?.slice(0, 4) ?? [],
     [data]
   );
+  const donors = data?.site?.siteMetadata?.donors ?? [];
 
   return (
     <Layout>
       <div className="page-container home-page">
 
         {/* Hero */}
-        <section className="hero-section" style={{ flexDirection: 'column', textAlign: 'center' }}>
-          <div className="hero-text" style={{ textAlign: 'center' }}>
+        <section className="hero-section hero-stack hero-centered">
+          <div className="hero-text">
             <h1>Precision Neurology for Parkinson's Disease</h1>
             <p>From population patterns to individual care</p>
           </div>
           <div className="hero-figure">
             <StaticImage
-              src="../images/fig_hero_workflow.png"
+              src="../images/precision-neurology.png"
               alt="Precision Neurology for Parkinson's Disease: From population patterns to individual care"
               placeholder="blurred"
               layout="fullWidth"
             />
           </div>
-          <div className="hero-cta" style={{ justifyContent: 'center' }}>
+          <div className="hero-cta hero-cta-centered">
             <Link className="button primary" to="/clinician-workflow">
               See the clinician workflow
             </Link>
@@ -39,7 +39,7 @@ export default function IndexPage({ data }) {
           </div>
         </section>
 
-        {/* Four content blocks */}
+        {/* Core content blocks */}
         <section className="section">
           <div className="content-blocks">
             <div className="content-block">
@@ -59,19 +59,11 @@ export default function IndexPage({ data }) {
               </p>
             </div>
             <div className="content-block">
-              <h3>Clinician-Guided Workflow</h3>
-              <p>
-                Extracted features place each individual within a population-level
-                map, translating group-level knowledge into highly personalized
-                patient profiles.
-              </p>
-            </div>
-            <div className="content-block">
               <h3>Actionable Precision</h3>
               <p>
-                By learning from the population, this workflow equips clinicians
-                with individual-level decision support, surfacing patient-specific
-                risk stratifications and targeted therapeutic priorities.
+                Population-informed models surface patient-specific risk
+                stratifications, subgroup context, and targeted therapeutic
+                priorities.
               </p>
             </div>
           </div>
@@ -97,42 +89,6 @@ export default function IndexPage({ data }) {
               and their longitudinal outcomes.
             </li>
           </ul>
-        </section>
-
-        {/* Clinician workflow */}
-        <section className="section">
-          <h2 className="section-title">Clinician workflow</h2>
-          <p className="prose">
-            From data collection to decision support in four steps:
-          </p>
-          <PipelineSteps />
-        </section>
-
-        {/* What the clinician sees */}
-        <section className="section">
-          <h2 className="section-title">What the clinician sees</h2>
-          <dl className="clinician-outputs">
-            <dt>Subgroup</dt>
-            <dd>
-              A biomarker-defined subgroup label with population context,
-              indicating which cluster the patient most closely resembles.
-            </dd>
-            <dt>Nearest neighbors</dt>
-            <dd>
-              The closest patients in the population map, with their
-              trajectories and outcomes for clinical comparison.
-            </dd>
-            <dt>Pathway burden</dt>
-            <dd>
-              A profile of motor, cognitive, and autonomic pathway contributions
-              weighted by the patient's multimodal signature.
-            </dd>
-            <dt>Monitoring priorities</dt>
-            <dd>
-              Domain-specific flags highlighting which motor, cognitive, or gait
-              measures warrant closest follow-up.
-            </dd>
-          </dl>
         </section>
 
         {/* Evidence highlights */}
@@ -182,9 +138,22 @@ export default function IndexPage({ data }) {
           </p>
         </section>
 
-        {/* Partner with us */}
+        {/* Sponsors */}
         <section className="section final-callout">
-          <h2 className="section-title">Partner with us</h2>
+          <h2 className="section-title">Sponsors and Funding Partners</h2>
+          <ul className="tight-list donor-links">
+            {donors.map((donor) => (
+              <li key={donor.name}>
+                {donor.link ? (
+                  <a href={donor.link} target="_blank" rel="noopener noreferrer">
+                    {donor.name}
+                  </a>
+                ) : (
+                  donor.name
+                )}
+              </li>
+            ))}
+          </ul>
           <p>
             Strategic philanthropy, industry collaborations, and clinical trial
             partnerships accelerate translation of multimodal biomarkers into
@@ -202,6 +171,14 @@ export default function IndexPage({ data }) {
 
 export const query = graphql`
   query HomePage {
+    site {
+      siteMetadata {
+        donors {
+          name
+          link
+        }
+      }
+    }
     thrusts: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "thrust" } } }
       sort: { frontmatter: { order: ASC } }
