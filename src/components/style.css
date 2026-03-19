@@ -1012,6 +1012,104 @@ footer {
   color: var(--ut-burnt-orange);
 }
 
+/* === Content Blocks (2x2 grid) === */
+
+.content-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-6);
+}
+
+.content-block h3 {
+  margin: 0 0 var(--spacing-2);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--ut-charcoal);
+}
+
+.content-block p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ut-charcoal-light);
+  line-height: var(--leading-relaxed);
+}
+
+/* === Hero Figure (full-width prominent) === */
+
+.hero-figure {
+  max-width: 100%;
+  margin: 0 auto var(--spacing-6);
+}
+
+.hero-figure .gatsby-image-wrapper,
+.hero-figure picture,
+.hero-figure img {
+  width: 100% !important;
+  max-width: 100%;
+  border-radius: var(--border-radius-lg);
+  padding: 0;
+  margin: 0;
+}
+
+.figure-caption {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--ut-charcoal-light);
+  margin-top: var(--spacing-2);
+  font-style: italic;
+}
+
+/* === Publication Pages === */
+
+.publication-hero-figure {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-8);
+}
+
+.publication-hero-figure .gatsby-image-wrapper,
+.publication-hero-figure picture,
+.publication-hero-figure img {
+  width: 100% !important;
+  max-width: 100%;
+  border-radius: var(--border-radius-lg);
+  padding: 0;
+  margin: 0;
+}
+
+.publication-section-figure {
+  max-width: 800px;
+  margin: var(--spacing-6) auto;
+}
+
+.publication-section-figure .gatsby-image-wrapper,
+.publication-section-figure picture,
+.publication-section-figure img {
+  width: 100% !important;
+  max-width: 100%;
+  border-radius: var(--border-radius-lg);
+  padding: 0;
+  margin: 0;
+}
+
+.doi-link {
+  display: inline-block;
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: var(--ut-burnt-orange);
+  color: var(--ut-white);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: background-color var(--transition-fast);
+}
+
+.doi-link:hover {
+  background-color: var(--ut-burnt-orange-dark);
+  color: var(--ut-white);
+  opacity: 1;
+}
+
 /* === Scroll Reveal Animations === */
 
 .scroll-reveal {
@@ -1038,6 +1136,10 @@ footer {
 
   .hero-section p {
     font-size: var(--text-base);
+  }
+
+  .content-blocks {
+    grid-template-columns: 1fr;
   }
 
   .pipeline-steps-container {

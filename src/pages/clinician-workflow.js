@@ -13,7 +13,7 @@ export default function ClinicianWorkflowPage({ data }) {
       <div className="page-container home-page">
 
         {/* Hero */}
-        <section className="hero-section">
+        <section className="hero-section" style={{ flexDirection: 'column' }}>
           <div className="hero-text">
             <h1>How clinicians use multimodal insights</h1>
             <p>
@@ -21,38 +21,55 @@ export default function ClinicianWorkflowPage({ data }) {
               subgroups, places each new patient into the nearest subgroup, and
               delivers interpretable decision support to the treating neurologist.
             </p>
-            <p className="hero-subtext">
-              Every step is designed for transparency: the clinician sees which
-              subgroup, which neighbors, and which pathways drive each recommendation.
-            </p>
           </div>
-          <div className="hero-visual">
+          <div className="hero-figure">
             <StaticImage
-              src="../images/training.png"
-              alt="Clinician workflow pipeline overview"
+              src="../images/fig_clinical_workflow.jpg"
+              alt="Clinical workflow: from large multimodal cohort to individual patient application"
               placeholder="blurred"
+              layout="fullWidth"
             />
           </div>
         </section>
 
-        {/* The clinical challenge */}
+        {/* Four content blocks */}
         <section className="section">
-          <h2 className="section-title">The clinical challenge</h2>
-          <div className="prose">
-            <p>
-              Parkinson's disease shares motor and non-motor features with
-              multiple system atrophy (MSA), progressive supranuclear palsy (PSP),
-              and dementia with Lewy bodies (DLB). Clinical scales alone often
-              cannot distinguish them early.
-            </p>
-            <p>
-              Clinic visits capture only a snapshot. Day-to-day variation in gait,
-              tremor, and cognition goes unmeasured. Imaging, wearable, and
-              molecular data fill these gaps with quantitative, longitudinal
-              evidence. Yet these modalities are typically analyzed in isolation.
-              Coordinated inference across modalities unlocks individualized
-              trajectories and intervention planning.
-            </p>
+          <div className="content-blocks">
+            <div className="content-block">
+              <h3>Multimodal Fusion</h3>
+              <p>
+                Integrating genetics, imaging, clinical assessments, molecular
+                bio-specimens, and wearable data from diverse populations to
+                build comprehensive disease profiles.
+              </p>
+            </div>
+            <div className="content-block">
+              <h3>Cluster Identification</h3>
+              <p>
+                Generative population modeling uncovers latent biomarker
+                associations, grouping patients into distinct mechanistic
+                subtypes such as tremor-dominant (slow progression), PIGD
+                (rapid progression), and cognitive-behavioral clusters.
+              </p>
+            </div>
+            <div className="content-block">
+              <h3>Patient Application</h3>
+              <p>
+                Population-level knowledge translates into individual care,
+                providing the neurologist with differential diagnosis support,
+                prognostic trajectory insights, and therapeutic trial
+                stratification.
+              </p>
+            </div>
+            <div className="content-block">
+              <h3>The Twin Approach</h3>
+              <p>
+                Translational AI enables patient-level precision therapeutics
+                and support without replacing clinical judgment, bridging the
+                gap between large-scale population learning and individualized
+                decision-making.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -71,16 +88,11 @@ export default function ClinicianWorkflowPage({ data }) {
               and retrieves comparable patients, providing the clinician with
               outcome context drawn from real cases.
             </p>
-            <p>
-              This reframes traditional latent-space modeling into a practical
-              clinical tool: subgroup labels, nearest-neighbor comparisons, and
-              pathway-level explanations that neurologists can audit and act on.
-            </p>
           </div>
-          <div className="image-container">
+          <div className="publication-section-figure">
             <StaticImage
-              src="../images/clustering_patientdata.png"
-              alt="Patient subgroup discovery through multimodal clustering"
+              src="../images/fig_subgroup_landscape.png"
+              alt="Parkinson's Subgroup Landscape: nearest-neighbor patient placement"
               placeholder="blurred"
             />
           </div>
@@ -90,13 +102,6 @@ export default function ClinicianWorkflowPage({ data }) {
         <section className="section">
           <h2 className="section-title">The pipeline</h2>
           <PipelineSteps />
-          <div className="image-container" style={{ marginTop: '2rem' }}>
-            <StaticImage
-              src="../images/NewProcess.png"
-              alt="Multimodal processing pipeline"
-              placeholder="blurred"
-            />
-          </div>
         </section>
 
         {/* What the clinician sees */}
@@ -123,12 +128,18 @@ export default function ClinicianWorkflowPage({ data }) {
               Domain-specific flags highlighting which measures warrant closest
               follow-up and suggested assessment intervals.
             </dd>
-            <dt>Research and trial flags</dt>
-            <dd>
-              When the patient's profile aligns with active research cohorts or
-              clinical trials, the system surfaces potential enrollment matches.
-            </dd>
           </dl>
+          <div className="publication-section-figure">
+            <StaticImage
+              src="../images/fig_dashboard.png"
+              alt="Parkinson's Disease Decision Support Dashboard"
+              placeholder="blurred"
+            />
+            <p className="figure-caption">
+              Decision support dashboard concept: patient summary, subgroup
+              classification, nearest-neighbor matches, and follow-up recommendations.
+            </p>
+          </div>
         </section>
 
         {/* Domain thrusts feeding the workflow */}

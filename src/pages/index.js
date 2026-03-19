@@ -16,61 +16,65 @@ export default function IndexPage({ data }) {
       <div className="page-container home-page">
 
         {/* Hero */}
-        <section className="hero-section">
-          <div className="hero-text">
-            <h1>Multimodal biomarkers for differential diagnosis and precision Parkinson's care</h1>
-            <p>
-              We integrate imaging, diffusion, wearable, and clinical data to
-              differentiate Parkinson's disease from look-alikes and to identify
-              patient subgroups that respond to different care strategies.
-            </p>
-            <p className="hero-subtext">
-              Four domain thrusts extract features; a clinician-facing workflow
-              places each patient within a population-level map and surfaces
-              actionable monitoring priorities.
-            </p>
-            <div className="hero-cta">
-              <Link className="button primary" to="/clinician-workflow">
-                See the clinician workflow
-              </Link>
-              <Link className="button secondary" to="/thrusts">
-                Explore domain thrusts
-              </Link>
-            </div>
+        <section className="hero-section" style={{ flexDirection: 'column', textAlign: 'center' }}>
+          <div className="hero-text" style={{ textAlign: 'center' }}>
+            <h1>Precision Neurology for Parkinson's Disease</h1>
+            <p>From population patterns to individual care</p>
           </div>
-          <div className="hero-visual">
+          <div className="hero-figure">
             <StaticImage
-              src="../images/progressive_ai.jpg"
-              alt="Multimodal biomarker pipeline for Parkinson's care"
+              src="../images/fig_hero_workflow.png"
+              alt="Precision Neurology for Parkinson's Disease: From population patterns to individual care"
               placeholder="blurred"
+              layout="fullWidth"
             />
+          </div>
+          <div className="hero-cta" style={{ justifyContent: 'center' }}>
+            <Link className="button primary" to="/clinician-workflow">
+              See the clinician workflow
+            </Link>
+            <Link className="button secondary" to="/thrusts">
+              Explore domain thrusts
+            </Link>
           </div>
         </section>
 
-        {/* What makes our approach different */}
+        {/* Four content blocks */}
         <section className="section">
-          <h2 className="section-title">What makes our approach different</h2>
-          <ul className="tight-list prose">
-            <li>
-              <strong>Multimodal:</strong> Imaging, diffusion, wearable sensors,
-              biospecimens, and clinical scales fused in a shared representation
-              rather than analyzed in isolation.
-            </li>
-            <li>
-              <strong>Longitudinal:</strong> Time-aware modeling tracks disease
-              progression rather than relying on single-visit snapshots.
-            </li>
-            <li>
-              <strong>Subgroup-based:</strong> Population-level discovery identifies
-              clusters of patients who share biology and trajectory, enabling
-              precision stratification.
-            </li>
-            <li>
-              <strong>Clinician-in-the-loop:</strong> Every inference surfaces in
-              interactive tools designed with neurologists, not as a black-box
-              prediction.
-            </li>
-          </ul>
+          <div className="content-blocks">
+            <div className="content-block">
+              <h3>Multimodal Data Integration</h3>
+              <p>
+                We integrate four core data domains — clinical assessments, brain
+                imaging, genetic profiles, and wearable sensor data — from
+                large-scale cohorts to build a comprehensive baseline.
+              </p>
+            </div>
+            <div className="content-block">
+              <h3>Subgroup Discovery</h3>
+              <p>
+                An advanced AI framework analyzes this integrated data to reveal
+                latent markers, differentiating Parkinson's disease from look-alikes
+                and discovering meaningful patient subgroups.
+              </p>
+            </div>
+            <div className="content-block">
+              <h3>Clinician-Guided Workflow</h3>
+              <p>
+                Extracted features place each individual within a population-level
+                map, translating group-level knowledge into highly personalized
+                patient profiles.
+              </p>
+            </div>
+            <div className="content-block">
+              <h3>Actionable Precision</h3>
+              <p>
+                By learning from the population, this workflow equips clinicians
+                with individual-level decision support, surfacing patient-specific
+                risk stratifications and targeted therapeutic priorities.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* What we differentiate */}

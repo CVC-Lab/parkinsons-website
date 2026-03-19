@@ -11,6 +11,7 @@ const papers = [
     summary:
       "Presents a pathway-anchored co-clustering framework (SRVCC) integrating structural MRI, DTI, and DaT-SPECT within six predefined neuroanatomical circuits. Multimodal Pathway Integrity Scores reveal circuit-level imaging heterogeneity linked to motor severity and cognitive function across five imaging-driven patient clusters in the PPMI cohort.",
     link: "https://doi.org/10.64898/2025.12.15.694278",
+    detailsLink: "/paper-pathway-clustering",
   },
   {
     title: "Integrated Genetic, Molecular, and Wearable Sensor Biomarkers Enable Bayesian Machine Learning-Driven Precision Stratification in Parkinson's Disease",
@@ -19,6 +20,7 @@ const papers = [
     summary:
       "Integrates LRRK2 G2019S genetic status, urinary phospho-LRRK2, CSF alpha-synuclein seed amplification, and IMU-derived gait metrics into a Bayesian clustering framework. Identifies four motor phenotypes across 4,775 PPMI patients and 627 LRRK2 Consortium participants, with a risk prediction model enabling personalized prognostic counseling.",
     link: "https://doi.org/10.64898/2025.12.02.25340302",
+    detailsLink: "/paper-integrated-biomarkers",
   },
 ];
 
