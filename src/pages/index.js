@@ -2,6 +2,9 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
+import differentialDiagnosisThumbnail from "../images/differential-diagnosis-thumbnail.jpg";
+import precisionStratificationThumbnail from "../images/precision-stratification-thumbnail.jpg";
+import nearestNeighborThumbnail from "../images/nearest-neighbor-thumbnail.jpg";
 import "../components/style.css";
 
 export default function IndexPage({ data }) {
@@ -23,7 +26,7 @@ export default function IndexPage({ data }) {
           </div>
           <div className="hero-figure">
             <StaticImage
-              src="../images/precision-neurology.png"
+              src="../images/home-main.png"
               alt="Precision Neurology for Parkinson's Disease: From population patterns to individual care"
               placeholder="blurred"
               layout="fullWidth"
@@ -66,27 +69,62 @@ export default function IndexPage({ data }) {
                 priorities.
               </p>
             </div>
+            <div className="content-block">
+              <h3>Port Hamiltonian Modeling</h3>
+              <p>
+                We solve the multimodal dynamics with a port-Hamiltonian
+                formulation that preserves structure while supporting stable,
+                interpretable patient-state inference.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* What we differentiate */}
         <section className="section">
           <h2 className="section-title">What we differentiate</h2>
-          <ul className="tight-list prose">
-            <li>
-              <strong>Differential diagnosis:</strong> Molecular evidence such as
-              CSF alpha-synuclein seed amplification helps disambiguate Parkinson's
-              disease from look-alikes including MSA, PSP, and DLB.
+          <ul className="differentiate-list">
+            <li className="differentiate-item">
+              <img
+                src={differentialDiagnosisThumbnail}
+                alt="Differential diagnosis thumbnail"
+                className="differentiate-thumb"
+              />
+              <div className="differentiate-copy">
+                <span className="differentiate-label">Differential diagnosis</span>
+                <p>
+                  Seed amplification biomarkers help separate Parkinson&apos;s
+                  disease from look-alikes such as MSA, PSP, and DLB.
+                </p>
+              </div>
             </li>
-            <li>
-              <strong>Precision stratification:</strong> Pathway-weighted profiles
-              define subgroups within Parkinson's disease, each with distinct
-              biology and clinical trajectory.
+            <li className="differentiate-item">
+              <img
+                src={precisionStratificationThumbnail}
+                alt="Precision stratification thumbnail"
+                className="differentiate-thumb"
+              />
+              <div className="differentiate-copy">
+                <span className="differentiate-label">Precision stratification</span>
+                <p>
+                  Pathway-weighted profiles group patients into biologically
+                  distinct Parkinson&apos;s subtypes with different trajectories.
+                </p>
+              </div>
             </li>
-            <li>
-              <strong>Nearest-neighbor comparison:</strong> New patients are placed
-              against the closest population subgroup, surfacing comparable cases
-              and their longitudinal outcomes.
+            <li className="differentiate-item">
+              <img
+                src={nearestNeighborThumbnail}
+                alt="Nearest-neighbor comparison thumbnail"
+                className="differentiate-thumb"
+              />
+              <div className="differentiate-copy">
+                <span className="differentiate-label">Nearest-neighbor comparison</span>
+                <p>
+                  Each new patient is matched to the closest subgroup and
+                  comparable cases to surface likely outcomes.
+                </p>
+              </div>
             </li>
           </ul>
         </section>

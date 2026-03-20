@@ -24,7 +24,7 @@ export default function ClinicianWorkflowPage({ data }) {
           </div>
           <div className="hero-figure">
             <StaticImage
-              src="../images/fig_clinical_workflow.jpg"
+              src="../images/clinician-picture.png"
               alt="Clinical workflow: from large multimodal cohort to individual patient application"
               placeholder="blurred"
               layout="fullWidth"
@@ -140,6 +140,17 @@ export default function ClinicianWorkflowPage({ data }) {
               classification, nearest-neighbor matches, and follow-up recommendations.
             </p>
           </div>
+          <p className="workflow-inline-link">
+            Explore the interactive workflow in the{" "}
+            <a
+              href="https://cvc-lab.github.io/parkinson-viz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Parkinson Viz dashboard
+            </a>
+            .
+          </p>
         </section>
 
         {/* Domain thrusts feeding the workflow */}

@@ -40,8 +40,7 @@
         link: 'https://www.utexas.edu'
       },
       {
-        name: 'Oden Institute for Computational Engineering and Sciences',
-        link: 'https://www.oden.utexas.edu'
+        name: 'Peter O\'Donnell Foundation'
       }
     ],
     title: `Multimodal Biomarkers for Parkinson's Disease`,
