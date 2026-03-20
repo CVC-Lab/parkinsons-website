@@ -961,9 +961,17 @@ footer {
   align-items: center;
 }
 
-.differentiate-thumb {
+.differentiate-thumb-frame {
   width: 120px;
-  aspect-ratio: 4 / 3;
+}
+
+.differentiate-thumb-media {
+  width: 100%;
+}
+
+.differentiate-thumb {
+  display: block;
+  width: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-md);
   border: 1px solid var(--ut-limestone);
@@ -1348,7 +1356,7 @@ footer {
     gap: var(--spacing-2);
   }
 
-  .differentiate-thumb {
+  .differentiate-thumb-frame {
     width: 100%;
     max-width: 220px;
   }

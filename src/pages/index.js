@@ -2,9 +2,6 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import differentialDiagnosisThumbnail from "../images/differential-diagnosis-thumbnail.jpg";
-import precisionStratificationThumbnail from "../images/precision-stratification-thumbnail.jpg";
-import nearestNeighborThumbnail from "../images/nearest-neighbor-thumbnail.jpg";
 import "../components/style.css";
 
 export default function IndexPage({ data }) {
@@ -85,11 +82,17 @@ export default function IndexPage({ data }) {
           <h2 className="section-title">What we differentiate</h2>
           <ul className="differentiate-list">
             <li className="differentiate-item">
-              <img
-                src={differentialDiagnosisThumbnail}
-                alt="Differential diagnosis thumbnail"
-                className="differentiate-thumb"
-              />
+              <div className="differentiate-thumb-frame">
+                <StaticImage
+                  src="../images/differential-diagnosis-thumbnail.jpg"
+                  alt="Differential diagnosis thumbnail"
+                  className="differentiate-thumb-media"
+                  imgClassName="differentiate-thumb"
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  aspectRatio={4 / 3}
+                />
+              </div>
               <div className="differentiate-copy">
                 <span className="differentiate-label">Differential diagnosis</span>
                 <p>
@@ -99,11 +102,17 @@ export default function IndexPage({ data }) {
               </div>
             </li>
             <li className="differentiate-item">
-              <img
-                src={precisionStratificationThumbnail}
-                alt="Precision stratification thumbnail"
-                className="differentiate-thumb"
-              />
+              <div className="differentiate-thumb-frame">
+                <StaticImage
+                  src="../images/precision-stratification-thumbnail.jpg"
+                  alt="Precision stratification thumbnail"
+                  className="differentiate-thumb-media"
+                  imgClassName="differentiate-thumb"
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  aspectRatio={4 / 3}
+                />
+              </div>
               <div className="differentiate-copy">
                 <span className="differentiate-label">Precision stratification</span>
                 <p>
@@ -113,11 +122,17 @@ export default function IndexPage({ data }) {
               </div>
             </li>
             <li className="differentiate-item">
-              <img
-                src={nearestNeighborThumbnail}
-                alt="Nearest-neighbor comparison thumbnail"
-                className="differentiate-thumb"
-              />
+              <div className="differentiate-thumb-frame">
+                <StaticImage
+                  src="../images/nearest-neighbor-thumbnail.jpg"
+                  alt="Nearest-neighbor comparison thumbnail"
+                  className="differentiate-thumb-media"
+                  imgClassName="differentiate-thumb"
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  aspectRatio={4 / 3}
+                />
+              </div>
               <div className="differentiate-copy">
                 <span className="differentiate-label">Nearest-neighbor comparison</span>
                 <p>
