@@ -2,3 +2,8 @@ node_modules/
 .cache/
 public
 .claude/
+
+# Large binary docs (keep local only)
+docs/*.pdf
+docs/*.pptx
+docs/*.docx
