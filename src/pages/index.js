@@ -13,7 +13,7 @@ export default function IndexPage({ data }) {
 
   return (
     <Layout>
-      <div className="page-container home-page">
+      <div className="page-container home-page home-page-landing">
 
         {/* Hero */}
         <section className="hero-section hero-stack hero-centered">

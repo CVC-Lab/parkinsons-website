@@ -344,6 +344,20 @@ footer {
   display: block;
 }
 
+.home-page-landing {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.home-page-landing .content-blocks,
+.home-page-landing .dense-section.two-column {
+  grid-template-columns: 1fr;
+}
+
+.home-page-landing .hero-figure {
+  max-width: 900px;
+}
+
 .prose {
   max-width: var(--content-max-width);
 }
