@@ -40,10 +40,11 @@
         link: 'https://www.utexas.edu'
       },
       {
-        name: 'Peter O\'Donnell Foundation'
+        name: 'Peter O\'Donnell Foundation',
+        link: 'https://www.tshmf.org/ODonnells.html'
       }
     ],
-    title: `Multimodal Biomarkers for Parkinson's Disease`,
+    title: `Actionable Intelligence For Combating Parkinson’s`,
     description: `UT Austin Oden Institute research program integrating imaging, diffusion, wearable, and clinical data into biomarker-defined subgroups for differential diagnosis and precision Parkinson's care.`,
     siteUrl: `https://cvc-lab.github.io/parkinsons-website`
   },
