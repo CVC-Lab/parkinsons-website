@@ -35,16 +35,16 @@ export default function IndexPage({ data }) {
         {/* Core content blocks */}
         <section className="section">
           <div className="content-blocks">
-            <div className="content-block">
+            <div className="content-block content-block--media">
               <div className="content-block-thumb-frame">
                 <StaticImage
-                  src="../images/multimodal-data-integration-thumbnail.png"
+                  src="../images/multimodal-data-integration-replacement.jpg"
                   alt="Multimodal Data Integration thumbnail"
                   className="content-block-thumb-media"
                   imgClassName="content-block-thumb"
                   placeholder="blurred"
                   layout="fullWidth"
-                  aspectRatio={1}
+                  aspectRatio={16 / 9}
                 />
               </div>
               <div className="content-block-copy">
@@ -72,16 +72,16 @@ export default function IndexPage({ data }) {
                 </div>
               </div>
             </div>
-            <div className="content-block">
+            <div className="content-block content-block--media">
               <div className="content-block-thumb-frame">
                 <StaticImage
-                  src="../images/subgroup-discovery-thumbnail.png"
+                  src="../images/subgroup-discovery-replacement.jpg"
                   alt="Subgroup Discovery thumbnail"
                   className="content-block-thumb-media"
                   imgClassName="content-block-thumb"
                   placeholder="blurred"
                   layout="fullWidth"
-                  aspectRatio={1}
+                  aspectRatio={16 / 9}
                 />
               </div>
               <div className="content-block-copy">
@@ -102,16 +102,16 @@ export default function IndexPage({ data }) {
                 </div>
               </div>
             </div>
-            <div className="content-block">
+            <div className="content-block content-block--media">
               <div className="content-block-thumb-frame">
                 <StaticImage
-                  src="../images/actionable-precision-thumbnail.png"
+                  src="../images/actionable-precision-replacement.jpg"
                   alt="Actionable Precision thumbnail"
                   className="content-block-thumb-media"
                   imgClassName="content-block-thumb"
                   placeholder="blurred"
                   layout="fullWidth"
-                  aspectRatio={1}
+                  aspectRatio={16 / 9}
                 />
               </div>
               <div className="content-block-copy">
@@ -153,16 +153,16 @@ export default function IndexPage({ data }) {
                 </div>
               </div>
             </div>
-            <div className="content-block">
+            <div className="content-block content-block--media">
               <div className="content-block-thumb-frame">
                 <StaticImage
-                  src="../images/port-hamiltonian-modeling-thumbnail.png"
+                  src="../images/port-hamiltonian-modeling-replacement.jpg"
                   alt="Port Hamiltonian Modeling thumbnail"
                   className="content-block-thumb-media"
                   imgClassName="content-block-thumb"
                   placeholder="blurred"
                   layout="fullWidth"
-                  aspectRatio={1}
+                  aspectRatio={16 / 9}
                 />
               </div>
               <div className="content-block-copy">

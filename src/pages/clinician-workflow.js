@@ -1,13 +1,10 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import PipelineSteps from "../components/PipelineSteps";
 import "../components/style.css";
 
-export default function ClinicianWorkflowPage({ data }) {
-  const thrusts = data?.thrusts?.edges ?? [];
-
+export default function ClinicianWorkflowPage() {
   return (
     <Layout>
       <div className="page-container home-page">
@@ -152,48 +149,7 @@ export default function ClinicianWorkflowPage({ data }) {
             .
           </p>
         </section>
-
-        {/* Domain thrusts feeding the workflow */}
-        <section className="section">
-          <h2 className="section-title">Domain thrusts feeding the workflow</h2>
-          <div className="dense-section two-column">
-            {thrusts.map(({ node }) => (
-              <article key={node.id} className="dense-brief">
-                <h3>
-                  <Link to={node.frontmatter.slug}>{node.frontmatter.title}</Link>
-                </h3>
-                {node.frontmatter.summary && <p>{node.frontmatter.summary}</p>}
-              </article>
-            ))}
-          </div>
-          <p className="text-block centered">
-            Full briefs on the{" "}
-            <Link to="/thrusts">Domain Thrusts page</Link>.
-          </p>
-        </section>
-
       </div>
     </Layout>
   );
 }
-
-export const query = graphql`
-  query ClinicianWorkflowPage {
-    thrusts: allMarkdownRemark(
-      filter: { frontmatter: { category: { eq: "thrust" } } }
-      sort: { frontmatter: { order: ASC } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            slug
-            summary
-            order
-          }
-        }
-      }
-    }
-  }
-`;

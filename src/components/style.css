@@ -349,9 +349,12 @@ footer {
   margin: 0 auto;
 }
 
-.home-page-landing .content-blocks,
-.home-page-landing .dense-section.two-column {
-  grid-template-columns: 1fr;
+.home-page-landing .content-block--media {
+  grid-template-columns: 144px minmax(0, 1fr);
+}
+
+.home-page-landing .content-block-thumb-frame {
+  width: 144px;
 }
 
 .home-page-landing .hero-figure {
@@ -988,6 +991,43 @@ footer {
   color: var(--ut-charcoal);
 }
 
+.thrust-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-5);
+}
+
+.thrust-card {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: var(--spacing-4);
+  align-items: start;
+}
+
+.thrust-card-thumb-frame {
+  width: 120px;
+}
+
+.thrust-card-thumb-media {
+  width: 100%;
+}
+
+.thrust-card-thumb {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--ut-limestone);
+}
+
+.thrust-card-copy {
+  min-width: 0;
+}
+
+.thrust-card-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .differentiate-copy p {
   margin: 0;
   color: var(--ut-charcoal-light);
@@ -1139,24 +1179,28 @@ footer {
   color: var(--ut-burnt-orange);
 }
 
-/* === Content Blocks (2x2 grid) === */
+/* === Content Blocks === */
 
 .content-blocks {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--spacing-4);
   margin-top: var(--spacing-4);
 }
 
 .content-block {
+  display: block;
+}
+
+.content-block--media {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: 120px minmax(0, 1fr);
   gap: var(--spacing-3);
   align-items: start;
 }
 
 .content-block-thumb-frame {
-  width: 72px;
+  width: 120px;
 }
 
 .content-block-thumb-media {
@@ -1366,16 +1410,32 @@ footer {
   }
 
   .content-blocks {
-    grid-template-columns: 1fr;
     gap: var(--spacing-3);
   }
 
-  .content-block {
-    grid-template-columns: 64px minmax(0, 1fr);
+  .home-page-landing .content-block--media {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .home-page-landing .content-block-thumb-frame {
+    width: 120px;
+  }
+
+  .content-block--media {
+    grid-template-columns: 100px minmax(0, 1fr);
   }
 
   .content-block-thumb-frame {
-    width: 64px;
+    width: 100px;
+  }
+
+  .thrust-card {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: var(--spacing-3);
+  }
+
+  .thrust-card-thumb-frame {
+    width: 100px;
   }
 
   .pipeline-steps-container {
