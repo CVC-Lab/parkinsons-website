@@ -67,7 +67,7 @@ export default function ThrustsPage({ data }) {
 
   return (
     <Layout>
-      <div className="page-container home-page">
+      <div className="page-container home-page compact-page-shell">
         <section className="hero-section">
           <div className="hero-text">
             <h1>Domain Thrusts</h1>

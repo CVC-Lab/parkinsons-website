@@ -7,7 +7,7 @@ import "../components/style.css";
 export default function ClinicianWorkflowPage() {
   return (
     <Layout>
-      <div className="page-container home-page">
+      <div className="page-container home-page compact-page-shell">
 
         {/* Hero */}
         <section className="hero-section hero-stack">
