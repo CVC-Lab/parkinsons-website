@@ -16,11 +16,16 @@ const PaperCard = ({ title, authors, status, summary, link, detailsLink }) => (
     <p className="paper-authors">{authors}</p>
     <p className="paper-summary">{summary}</p>
     <div className="paper-link-row">
-      {detailsLink && (
-        <Link to={detailsLink} className="paper-link">
-          View details &rarr;
-        </Link>
-      )}
+      {detailsLink &&
+        (detailsLink.startsWith("http://") || detailsLink.startsWith("https://") ? (
+          <a href={detailsLink} className="paper-link" target="_blank" rel="noopener noreferrer">
+            View details &rarr;
+          </a>
+        ) : (
+          <Link to={detailsLink} className="paper-link">
+            View details &rarr;
+          </Link>
+        ))}
       {link && (
         <a href={link} className="paper-link" target="_blank" rel="noopener noreferrer">
           View paper &rarr;

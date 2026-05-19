@@ -22,6 +22,15 @@ const papers = [
     link: "https://doi.org/10.64898/2025.12.02.25340302",
     detailsLink: "/paper-integrated-biomarkers",
   },
+  {
+    title: "A Novel Tri-Modal Viral-Ultrasound Gene-Delivery Therapy Protocol for Lysosomal Neurodegeneration via Stochastic Model Optimization with Uncertainty Quantification and Generalizability",
+    authors: "Nekkanti, K., Bajaj, C.",
+    status: "Preprint",
+    summary:
+      "Introduces a computationally optimized tri-modal AAV-T4, SP2, and focused ultrasound gene-delivery protocol for lysosomal neurodegeneration. The project combines stochastic model optimization, uncertainty quantification, and generalizability analysis to evaluate therapeutic trajectories and protocol robustness.",
+    link: "https://cvc-lab.github.io/projects/tri-modal-gene-therapy/Tri-modal_kartheek-arxiv.pdf",
+    detailsLink: "https://cvc-lab.github.io/projects/tri-modal-gene-therapy/",
+  },
 ];
 
 export default function RelatedPapersPage() {
