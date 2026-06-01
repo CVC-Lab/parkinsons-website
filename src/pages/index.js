@@ -6,6 +6,107 @@ import "../components/style.css";
 
 export default function IndexPage({ data }) {
   const donors = data?.site?.siteMetadata?.donors ?? [];
+  const [activePreview, setActivePreview] = React.useState(null);
+
+  React.useEffect(() => {
+    if (!activePreview) return undefined;
+
+    const handleKeyDown = event => {
+      if (event.key === "Escape") {
+        setActivePreview(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [activePreview]);
+
+  const previewTitles = {
+    multimodal: "Multimodal Data Integration",
+    subgroup: "Subgroup Discovery",
+    precision: "Actionable Precision",
+    hamiltonian: "Port Hamiltonian Modeling",
+    diagnosis: "Differential diagnosis",
+    stratification: "Precision stratification",
+    intervention: "Optimal Intervention and Decision Support",
+  };
+
+  const renderPreviewImage = () => {
+    switch (activePreview) {
+      case "multimodal":
+        return (
+          <StaticImage
+            src="../images/multimodal-data-integration-replacement.jpg"
+            alt="Multimodal Data Integration full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      case "subgroup":
+        return (
+          <StaticImage
+            src="../images/subgroup-discovery-replacement.jpg"
+            alt="Subgroup Discovery full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      case "precision":
+        return (
+          <StaticImage
+            src="../images/actionable-precision-replacement.jpg"
+            alt="Actionable Precision full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      case "hamiltonian":
+        return (
+          <StaticImage
+            src="../images/port-hamiltonian-modeling-replacement.jpg"
+            alt="Port Hamiltonian Modeling full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      case "diagnosis":
+        return (
+          <StaticImage
+            src="../images/differential-diagnosis-thumbnail.jpg"
+            alt="Differential diagnosis full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      case "stratification":
+        return (
+          <StaticImage
+            src="../images/precision-stratification-thumbnail.jpg"
+            alt="Precision stratification full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      case "intervention":
+        return (
+          <StaticImage
+            src="../images/nearest-neighbor-thumbnail.jpg"
+            alt="Optimal intervention and decision support full preview"
+            placeholder="blurred"
+            layout="constrained"
+            width={1100}
+          />
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <Layout>
@@ -36,7 +137,12 @@ export default function IndexPage({ data }) {
         <section className="section">
           <div className="content-blocks">
             <div className="content-block content-block--media">
-              <div className="content-block-thumb-frame">
+              <button
+                type="button"
+                className="content-block-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("multimodal")}
+                aria-label="View Multimodal Data Integration image larger"
+              >
                 <StaticImage
                   src="../images/multimodal-data-integration-replacement.jpg"
                   alt="Multimodal Data Integration thumbnail"
@@ -46,7 +152,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={16 / 9}
                 />
-              </div>
+              </button>
               <div className="content-block-copy">
                 <h3>Multimodal Data Integration</h3>
                 <p>
@@ -73,7 +179,12 @@ export default function IndexPage({ data }) {
               </div>
             </div>
             <div className="content-block content-block--media">
-              <div className="content-block-thumb-frame">
+              <button
+                type="button"
+                className="content-block-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("subgroup")}
+                aria-label="View Subgroup Discovery image larger"
+              >
                 <StaticImage
                   src="../images/subgroup-discovery-replacement.jpg"
                   alt="Subgroup Discovery thumbnail"
@@ -83,7 +194,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={16 / 9}
                 />
-              </div>
+              </button>
               <div className="content-block-copy">
                 <h3>Subgroup Discovery</h3>
                 <p>
@@ -103,7 +214,12 @@ export default function IndexPage({ data }) {
               </div>
             </div>
             <div className="content-block content-block--media">
-              <div className="content-block-thumb-frame">
+              <button
+                type="button"
+                className="content-block-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("precision")}
+                aria-label="View Actionable Precision image larger"
+              >
                 <StaticImage
                   src="../images/actionable-precision-replacement.jpg"
                   alt="Actionable Precision thumbnail"
@@ -113,7 +229,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={16 / 9}
                 />
-              </div>
+              </button>
               <div className="content-block-copy">
                 <h3>Actionable Precision</h3>
                 <p>
@@ -154,7 +270,12 @@ export default function IndexPage({ data }) {
               </div>
             </div>
             <div className="content-block content-block--media">
-              <div className="content-block-thumb-frame">
+              <button
+                type="button"
+                className="content-block-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("hamiltonian")}
+                aria-label="View Port Hamiltonian Modeling image larger"
+              >
                 <StaticImage
                   src="../images/port-hamiltonian-modeling-replacement.jpg"
                   alt="Port Hamiltonian Modeling thumbnail"
@@ -164,7 +285,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={16 / 9}
                 />
-              </div>
+              </button>
               <div className="content-block-copy">
                 <h3>Port Hamiltonian Modeling</h3>
                 <p>
@@ -191,7 +312,12 @@ export default function IndexPage({ data }) {
           <h2 className="section-title">What we differentiate</h2>
           <ul className="differentiate-list">
             <li className="differentiate-item">
-              <div className="differentiate-thumb-frame">
+              <button
+                type="button"
+                className="differentiate-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("diagnosis")}
+                aria-label="View Differential diagnosis image larger"
+              >
                 <StaticImage
                   src="../images/differential-diagnosis-thumbnail.jpg"
                   alt="Differential diagnosis thumbnail"
@@ -201,7 +327,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={4 / 3}
                 />
-              </div>
+              </button>
               <div className="differentiate-copy">
                 <span className="differentiate-label">Differential diagnosis</span>
                 <p>
@@ -211,7 +337,12 @@ export default function IndexPage({ data }) {
               </div>
             </li>
             <li className="differentiate-item">
-              <div className="differentiate-thumb-frame">
+              <button
+                type="button"
+                className="differentiate-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("stratification")}
+                aria-label="View Precision stratification image larger"
+              >
                 <StaticImage
                   src="../images/precision-stratification-thumbnail.jpg"
                   alt="Precision stratification thumbnail"
@@ -221,7 +352,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={4 / 3}
                 />
-              </div>
+              </button>
               <div className="differentiate-copy">
                 <span className="differentiate-label">Precision stratification</span>
                 <p>
@@ -231,7 +362,12 @@ export default function IndexPage({ data }) {
               </div>
             </li>
             <li className="differentiate-item">
-              <div className="differentiate-thumb-frame">
+              <button
+                type="button"
+                className="differentiate-thumb-frame thumbnail-preview-trigger"
+                onClick={() => setActivePreview("intervention")}
+                aria-label="View Optimal intervention and decision support image larger"
+              >
                 <StaticImage
                   src="../images/nearest-neighbor-thumbnail.jpg"
                   alt="Optimal intervention and decision support thumbnail"
@@ -241,7 +377,7 @@ export default function IndexPage({ data }) {
                   layout="fullWidth"
                   aspectRatio={4 / 3}
                 />
-              </div>
+              </button>
               <div className="differentiate-copy">
                 <span className="differentiate-label">Optimal Intervention and Decision Support</span>
                 <p>
@@ -335,6 +471,34 @@ export default function IndexPage({ data }) {
             <Link to="/resources">resources portal</Link>.
           </p>
         </section>
+
+        {activePreview && (
+          <div
+            className="image-preview-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${previewTitles[activePreview]} image preview`}
+          >
+            <button
+              type="button"
+              className="image-preview-modal__backdrop"
+              onClick={() => setActivePreview(null)}
+              aria-label="Close image preview"
+            />
+            <div className="image-preview-modal__content">
+              <button
+                type="button"
+                className="image-preview-modal__close"
+                onClick={() => setActivePreview(null)}
+                aria-label="Close image preview"
+              >
+                ×
+              </button>
+              <div className="image-preview-modal__image">{renderPreviewImage()}</div>
+              <p>{previewTitles[activePreview]}</p>
+            </div>
+          </div>
+        )}
 
       </div>
     </Layout>
