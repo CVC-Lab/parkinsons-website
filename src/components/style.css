@@ -970,12 +970,14 @@ footer {
 
 .differentiate-thumb-media {
   width: 100%;
+  background: var(--ut-off-white);
+  border-radius: var(--border-radius-md);
 }
 
 .differentiate-thumb {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain !important;
   border-radius: var(--border-radius-md);
 }
 
@@ -1203,12 +1205,14 @@ footer {
 
 .content-block-thumb-media {
   width: 100%;
+  background: var(--ut-off-white);
+  border-radius: var(--border-radius-md);
 }
 
 .content-block-thumb {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain !important;
   border-radius: var(--border-radius-md);
 }
 
