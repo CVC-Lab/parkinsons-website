@@ -1342,6 +1342,302 @@ footer {
   line-height: var(--leading-normal);
 }
 
+/* === Digital Twin Initiative === */
+
+.digital-twin-page .hero-section {
+  gap: var(--spacing-4);
+}
+
+.digital-twin-hero .hero-text {
+  max-width: 920px;
+}
+
+.initiative-eyebrow {
+  margin: 0 0 var(--spacing-2);
+  color: var(--ut-burnt-orange) !important;
+  font-size: var(--text-sm) !important;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.initiative-figure {
+  margin: 0;
+}
+
+.initiative-figure .gatsby-image-wrapper,
+.initiative-figure picture,
+.initiative-figure img {
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--ut-limestone-light);
+  box-shadow: var(--shadow-sm);
+  background: var(--ut-white);
+}
+
+.initiative-figure figcaption {
+  padding-top: var(--spacing-2);
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+}
+
+.initiative-lead-grid,
+.initiative-output-grid,
+.initiative-advance-grid,
+.initiative-impact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+}
+
+.initiative-lead-card,
+.initiative-output-card,
+.initiative-advance-card,
+.initiative-impact-card {
+  min-width: 0;
+  padding: var(--spacing-5);
+  border: 1px solid var(--ut-limestone-light);
+  border-radius: var(--border-radius-lg);
+  background: var(--ut-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.initiative-lead-card {
+  border-top: 3px solid var(--ut-burnt-orange);
+}
+
+.initiative-stat {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  color: var(--ut-charcoal);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+}
+
+.initiative-lead-card p,
+.initiative-output-card p {
+  margin: 0;
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.initiative-output-card {
+  border-left: 3px solid var(--ut-green);
+}
+
+.initiative-output-card h3 {
+  margin: 0 0 var(--spacing-2);
+  color: var(--ut-charcoal);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.initiative-advance-card {
+  border-top: 3px solid var(--ut-blue);
+}
+
+.initiative-advance-card h3,
+.initiative-impact-card h3 {
+  margin: 0 0 var(--spacing-2);
+  color: var(--ut-charcoal);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+.initiative-advance-card p,
+.initiative-impact-card p {
+  margin: 0;
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.initiative-impact-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  border-left: 3px solid var(--ut-burnt-orange);
+}
+
+.initiative-impact-role {
+  margin: 0;
+  color: var(--ut-burnt-orange) !important;
+  font-size: var(--text-xs) !important;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.initiative-impact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: auto;
+  padding-top: var(--spacing-2);
+}
+
+.initiative-impact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid rgba(191, 87, 0, 0.25);
+  border-radius: var(--border-radius-full);
+  background: rgba(191, 87, 0, 0.08);
+  color: var(--ut-burnt-orange);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-tight);
+}
+
+.initiative-impact-links a:hover,
+.initiative-impact-links a:focus {
+  background: var(--ut-burnt-orange);
+  color: var(--ut-white);
+  opacity: 1;
+}
+
+.initiative-split-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-5);
+  align-items: center;
+}
+
+.initiative-check-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3);
+  padding: 0;
+  margin: var(--spacing-4) 0;
+  list-style: none;
+}
+
+.initiative-check-list li {
+  position: relative;
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-4) var(--spacing-10);
+  border: 1px solid var(--ut-limestone-light);
+  border-radius: var(--border-radius-lg);
+  background: var(--ut-off-white);
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.initiative-check-list li::before {
+  content: "";
+  position: absolute;
+  left: var(--spacing-4);
+  top: 1.25rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: var(--border-radius-full);
+  background: var(--ut-burnt-orange);
+}
+
+.initiative-budget-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3);
+  margin: var(--spacing-4) 0;
+}
+
+.initiative-budget-card {
+  padding: var(--spacing-4);
+  border: 1px solid var(--ut-limestone-light);
+  border-radius: var(--border-radius-lg);
+  background: var(--ut-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.initiative-budget-card span {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  color: var(--ut-burnt-orange);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+}
+
+.initiative-budget-card h3,
+.initiative-support-note h3 {
+  margin: 0 0 var(--spacing-2);
+  color: var(--ut-charcoal);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.initiative-budget-card p {
+  margin: 0;
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.initiative-support-note {
+  margin: var(--spacing-5) 0;
+  padding: var(--spacing-5);
+  border-left: 3px solid var(--ut-blue);
+  border-radius: var(--border-radius-lg);
+  background: var(--ut-off-white);
+}
+
+.initiative-support-note ul {
+  display: grid;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding-left: var(--spacing-5);
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.initiative-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.initiative-timeline article {
+  position: relative;
+  padding: var(--spacing-5);
+  border: 1px solid var(--ut-limestone-light);
+  border-radius: var(--border-radius-lg);
+  background: var(--ut-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.initiative-timeline span {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: var(--spacing-3);
+  border-radius: var(--border-radius-full);
+  background: var(--ut-blue);
+  color: var(--ut-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.initiative-timeline h3 {
+  margin: 0 0 var(--spacing-2);
+  color: var(--ut-charcoal);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.initiative-timeline p {
+  margin: 0;
+  color: var(--ut-charcoal-light);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
 /* === Hero Figure (full-width prominent) === */
 
 .hero-figure {
@@ -1622,6 +1918,15 @@ footer {
   .image-preview-modal__content p {
     margin-right: var(--spacing-10);
   }
+
+  .digital-twin-page .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .digital-twin-page .button {
+    text-align: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1659,6 +1964,41 @@ footer {
 
   .dense-section.two-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .initiative-lead-grid,
+  .initiative-output-grid,
+  .initiative-advance-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .initiative-impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .initiative-split-section {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--spacing-8);
+  }
+
+  .initiative-split-section--agent {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  }
+
+  .initiative-split-section--reverse {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .initiative-check-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .initiative-budget-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .initiative-timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .pipeline-steps-container {

@@ -25,6 +25,10 @@
         name: 'Partners',
         link: '/partners',
       },
+      {
+        name: 'Digital Twin Initiative',
+        link: '/digital-twin-initiative',
+      },
     ],
     donors:[
       {
