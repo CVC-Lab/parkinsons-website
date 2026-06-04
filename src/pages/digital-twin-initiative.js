@@ -63,12 +63,12 @@ const advanceCards = [
   {
     title: "Evidence arbitration",
     text:
-      "The system debates across agents, resolves conflicts, discards unsafe or inconsistent options, ranks what remains by supporting evidence, and reports uncertainty and evidence gaps.",
+      "AI4PD compares evidence across agents, resolves conflicts, filters unsafe or inconsistent options, ranks what remains by support, and reports uncertainty and evidence gaps.",
   },
   {
     title: "Decision support posture",
     text:
-      "Every meaningful output is routed to clinicians first. The system supports diagnosis and therapy planning; it does not prescribe autonomously.",
+      "Every meaningful output is routed to clinicians first. AI4PD supports diagnosis and therapy planning; it does not prescribe autonomously.",
   },
 ];
 
@@ -83,13 +83,13 @@ const diagramAnchors = [
     label: "2. Discovery chain",
     href: "#discovery-timeline",
     text:
-      "Four Parkinson's papers show how the program moved from cohort-scale latent spaces to pathway mechanisms, multimodal phenotypes, and calibrated motor-state trajectories.",
+      "Our Parkinson's papers trace the path from cohort-scale latent spaces to pathway mechanisms, multimodal phenotypes, and calibrated motor-state trajectories.",
   },
   {
     label: "3. Clinician outputs",
     href: "#clinician-outputs",
     text:
-      "The proposed twin returns patient-state estimates, differential diagnosis, therapy-planning support, follow-up priorities, and explicit evidence gaps to clinicians.",
+      "AI4PD returns patient-state estimates, differential diagnosis, therapy-planning support, follow-up priorities, and explicit evidence gaps to clinicians.",
   },
 ];
 
@@ -100,7 +100,7 @@ const discoveryTimeline = [
     role: "Population latent spaces",
     title: "Scalable Robust Bayesian Co-Clustering with Compositional ELBOs",
     result:
-      "The team made patient heterogeneity measurable by learning row and feature clusters together instead of treating patients as isolated points or features as independent columns.",
+      "Our co-clustering work makes patient heterogeneity measurable by learning row and feature clusters together instead of treating patients as isolated points or features as independent columns.",
     evidence:
       "SRVCC uses variational co-clustering, compositional ELBO regularization, noise learning, and mutual-information coupling to recover structure in noisy, sparse, high-dimensional multimodal data.",
     pipeline:
@@ -121,13 +121,13 @@ const discoveryTimeline = [
     role: "Pathway discovery",
     title: "Pathway-Anchored Multimodal Clustering Reveals Circuit-Level Signatures in Parkinson's Disease",
     result:
-      "The program moved from raw imaging features to circuit-level disease signatures, showing that Parkinson's heterogeneity can be mapped onto affected anatomical pathways.",
+      "Our pathway work moves from raw imaging features to circuit-level disease signatures, showing that Parkinson's heterogeneity can be mapped onto affected anatomical pathways.",
     evidence:
       "Structural MRI, free-water-corrected diffusion MRI, and DaT-SPECT are aligned inside predefined circuits such as nigrostriatal, frontostriatal, limbic, sensory-visuospatial, cerebellothalamic, and microvascular pathways.",
     pipeline:
       "MRI, DTI/free-water, and dopaminergic SBR signals are converted into Multimodal Pathway Integrity Scores, then clustered with patient and pathway features together.",
     impact:
-      "This supports the 'inferring the unseen' claim: clinicians see motor and cognitive symptoms, while AI4PD can point to hidden circuit-level mechanisms that may explain them.",
+      "This is the practical meaning of inferring the unseen: clinicians see motor and cognitive symptoms, while AI4PD points to hidden circuit-level mechanisms that may explain them.",
     links: [
       { label: "Project page", href: `${cvcBase}/projects/pathway-anchored-pd-clustering/` },
       { label: "Paper brief", to: "/paper-pathway-clustering" },
@@ -140,13 +140,13 @@ const discoveryTimeline = [
     role: "Multimodal precision stratification",
     title: "Integrated Genetic, Molecular, and Wearable Sensor Biomarkers Enable Bayesian ML-Driven Precision Stratification",
     result:
-      "The team connected genetics, molecular markers, wearable gait sensing, and clinical measures into Bayesian phenotypes rather than relying on a single clinical score.",
+      "Our biomarker work connects genetics, molecular markers, wearable gait sensing, and clinical measures into Bayesian phenotypes rather than relying on a single clinical score.",
     evidence:
       "LRRK2 risk, molecular markers, CSF alpha-synuclein seed amplification, IMU gait features, prodromal markers, and clinical assessments contribute complementary evidence about patient state.",
     pipeline:
       "Patient-level signals are harmonized into a probabilistic stratification model with uncertainty, supporting biological-risk and remote-monitoring layers of the twin.",
     impact:
-      "This turns the digital twin from a static demographic profile into a patient-assimilating model that can update as new tests, wearables, and clinical visits arrive.",
+      "This moves the digital twin beyond a static demographic profile toward a patient-assimilating model that updates as new tests, wearables, and clinical visits arrive.",
     links: [
       {
         label: "Project page",
@@ -164,11 +164,11 @@ const discoveryTimeline = [
     result:
       "The motor phenotype becomes a calibrated probability distribution over states, not a hard subtype label. Similar-looking patients can carry different latent motor-state uncertainty and transition risk.",
     evidence:
-      "The Hill Prize summary cites 29,366 aligned PPMI motor-state visits from 4,773 participant identifiers, patient-level posterior aggregation, 250 patient-blocked bootstrap refits, imaging-to-posterior prediction, future axial prediction, and BioFIND transfer checks.",
+      "Our motor-state paper reports 29,366 aligned PPMI motor-state visits from 4,773 participant identifiers, patient-level posterior aggregation, 250 patient-blocked bootstrap refits, imaging-to-posterior prediction, future axial prediction, and BioFIND transfer checks.",
     pipeline:
       "Visit-level motor evidence is residualized, converted into soft posterior states, calibrated with bootstrap consistency, and connected back to imaging-associated heterogeneity.",
     impact:
-      "This gives AI4PD a clinical state layer: the twin can report confidence, entropy, transition risk, and evidence gaps instead of pretending every patient belongs cleanly to one group.",
+      "These results give AI4PD a clinical state layer: the twin can report confidence, entropy, transition risk, and evidence gaps instead of forcing every patient into one hard group.",
     links: [{ label: "Related papers", to: "/related-papers#paper-motor-states" }],
   },
 ];
@@ -198,7 +198,7 @@ const nextPhaseCards = [
   {
     title: "Proactive evidence collection",
     text:
-      "The next demo should not only react to whatever data arrives. It should learn which missing test, wearable interval, imaging slice, or follow-up measurement would reduce uncertainty the most.",
+      "The next demo will not only react to whatever data arrives. It will learn which missing test, wearable interval, imaging slice, or follow-up measurement would reduce uncertainty the most.",
   },
   {
     title: "Measurement agent plus planning agent",
@@ -208,7 +208,7 @@ const nextPhaseCards = [
   {
     title: "Stronger demonstrations",
     text:
-      "The page should keep growing toward concrete examples: a patient timeline enters, the twin updates, uncertainty changes, the evidence trail is visible, and clinician-facing next steps are ranked.",
+      "The demonstration will grow toward concrete examples: a patient timeline enters, the twin updates, uncertainty changes, the evidence trail is visible, and clinician-facing next steps are ranked.",
   },
 ];
 
@@ -286,12 +286,12 @@ const teamCards = [
   {
     title: "Texas-built AI core",
     text:
-      "The initiative is centered at UT Austin across the Bajaj lab, Oden Institute, and TACC infrastructure, with proposed UT AI collaborators in sequential decision-making and multi-agent reasoning.",
+      "The initiative is centered at UT Austin across the Bajaj lab, Oden Institute, and TACC infrastructure, with planned UT AI collaboration in sequential decision-making and multi-agent reasoning.",
   },
   {
     title: "Four years of foundations",
     text:
-      "The program already spans pathway-anchored imaging, Bayesian co-clustering, posterior-calibrated motor states, port-Hamiltonian forecasting, and intervention-oriented control.",
+      "Our foundations already span pathway-anchored imaging, Bayesian co-clustering, posterior-calibrated motor states, port-Hamiltonian forecasting, and intervention-oriented control.",
   },
   {
     title: "Clinical translation path",
@@ -328,11 +328,11 @@ export default function DigitalTwinInitiativePage() {
             <h1>Inferring the Unseen: Mechanism-Grounded AI for Personalized Parkinson's Care</h1>
             <p>
               AI4PD (AI for Parkinson's Disease) is a Texas-led, patient-specific
-              digital twin system for Parkinson's care. The current update reframes
-              the initiative as a story of progress: prior Parkinson's papers already
-              show patient heterogeneity, pathway-level mechanisms, multimodal
-              stratification, and calibrated motor-state trajectories. The next phase
-              turns those wins into a clinician-facing digital twin.
+              digital twin system for Parkinson's care. Our current work brings
+              together a sequence of Parkinson's results: patient heterogeneity,
+              pathway-level mechanisms, multimodal stratification, and calibrated
+              motor-state trajectories. The next phase turns those results into a
+              clinician-facing digital twin.
             </p>
             <div className="hero-cta">
               <Link className="button primary" to="/clinician-workflow">
@@ -382,11 +382,11 @@ export default function DigitalTwinInitiativePage() {
           <p className="initiative-eyebrow">Evidence first</p>
           <h2 className="section-title">What prior support has already produced</h2>
           <p className="text-block">
-            The current pitch should not read like AI4PD is starting from scratch.
-            The Parkinson's work already produced a discovery chain: population
-            latent spaces, pathway-level imaging signatures, multimodal biomarker
-            stratification, and calibrated motor-state trajectories. Each step gives
-            the digital twin a concrete evidence layer.
+            AI4PD is not starting from scratch. Our Parkinson's work has already
+            produced a discovery chain: population latent spaces, pathway-level
+            imaging signatures, multimodal biomarker stratification, and calibrated
+            motor-state trajectories. Each step gives the digital twin a concrete
+            evidence layer.
           </p>
           <div className="initiative-proof-grid">
             <article>
@@ -410,7 +410,7 @@ export default function DigitalTwinInitiativePage() {
               <span>Translate</span>
               <h3>Clinician-facing next steps</h3>
               <p>
-                The proposed twin converts these wins into patient-state estimates,
+                AI4PD converts these results into patient-state estimates,
                 differential diagnosis support, therapy-planning evidence, and
                 follow-up priorities.
               </p>
@@ -420,12 +420,11 @@ export default function DigitalTwinInitiativePage() {
 
         <section className="section" id="discovery-timeline">
           <p className="initiative-eyebrow">Timeline of discoveries</p>
-          <h2 className="section-title">Four paper-backed wins that lead to AI4PD</h2>
+          <h2 className="section-title">Four paper-backed results that lead to AI4PD</h2>
           <p className="text-block">
-            The professor's main correction was structural: lead with the wins, then
-            show how each win led to the next step. The four Parkinson's papers below
-            become the backbone of the page: result, evidence, processing pipeline,
-            and impact.
+            The four Parkinson's papers below form the backbone of the initiative.
+            Each result contributes a specific layer to AI4PD: evidence, processing
+            pipeline, and translational impact.
           </p>
           <div className="initiative-discovery-timeline">
             {discoveryTimeline.map((item) => (
@@ -537,7 +536,7 @@ export default function DigitalTwinInitiativePage() {
               components: functional reserve H, subsystem coupling J, dissipation R,
               and therapy ports. That structure supports state estimation, progression
               forecasting, uncertainty calibration, and therapy planning inside one
-              patient-specific model while conserving what should be conserved,
+              patient-specific model while preserving stable physiological structure,
               accounting for dissipation, and respecting symmetries and balance laws.
             </p>
             <p className="text-block">
@@ -573,13 +572,13 @@ export default function DigitalTwinInitiativePage() {
         </section>
 
         <section className="section initiative-supporting-methods">
-          <p className="initiative-eyebrow">From wins to the next phase</p>
+          <p className="initiative-eyebrow">From results to the next phase</p>
           <h2 className="section-title">Methods that connect the papers into a living twin</h2>
           <p className="text-block">
             The four Parkinson's papers establish the evidence backbone. The broader
             Bajaj-group methods explain how those evidence layers become a living,
-            continually updated, mechanism-grounded twin rather than a static website
-            of study summaries.
+            continually updated, mechanism-grounded twin rather than a static
+            collection of study summaries.
           </p>
           <div className="initiative-method-grid">
             {supportingMethods.map((method) => (
@@ -610,9 +609,9 @@ export default function DigitalTwinInitiativePage() {
           <p className="initiative-eyebrow">Next research direction</p>
           <h2 className="section-title">Make the twin proactive, not only reactive</h2>
           <p className="text-block">
-            The suggested next step is a coupled discovery-and-planning demo. AI4PD
-            should not merely wait for more evidence and then react. It should learn
-            what evidence would most reduce uncertainty, request or prioritize that
+            We are moving toward a coupled discovery-and-planning demo. AI4PD will
+            not merely wait for more evidence and then react. It will learn what
+            evidence would most reduce uncertainty, request or prioritize that
             evidence, and then update the patient plan.
           </p>
           <div className="initiative-output-grid">
@@ -640,8 +639,9 @@ export default function DigitalTwinInitiativePage() {
           </ul>
           <p className="text-block">
             The submitted $500,000 Hill Prize budget is direct costs only, with no
-            institutional overhead or indirect costs. It would turn the current research
-            components into a clinically testable Texas-led AI platform.
+            institutional overhead or indirect costs. The budget is designed to turn
+            the current research components into a clinically testable Texas-led AI
+            platform.
           </p>
           <div className="initiative-budget-grid">
             {budgetItems.map((item) => (
