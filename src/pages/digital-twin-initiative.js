@@ -72,112 +72,143 @@ const advanceCards = [
   },
 ];
 
-const evidencePapers = [
+const diagramAnchors = [
   {
-    title:
-      "Pathway-Anchored Multimodal Clustering Reveals Circuit-Level Signatures in Parkinson's Disease",
-    role: "Circuit-level disease map",
+    label: "1. Data foundation",
+    href: "#data-foundation",
+    text:
+      "Clinical records, MRI, DTI/free-water, DaT-SPECT, wearables, biomarkers, medication history, and partner validation sites feed the patient timeline.",
+  },
+  {
+    label: "2. Discovery chain",
+    href: "#discovery-timeline",
+    text:
+      "Four Parkinson's papers show how the program moved from cohort-scale latent spaces to pathway mechanisms, multimodal phenotypes, and calibrated motor-state trajectories.",
+  },
+  {
+    label: "3. Clinician outputs",
+    href: "#clinician-outputs",
+    text:
+      "The proposed twin returns patient-state estimates, differential diagnosis, therapy-planning support, follow-up priorities, and explicit evidence gaps to clinicians.",
+  },
+];
+
+const discoveryTimeline = [
+  {
+    id: "paper-coclustering",
+    stage: "1",
+    role: "Population latent spaces",
+    title: "Scalable Robust Bayesian Co-Clustering with Compositional ELBOs",
+    result:
+      "The team made patient heterogeneity measurable by learning row and feature clusters together instead of treating patients as isolated points or features as independent columns.",
+    evidence:
+      "SRVCC uses variational co-clustering, compositional ELBO regularization, noise learning, and mutual-information coupling to recover structure in noisy, sparse, high-dimensional multimodal data.",
+    pipeline:
+      "Raw cohort tables become patient-feature modules, feature families, subtype neighborhoods, and uncertainty-aware population latent spaces.",
     impact:
-      "Moved the program from raw imaging features to pathway-specific circuit signatures, giving AI4PD interpretable anatomical evidence for patient state and differential diagnosis.",
+      "This is the collaborative-filtering substrate for AI4PD: what the system has learned across many patients can sharpen what is plausible for one new patient.",
+    links: [
+      {
+        label: "Project page",
+        href: `${cvcBase}/projects/scalable-robust-bayesian-co-clustering/`,
+      },
+      { label: "Related papers", to: "/related-papers#paper-coclustering" },
+    ],
+  },
+  {
+    id: "paper-pathway",
+    stage: "2",
+    role: "Pathway discovery",
+    title: "Pathway-Anchored Multimodal Clustering Reveals Circuit-Level Signatures in Parkinson's Disease",
+    result:
+      "The program moved from raw imaging features to circuit-level disease signatures, showing that Parkinson's heterogeneity can be mapped onto affected anatomical pathways.",
+    evidence:
+      "Structural MRI, free-water-corrected diffusion MRI, and DaT-SPECT are aligned inside predefined circuits such as nigrostriatal, frontostriatal, limbic, sensory-visuospatial, cerebellothalamic, and microvascular pathways.",
+    pipeline:
+      "MRI, DTI/free-water, and dopaminergic SBR signals are converted into Multimodal Pathway Integrity Scores, then clustered with patient and pathway features together.",
+    impact:
+      "This supports the 'inferring the unseen' claim: clinicians see motor and cognitive symptoms, while AI4PD can point to hidden circuit-level mechanisms that may explain them.",
     links: [
       { label: "Project page", href: `${cvcBase}/projects/pathway-anchored-pd-clustering/` },
       { label: "Paper brief", to: "/paper-pathway-clustering" },
+      { label: "Related papers", to: "/related-papers#paper-pathway" },
     ],
   },
   {
-    title:
-      "Integrated Genetic, Molecular, and Wearable Sensor Biomarkers Enable Bayesian ML-Driven Precision Stratification",
-    role: "Multimodal patient stratification",
+    id: "paper-biomarkers",
+    stage: "3",
+    role: "Multimodal precision stratification",
+    title: "Integrated Genetic, Molecular, and Wearable Sensor Biomarkers Enable Bayesian ML-Driven Precision Stratification",
+    result:
+      "The team connected genetics, molecular markers, wearable gait sensing, and clinical measures into Bayesian phenotypes rather than relying on a single clinical score.",
+    evidence:
+      "LRRK2 risk, molecular markers, CSF alpha-synuclein seed amplification, IMU gait features, prodromal markers, and clinical assessments contribute complementary evidence about patient state.",
+    pipeline:
+      "Patient-level signals are harmonized into a probabilistic stratification model with uncertainty, supporting biological-risk and remote-monitoring layers of the twin.",
     impact:
-      "Connected genetics, molecular markers, gait sensing, and clinical measures into Bayesian phenotypes, supporting AI4PD's patient-state and progression agents.",
+      "This turns the digital twin from a static demographic profile into a patient-assimilating model that can update as new tests, wearables, and clinical visits arrive.",
     links: [
-      { label: "Project page", href: `${cvcBase}/projects/integrated-pd-precision-stratification/` },
+      {
+        label: "Project page",
+        href: `${cvcBase}/projects/integrated-pd-precision-stratification/`,
+      },
       { label: "Paper brief", to: "/paper-integrated-biomarkers" },
+      { label: "Related papers", to: "/related-papers#paper-biomarkers" },
     ],
   },
   {
-    title:
-      "Posterior-Calibrated Multimodal Motor States Reveal Longitudinal and Imaging-Associated Heterogeneity",
-    role: "Uncertainty-aware motor state",
+    id: "paper-motor-states",
+    stage: "4",
+    role: "Posterior-calibrated motor states",
+    title: "Posterior-Calibrated Multimodal Motor States Reveal Longitudinal and Imaging-Associated Heterogeneity",
+    result:
+      "The motor phenotype becomes a calibrated probability distribution over states, not a hard subtype label. Similar-looking patients can carry different latent motor-state uncertainty and transition risk.",
+    evidence:
+      "The Hill Prize summary cites 29,366 aligned PPMI motor-state visits from 4,773 participant identifiers, patient-level posterior aggregation, 250 patient-blocked bootstrap refits, imaging-to-posterior prediction, future axial prediction, and BioFIND transfer checks.",
+    pipeline:
+      "Visit-level motor evidence is residualized, converted into soft posterior states, calibrated with bootstrap consistency, and connected back to imaging-associated heterogeneity.",
     impact:
-      "Reframed phenotype as a probability distribution over motor states, turning AI4PD toward calibrated uncertainty instead of hard labels.",
-    links: [{ label: "Related papers", to: "/related-papers" }],
+      "This gives AI4PD a clinical state layer: the twin can report confidence, entropy, transition risk, and evidence gaps instead of pretending every patient belongs cleanly to one group.",
+    links: [{ label: "Related papers", to: "/related-papers#paper-motor-states" }],
+  },
+];
+
+const supportingMethods = [
+  {
+    title: "PHAST and port-Hamiltonian forecasting",
+    text:
+      "Stable temporal dynamics make the patient state forecastable from sparse, partially observed, noisy trajectories without collapsing the twin into a black-box predictor.",
+    href: `${cvcBase}/projects/phast/`,
   },
   {
-    title:
-      "Compositional Bayesian Co-Clustering of DTI Biomarkers with Clinical Measures",
-    role: "Severity prediction precursor",
-    impact:
-      "Connects diffusion biomarkers with clinical severity, helping turn imaging cohorts into patient-comparable latent spaces for AI4PD.",
-    links: [
-      {
-        label: "Project page",
-        href: `${cvcBase}/projects/scalable-robust-bayesian-co-clustering/`,
-      },
-    ],
+    title: "Perennial learning",
+    text:
+      "The twin can be updated as new patient evidence arrives while preserving stable structure and distinguishing reversible belief transport from irreversible forgetting.",
+    href: `${cvcBase}/projects/perennial-learning-kolmogorov/`,
   },
   {
-    title:
-      "Brain Region Specific T1-MRI and DAT-SPECT Biomarkers for Differential Diagnosis",
-    role: "Look-alike diagnosis substrate",
-    impact:
-      "Extends the program toward CSF-alpha-synuclein-positive and negative parkinsonisms, directly supporting AI4PD's differential-diagnosis output.",
-    links: [{ label: "Related papers", to: "/related-papers" }],
+    title: "Hamiltonian control",
+    text:
+      "Intervention planning can be framed as controlled movement through structured patient state space, including DBS and therapy-transition reasoning where clinically appropriate.",
+    href: `${cvcBase}/projects/differential-and-pointwise-control-rl/`,
+  },
+];
+
+const nextPhaseCards = [
+  {
+    title: "Proactive evidence collection",
+    text:
+      "The next demo should not only react to whatever data arrives. It should learn which missing test, wearable interval, imaging slice, or follow-up measurement would reduce uncertainty the most.",
   },
   {
-    title: "Scalable Robust Bayesian Co-Clustering with Compositional ELBOs",
-    role: "Population latent spaces",
-    impact:
-      "Provides the collaborative-filtering substrate: cohort-derived latent spaces, subtypes, and trajectories used to sharpen guidance for one patient.",
-    links: [
-      {
-        label: "Project page",
-        href: `${cvcBase}/projects/scalable-robust-bayesian-co-clustering/`,
-      },
-    ],
+    title: "Measurement agent plus planning agent",
+    text:
+      "One agent can propose the most informative data to request or scan, while another uses the updated patient state to plan diagnosis, monitoring, and therapy-support options faster.",
   },
   {
-    title: "PHAST: Port-Hamiltonian Architecture for Structured Temporal Dynamics Forecasting",
-    role: "Stable trajectory forecasting",
-    impact:
-      "Supplies the structured temporal forecasting core for patient trajectories, ablations, and long-horizon disease dynamics.",
-    links: [{ label: "Project page", href: `${cvcBase}/projects/phast/` }],
-  },
-  {
-    title: "A Differential and Pointwise Control Approach to Reinforcement Learning",
-    role: "Intervention-oriented control",
-    impact:
-      "Provides Hamiltonian-structured control ideas for reasoning about DBS and therapy transitions toward safer, lower-dose states.",
-    links: [
-      {
-        label: "Project page",
-        href: `${cvcBase}/projects/differential-and-pointwise-control-rl/`,
-      },
-    ],
-  },
-  {
-    title:
-      "The Physics, Information, and Computation of Perennial Learning",
-    role: "Continual learning without forgetting",
-    impact:
-      "Gives the conceptual basis for updating a patient twin as new evidence arrives while preserving stable patient-specific structure.",
-    links: [
-      { label: "Project page", href: `${cvcBase}/projects/perennial-learning-kolmogorov/` },
-    ],
-  },
-  {
-    title: "Recipes for when Physics Fails: Recovering Robust Learning of Physics-Informed Neural Networks",
-    role: "Robust physics-grounded learning",
-    impact:
-      "Strengthens the bridge between physical structure and noisy biomedical data, supporting the case for port-Hamiltonian structure over black-box prediction.",
-    links: [{ label: "Project page", href: `${cvcBase}/projects/robust-pinns/` }],
-  },
-  {
-    title: "Learning Optimal Control with Stochastic Models of Hamiltonian Dynamics",
-    role: "Hamiltonian control foundation",
-    impact:
-      "Supports the intervention-planning layer by framing therapy selection as controlled transitions through structured dynamical state space.",
-    links: [{ label: "Project page", href: `${cvcBase}/projects/optimal-control/` }],
+    title: "Stronger demonstrations",
+    text:
+      "The page should keep growing toward concrete examples: a patient timeline enters, the twin updates, uncertainty changes, the evidence trail is visible, and clinician-facing next steps are ranked.",
   },
 ];
 
@@ -297,10 +328,11 @@ export default function DigitalTwinInitiativePage() {
             <h1>Inferring the Unseen: Mechanism-Grounded AI for Personalized Parkinson's Care</h1>
             <p>
               AI4PD (AI for Parkinson's Disease) is a Texas-led, patient-specific
-              digital twin system for Parkinson's care. It integrates multimodal
-              longitudinal evidence, queries a dynamic biomedical AI-knowledge network,
-              infers each patient's current and future disease state, and supports
-              safer diagnosis, therapy planning, and follow-up.
+              digital twin system for Parkinson's care. The current update reframes
+              the initiative as a story of progress: prior Parkinson's papers already
+              show patient heterogeneity, pathway-level mechanisms, multimodal
+              stratification, and calibrated motor-state trajectories. The next phase
+              turns those wins into a clinician-facing digital twin.
             </p>
             <div className="hero-cta">
               <Link className="button primary" to="/clinician-workflow">
@@ -319,11 +351,112 @@ export default function DigitalTwinInitiativePage() {
               layout="fullWidth"
             />
             <figcaption>
-              Multi-site longitudinal evidence feeds a Texas-core platform that
-              returns patient-specific diagnosis, intervention, and follow-up guidance
-              through a secure clinician portal.
+              Read left to right: clinical partners and multimodal evidence feed a
+              Texas-core AI platform; the platform builds a shared patient-specific
+              longitudinal twin using cohort latent spaces and mechanism-informed
+              circuit knowledge; clinician-facing outputs return diagnosis,
+              intervention, and follow-up guidance through a secure portal.
             </figcaption>
+            <aside className="initiative-side-jump" aria-label="Jump to digital twin evidence sections">
+              <div className="initiative-side-jump__card">
+                <span className="initiative-side-jump__label">Jump to evidence</span>
+                {diagramAnchors.map((anchor) => (
+                  <a key={anchor.label} href={anchor.href}>
+                    {anchor.label}
+                  </a>
+                ))}
+              </div>
+            </aside>
+            <div className="initiative-diagram-actions" aria-label="Jump from diagram to supporting evidence">
+              {diagramAnchors.map((anchor) => (
+                <a key={anchor.label} href={anchor.href}>
+                  <span>{anchor.label}</span>
+                  <p>{anchor.text}</p>
+                </a>
+              ))}
+            </div>
           </figure>
+        </section>
+
+        <section className="section initiative-proof-section" id="data-foundation">
+          <p className="initiative-eyebrow">Evidence first</p>
+          <h2 className="section-title">What prior support has already produced</h2>
+          <p className="text-block">
+            The current pitch should not read like AI4PD is starting from scratch.
+            The Parkinson's work already produced a discovery chain: population
+            latent spaces, pathway-level imaging signatures, multimodal biomarker
+            stratification, and calibrated motor-state trajectories. Each step gives
+            the digital twin a concrete evidence layer.
+          </p>
+          <div className="initiative-proof-grid">
+            <article>
+              <span>Discover</span>
+              <h3>Hidden patient structure</h3>
+              <p>
+                Patients who look similar clinically can separate once motor scores,
+                imaging, diffusion, biomarkers, wearables, genetics, and molecular
+                signals are modeled together with uncertainty.
+              </p>
+            </article>
+            <article>
+              <span>Explain</span>
+              <h3>Circuit-level mechanisms</h3>
+              <p>
+                The pathway work maps symptoms back to affected brain circuits rather
+                than stopping at descriptive clusters or crowded feature tables.
+              </p>
+            </article>
+            <article>
+              <span>Translate</span>
+              <h3>Clinician-facing next steps</h3>
+              <p>
+                The proposed twin converts these wins into patient-state estimates,
+                differential diagnosis support, therapy-planning evidence, and
+                follow-up priorities.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="section" id="discovery-timeline">
+          <p className="initiative-eyebrow">Timeline of discoveries</p>
+          <h2 className="section-title">Four paper-backed wins that lead to AI4PD</h2>
+          <p className="text-block">
+            The professor's main correction was structural: lead with the wins, then
+            show how each win led to the next step. The four Parkinson's papers below
+            become the backbone of the page: result, evidence, processing pipeline,
+            and impact.
+          </p>
+          <div className="initiative-discovery-timeline">
+            {discoveryTimeline.map((item) => (
+              <article key={item.id} id={item.id} className="initiative-discovery-card">
+                <div className="initiative-discovery-stage">
+                  <span>{item.stage}</span>
+                  <p>{item.role}</p>
+                </div>
+                <h3>{item.title}</h3>
+                <dl className="initiative-story-list">
+                  <div>
+                    <dt>Result</dt>
+                    <dd>{item.result}</dd>
+                  </div>
+                  <div>
+                    <dt>Evidence</dt>
+                    <dd>{item.evidence}</dd>
+                  </div>
+                  <div>
+                    <dt>Processing pipeline</dt>
+                    <dd>{item.pipeline}</dd>
+                  </div>
+                  <div>
+                    <dt>Impact</dt>
+                    <dd>{item.impact}</dd>
+                  </div>
+                </dl>
+                <LinkList links={item.links} />
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="section">
@@ -427,7 +560,7 @@ export default function DigitalTwinInitiativePage() {
           </figure>
         </section>
 
-        <section className="section">
+        <section className="section" id="clinician-outputs">
           <h2 className="section-title">Clinician-facing outputs</h2>
           <div className="initiative-output-grid">
             {outputCards.map((card) => (
@@ -439,23 +572,23 @@ export default function DigitalTwinInitiativePage() {
           </div>
         </section>
 
-        <section className="section">
-          <h2 className="section-title">From cited papers to AI4PD impact</h2>
+        <section className="section initiative-supporting-methods">
+          <p className="initiative-eyebrow">From wins to the next phase</p>
+          <h2 className="section-title">Methods that connect the papers into a living twin</h2>
           <p className="text-block">
-            The cited work changes the vision from separate Parkinson's predictors into
-            a connected clinical AI system. Cohort-scale latent spaces define what the
-            system has seen across many patients, pathway-specific imaging creates
-            interpretable biological context, port-Hamiltonian dynamics preserve a
-            patient-specific mechanism, and multi-agent arbitration turns evidence into
-            clinician-facing guidance.
+            The four Parkinson's papers establish the evidence backbone. The broader
+            Bajaj-group methods explain how those evidence layers become a living,
+            continually updated, mechanism-grounded twin rather than a static website
+            of study summaries.
           </p>
-          <div className="initiative-impact-grid">
-            {evidencePapers.map((paper) => (
-              <article key={paper.title} className="initiative-impact-card">
-                <p className="initiative-impact-role">{paper.role}</p>
-                <h3>{paper.title}</h3>
-                <p>{paper.impact}</p>
-                <LinkList links={paper.links} />
+          <div className="initiative-method-grid">
+            {supportingMethods.map((method) => (
+              <article key={method.title} className="initiative-method-card">
+                <h3>{method.title}</h3>
+                <p>{method.text}</p>
+                <a href={method.href} target="_blank" rel="noopener noreferrer">
+                  Project context &rarr;
+                </a>
               </article>
             ))}
           </div>
@@ -468,6 +601,25 @@ export default function DigitalTwinInitiativePage() {
               <article key={anchor.title} className="initiative-output-card">
                 <h3>{anchor.title}</h3>
                 <p>{anchor.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section initiative-next-phase">
+          <p className="initiative-eyebrow">Next research direction</p>
+          <h2 className="section-title">Make the twin proactive, not only reactive</h2>
+          <p className="text-block">
+            The suggested next step is a coupled discovery-and-planning demo. AI4PD
+            should not merely wait for more evidence and then react. It should learn
+            what evidence would most reduce uncertainty, request or prioritize that
+            evidence, and then update the patient plan.
+          </p>
+          <div className="initiative-output-grid">
+            {nextPhaseCards.map((card) => (
+              <article key={card.title} className="initiative-output-card">
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
               </article>
             ))}
           </div>

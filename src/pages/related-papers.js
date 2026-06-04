@@ -5,31 +5,42 @@ import "../components/style.css";
 
 const papers = [
   {
+    id: "paper-pathway",
     title: "Pathway Anchored Multimodal Clustering Reveals Circuit Level Signatures in Parkinson's Disease",
-    authors: "Vinod, A., Eliendula, A.S., Bhardwaj, S., Dev, A., Dominic, A., Bajaj, C.",
+    authors: "Vinod, A., Ellendula, A.S., Bhardwaj, S., Dev, A., Dominic, A., Bajaj, C.",
     status: "Preprint",
     summary:
-      "Presents a pathway-anchored co-clustering framework (SRVCC) integrating structural MRI, DTI, and DaT-SPECT within six predefined neuroanatomical circuits. Multimodal Pathway Integrity Scores reveal circuit-level imaging heterogeneity linked to motor severity and cognitive function across five imaging-driven patient clusters in the PPMI cohort.",
+      "Fuses structural MRI, DTI/free-water, and DaT-SPECT inside anatomically defined circuits. Multimodal Pathway Integrity Scores reveal circuit-level heterogeneity linked to motor and cognitive burden, giving AI4PD an interpretable mechanism layer.",
     link: "https://doi.org/10.64898/2025.12.15.694278",
     detailsLink: "/paper-pathway-clustering",
   },
   {
+    id: "paper-biomarkers",
     title: "Integrated Genetic, Molecular, and Wearable Sensor Biomarkers Enable Bayesian Machine Learning-Driven Precision Stratification in Parkinson's Disease",
     authors: "Tirhekar, H.M., Yadav, P., Bajaj, C.",
     status: "Preprint",
     summary:
-      "Integrates LRRK2 G2019S genetic status, urinary phospho-LRRK2, CSF alpha-synuclein seed amplification, and IMU-derived gait metrics into a Bayesian clustering framework. Identifies four motor phenotypes across 4,775 PPMI patients and 627 LRRK2 Consortium participants, with a risk prediction model enabling personalized prognostic counseling.",
+      "Connects LRRK2 genetics, molecular markers, CSF alpha-synuclein seed amplification, wearable gait features, prodromal signals, and clinical assessments into Bayesian patient phenotypes for precision stratification.",
     link: "https://doi.org/10.64898/2025.12.02.25340302",
     detailsLink: "/paper-integrated-biomarkers",
   },
   {
-    title: "A Novel Tri-Modal Viral-Ultrasound Gene-Delivery Therapy Protocol for Lysosomal Neurodegeneration via Stochastic Model Optimization with Uncertainty Quantification and Generalizability",
-    authors: "Nekkanti, K., Bajaj, C.",
+    id: "paper-motor-states",
+    title: "Posterior-Calibrated Multimodal Motor States Reveal Longitudinal and Imaging-Associated Heterogeneity in Parkinson's Disease",
+    authors: "Tirhekar, H.M., Yadav, P., Bajaj, C.",
+    status: "Manuscript in preparation",
+    summary:
+      "Reframes Parkinson's motor phenotype as calibrated posterior trajectories rather than hard subtypes. The Hill Prize summary cites 29,366 aligned PPMI motor-state visits, 4,773 participant identifiers, patient-blocked bootstrap calibration, imaging-to-posterior prediction, and BioFIND transfer checks.",
+  },
+  {
+    id: "paper-coclustering",
+    title: "Scalable Robust Bayesian Co-Clustering with Compositional ELBOs",
+    authors: "Vinod, A., Bajaj, C.",
     status: "Preprint",
     summary:
-      "Introduces a computationally optimized tri-modal AAV-T4, SP2, and focused ultrasound gene-delivery protocol for lysosomal neurodegeneration. The project combines stochastic model optimization, uncertainty quantification, and generalizability analysis to evaluate therapeutic trajectories and protocol robustness.",
-    link: "https://cvc-lab.github.io/projects/tri-modal-gene-therapy/Tri-modal_kartheek-arxiv.pdf",
-    detailsLink: "https://cvc-lab.github.io/projects/tri-modal-gene-therapy/",
+      "Provides the SRVCC population-latent-space substrate behind the digital twin: joint patient and feature clusters, compositional ELBO regularization, noise learning, and missing-input robustness for high-dimensional multimodal data.",
+    link: "https://arxiv.org/abs/2504.04079",
+    detailsLink: "https://cvc-lab.github.io/projects/scalable-robust-bayesian-co-clustering/",
   },
 ];
 
@@ -42,8 +53,9 @@ export default function RelatedPapersPage() {
           <div className="hero-text">
             <h1>Related Papers</h1>
             <p>
-              Manuscripts underpinning our multimodal biomarker program. Each card
-              summarizes a key finding and links to the full paper.
+              Four Parkinson's papers underpin the AI4PD digital twin story: patient-feature
+              co-clustering, pathway-level imaging mechanisms, multimodal biomarker
+              stratification, and posterior-calibrated motor-state trajectories.
             </p>
           </div>
         </section>
@@ -52,7 +64,9 @@ export default function RelatedPapersPage() {
           <h2 className="section-title">Manuscripts</h2>
           <div className="paper-card-grid">
             {papers.map((paper, i) => (
-              <PaperCard key={i} {...paper} />
+              <div id={paper.id} key={paper.id || i}>
+                <PaperCard {...paper} />
+              </div>
             ))}
           </div>
         </section>
