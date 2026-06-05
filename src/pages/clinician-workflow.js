@@ -18,6 +18,16 @@ export default function ClinicianWorkflowPage() {
               subgroups, places each new patient into the nearest subgroup, and
               delivers interpretable decision support to the treating neurologist.
             </p>
+            <div className="hero-cta">
+              <a
+                className="button primary"
+                href="https://cvc-lab.github.io/parkinson-viz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Parkinson Viz dashboard
+              </a>
+            </div>
           </div>
           <div className="hero-figure">
             <StaticImage

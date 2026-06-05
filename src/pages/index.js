@@ -130,6 +130,14 @@ export default function IndexPage({ data }) {
             <Link className="button primary" to="/clinician-workflow">
               See the clinician workflow
             </Link>
+            <a
+              className="button secondary"
+              href="https://cvc-lab.github.io/parkinson-viz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Parkinson Viz dashboard
+            </a>
           </div>
         </section>
 
