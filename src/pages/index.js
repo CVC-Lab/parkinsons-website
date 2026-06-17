@@ -174,6 +174,21 @@ export default function IndexPage() {
               background motivation, not a result AI4PD demonstrates.)
             </p>
           </div>
+          <figure className="initiative-figure">
+            <StaticImage
+              src="../images/ai4pd-architecture-figure1.png"
+              alt="AI4PD architecture: clinical and validation partners feed a Texas-core AI platform that maintains a patient-specific twin and returns clinician-facing guidance"
+              placeholder="blurred"
+              layout="fullWidth"
+            />
+            <figcaption>
+              AI4PD architecture: multi-site clinical and validation partners contribute
+              longitudinal multimodal evidence to a Texas-core AI platform that maintains a
+              shared patient-specific twin, refines it through population latent spaces and
+              mechanism-informed circuit knowledge, and returns diagnosis, intervention, and
+              follow-up guidance through a secure clinician portal.
+            </figcaption>
+          </figure>
           <p className="workflow-inline-link">
             <Link to="/digital-twin-initiative">Read the full approach &rarr;</Link>
           </p>
