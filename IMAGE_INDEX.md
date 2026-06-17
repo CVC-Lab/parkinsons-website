@@ -58,7 +58,7 @@ used by `clinician-workflow.js`; remove it when that page is rebuilt.
 
 | Page | AI images to remove/replace |
 |---|---|
-| Approach (`digital-twin-initiative.js`) | `ai4pd-collaboration-architecture.jpg`, `ai4pd-multi-agent-architecture.jpg`, `deep-brain-control.png` → need clean schematics (build briefs at that pass). |
+| ~~Approach (`digital-twin-initiative.js`)~~ ✅ **Done (Pass 3)** | Figure 1 wired to the hero; Figure 2 (`ai4pd-multi-agent-architecture.jpg`, clean/name-free) kept for the agents section; `ai4pd-collaboration-architecture.jpg` (stale name-bearing dup) + `deep-brain-control.png` (AI brain render) **deleted**. **One build-brief open** → a port-Hamiltonian core schematic: ẋ = (J−R)∇H(x) + Gu with H/J/R + therapy-port labels, the three coupled subsystems (motor/autonomic/cognitive), and the measure→estimate→simulate→select→update loop. Flat line art, no brain renders. |
 | Thrusts (`thrusts.js`) | `thrust-imaging-thumbnail.jpg`, `thrust-diffusion-thumbnail.jpg`, `thrust-wearable-thumbnail.jpg`, `thrust-mechanism-thumbnail.jpg`. |
 | Partners (`partners.js`) | `tagline.png` ("what starts here…"). |
 | Clinician workflow (`clinician-workflow.js`) | `clinician-picture.png` (verify whether AI or real before deciding). |

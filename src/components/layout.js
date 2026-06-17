@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
             <Link to="/clinician-workflow">Clinician Workflow</Link>
             <Link to="/thrusts">Domain Thrusts</Link>
             <Link to="/partners">Partners</Link>
-            <Link to="/digital-twin-initiative">Digital Twin Initiative</Link>
+            <Link to="/digital-twin-initiative">Approach</Link>
             <Link to="/team">Team</Link>
             <Link to="/resources">Resources</Link>
           </div>

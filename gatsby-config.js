@@ -10,12 +10,8 @@
         link: '/',
       },
       {
-        name: 'Clinician Workflow',
-        link: '/clinician-workflow',
-      },
-      {
-        name: 'Domain Thrusts',
-        link: '/thrusts',
+        name: 'Approach',
+        link: '/digital-twin-initiative',
       },
       {
         name: 'Evidence',
@@ -24,10 +20,6 @@
       {
         name: 'Partners',
         link: '/partners',
-      },
-      {
-        name: 'Digital Twin Initiative',
-        link: '/digital-twin-initiative',
       },
     ],
     donors:[

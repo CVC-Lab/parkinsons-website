@@ -2419,3 +2419,13 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.approach-jump {
+  margin-top: var(--spacing-3);
+  font-size: var(--text-sm);
+  color: var(--ut-charcoal-light);
+}
+
+.approach-jump a {
+  color: var(--ut-burnt-orange);
+}
