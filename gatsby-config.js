@@ -48,8 +48,8 @@
         link: 'https://www.tshmf.org/ODonnells.html'
       }
     ],
-    title: `Actionable Intelligence For Combating Parkinson’s`,
-    description: `UT Austin Oden Institute research program integrating imaging, diffusion, wearable, and clinical data into biomarker-defined subgroups for differential diagnosis and precision Parkinson's care.`,
+    title: `AI4PD`,
+    description: `AI4PD is a UT Austin Oden Institute program building a patient-specific digital twin for Parkinson's care: it infers hidden disease mechanism from multimodal longitudinal data and supports clinician diagnosis, progression forecasting, and therapy planning.`,
     siteUrl: `https://cvc-lab.github.io/parkinsons-website`
   },
   plugins: [

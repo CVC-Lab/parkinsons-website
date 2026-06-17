@@ -1,113 +1,10 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import Layout from "../components/layout";
 import "../components/style.css";
 
-export default function IndexPage({ data }) {
-  const donors = data?.site?.siteMetadata?.donors ?? [];
-  const [activePreview, setActivePreview] = React.useState(null);
-
-  React.useEffect(() => {
-    if (!activePreview) return undefined;
-
-    const handleKeyDown = event => {
-      if (event.key === "Escape") {
-        setActivePreview(null);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activePreview]);
-
-  const previewTitles = {
-    multimodal: "Multimodal Data Integration",
-    subgroup: "Subgroup Discovery",
-    precision: "Actionable Precision",
-    hamiltonian: "Port Hamiltonian Modeling",
-    diagnosis: "Differential diagnosis",
-    stratification: "Precision stratification",
-    intervention: "Optimal Intervention and Decision Support",
-  };
-
-  const renderPreviewImage = () => {
-    switch (activePreview) {
-      case "multimodal":
-        return (
-          <StaticImage
-            src="../images/multimodal-data-integration-replacement.jpg"
-            alt="Multimodal Data Integration full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      case "subgroup":
-        return (
-          <StaticImage
-            src="../images/subgroup-discovery-replacement.jpg"
-            alt="Subgroup Discovery full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      case "precision":
-        return (
-          <StaticImage
-            src="../images/actionable-precision-replacement.jpg"
-            alt="Actionable Precision full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      case "hamiltonian":
-        return (
-          <StaticImage
-            src="../images/port-hamiltonian-modeling-replacement.jpg"
-            alt="Port Hamiltonian Modeling full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      case "diagnosis":
-        return (
-          <StaticImage
-            src="../images/differential-diagnosis-thumbnail.jpg"
-            alt="Differential diagnosis full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      case "stratification":
-        return (
-          <StaticImage
-            src="../images/precision-stratification-thumbnail.jpg"
-            alt="Precision stratification full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      case "intervention":
-        return (
-          <StaticImage
-            src="../images/nearest-neighbor-thumbnail.jpg"
-            alt="Optimal intervention and decision support full preview"
-            placeholder="blurred"
-            layout="constrained"
-            width={1100}
-          />
-        );
-      default:
-        return null;
-    }
-  };
-
+export default function IndexPage() {
   return (
     <Layout>
       <div className="page-container home-page compact-page-shell home-page-landing">
@@ -115,413 +12,195 @@ export default function IndexPage({ data }) {
         {/* Hero */}
         <section className="hero-section hero-stack hero-centered">
           <div className="hero-text">
-            <h1>Precision Neurology for Parkinson's Disease</h1>
-            <p>From population patterns to individual care</p>
+            <p className="initiative-eyebrow">AI4PD</p>
+            <p className="hero-subtext">
+              A Texas-led, patient-specific digital twin for Parkinson&apos;s disease
+              care, built so a movement-disorders clinician can interrogate it rather
+              than just read its output.
+            </p>
+            <h1>Reading the mechanism behind the motor exam</h1>
+            <p>
+              Parkinson&apos;s is an inverse problem: from sparse clinic visits, wearables,
+              imaging, genetics, and the EHR, we work backward toward the hidden biology
+              that explains why two patients who present alike on the same exam later
+              diverge. Early PD is clinically hard to separate from atypical parkinsonian
+              look-alikes such as MSA, PSP, and DLB, and deep-brain-stimulation programming
+              today still leans heavily on iterative manual adjustment. AI4PD builds that
+              inferred mechanism into a patient-specific digital twin that updates as new
+              data arrives, with its uncertainty measured and reported, and stays as
+              decision support a clinician works in front of.
+            </p>
+            <div className="hero-cta hero-cta-centered">
+              <Link className="button primary" to="/digital-twin-initiative">
+                See how it works
+              </Link>
+              <a
+                className="button secondary"
+                href="https://cvc-lab.github.io/parkinson-viz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Parkinson Viz dashboard
+              </a>
+            </div>
           </div>
-          <div className="hero-figure">
+        </section>
+
+        {/* Evidence band — page center of gravity */}
+        <section className="section">
+          <p className="initiative-eyebrow">Evidence to date (retrospective)</p>
+          <h2 className="section-title">What the published analyses show</h2>
+          <p className="text-block">
+            Four preprint and in-review studies on established Parkinson&apos;s cohorts
+            (PPMI, BioFIND, PDBP, FoxInsight), shown across five result cards, results
+            first, with the hedges the papers themselves keep. These analyses are
+            retrospective and hypothesis-generating; they are the calibrated substrate the
+            patient-specific twin is built on, not the mechanism claim itself.
+          </p>
+
+          <div className="initiative-output-grid">
+            <article className="initiative-output-card">
+              <p className="initiative-eyebrow">PC-MSM · calibrated motor states in PPMI</p>
+              <h3>Motor-state stratification that holds up, and reports its own overconfidence</h3>
+              <p>
+                Across 29,366 aligned PPMI MDS-UPDRS-III motor visits from 4,773
+                participants, patient-level motor states were stable on average (mean
+                modal-family fraction 0.925, 95% CI 0.921–0.930), and 25.5% of patients
+                changed motor state at least once over follow-up (95% CI 24.1–26.7%). The
+                model is honest about its limits: nominal posterior confidence was 0.989
+                against an empirical patient-blocked bootstrap consistency of 0.849, so the
+                gap is measured and disclosed rather than hidden. These are calibrated,
+                dynamic, imaging-associated motor states, not a claim of five true
+                biological subtypes.
+              </p>
+            </article>
+
+            <article className="initiative-output-card">
+              <p className="initiative-eyebrow">PC-MSM · imaging recovery and BioFIND transfer</p>
+              <h3>Imaging is associated with the states; assignment reproduces endpoint gradients externally</h3>
+              <p>
+                Fused DaTSCAN and FreeSurfer ROI features predicted patient-level soft
+                motor-posterior vectors with moderate but calibrated performance (JSD
+                0.209, 95% CI 0.199–0.220; macro-AUROC 0.692; soft-label ECE 0.034).
+                Imaging predicts these soft posteriors rather than independently recovering
+                the taxonomy. On the independent BioFIND cohort (344 visits, 225 patients),
+                state assignment reproduced clinically meaningful endpoint gradients. This
+                is external face validity. It is not evidence of full transportability.
+              </p>
+            </article>
+
+            <article className="initiative-output-card">
+              <p className="initiative-eyebrow">Motor phenotyping for trial enrichment</p>
+              <h3>A rapid-progressor subgroup declining about +4 UPDRS points per year</h3>
+              <p>
+                Within a 3,261-patient longitudinal subcohort (patients with ≥3 visits,
+                drawn from 62,543 patients across four cohorts and 221,437 assessments),
+                16.6% (n=542) formed a Rapid Progressor subgroup, declining at +2.02
+                MDS-UPDRS Part III points per ~6-month visit (about +4 points/year). The
+                authors call this a candidate trial-enrichment signal. It still needs
+                prospective validation before any clinical use, and is not a validated
+                biomarker.
+              </p>
+            </article>
+
+            <article className="initiative-output-card">
+              <p className="initiative-eyebrow">Integrated genetic, molecular, and wearable stratification</p>
+              <h3>LRRK2 G2019S carriers run +4.35 motor points above non-carriers</h3>
+              <p>
+                LRRK2 G2019S carriage carried a 1.92-fold prevalence ratio for
+                Parkinson&apos;s (95% CI 1.54–2.40; sex-adjusted OR 2.73; individual-level
+                χ²(1)=36.6, p=1.44×10⁻⁹), and carriers showed +4.35 higher baseline
+                MDS-UPDRS Part III points (95% CI 1.95–6.47). In the same preprint,
+                wearable readouts flagged arm-swing asymmetry (27% of 178 assessments from
+                94 patients exceeded the 20% pathological threshold) and a 14.87% dual-task
+                gait cost (n=172, paired t=14.98, p&lt;0.001). These are heterogeneous
+                sub-analyses of one preprint, not a single validated genetic-plus-wearable
+                model.
+              </p>
+            </article>
+
+            <article className="initiative-output-card">
+              <p className="initiative-eyebrow">Pathway-anchored multimodal clustering</p>
+              <h3>Lower nigrostriatal integrity tracks higher motor burden</h3>
+              <p>
+                Anchoring imaging to six neuroanatomical pathways (nigrostriatal,
+                frontostriatal-executive, cerebello-thalamo-cortical, limbic, microvascular,
+                sensory/visuospatial) in 294 PPMI participants, lower nigrostriatal
+                integrity was associated with higher motor burden (Spearman ρ≈−0.201 with
+                MDS-UPDRS-III, q≈6.8×10⁻⁴), and higher sensory/visuospatial integrity with
+                better cognition (ρ≈0.163 with MoCA, q≈0.0071). The associations are
+                FDR-controlled and directionally coherent, but their effect sizes are
+                modest; this is a research framework, not a per-patient diagnostic.
+              </p>
+            </article>
+          </div>
+
+          <figure className="initiative-figure">
             <StaticImage
-              src="../images/home-main.png"
-              alt="Precision Neurology for Parkinson's Disease: From population patterns to individual care"
+              src="../images/05_arm_swing_asymmetry.png"
+              alt="Histogram of wearable arm-swing asymmetry across 178 assessments, with 27% above the 20% pathological threshold"
               placeholder="blurred"
-              layout="fullWidth"
             />
-          </div>
-          <div className="hero-cta hero-cta-centered">
-            <Link className="button primary" to="/clinician-workflow">
-              See the clinician workflow
-            </Link>
-            <a
-              className="button secondary"
-              href="https://cvc-lab.github.io/parkinson-viz/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open Parkinson Viz dashboard
-            </a>
-          </div>
+            <figcaption>
+              Wearable arm-swing asymmetry: 27% of 178 assessments exceed the 20%
+              pathological threshold (integrated genetic, molecular, and wearable
+              stratification preprint).
+            </figcaption>
+          </figure>
         </section>
 
-        {/* Core content blocks */}
+        {/* How it works teaser */}
         <section className="section">
-          <div className="content-blocks">
-            <div className="content-block content-block--media">
-              <button
-                type="button"
-                className="content-block-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("multimodal")}
-                aria-label="View Multimodal Data Integration image larger"
-              >
-                <StaticImage
-                  src="../images/multimodal-data-integration-replacement.jpg"
-                  alt="Multimodal Data Integration thumbnail"
-                  className="content-block-thumb-media"
-                  imgClassName="content-block-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={16 / 9}
-                />
-              </button>
-              <div className="content-block-copy">
-                <h3>Multimodal Data Integration</h3>
-                <p>
-                  We integrate four core data domains — clinical assessments, brain
-                  imaging, genetic profiles, and wearable sensor data — from
-                  large-scale cohorts to build a comprehensive baseline.
-                </p>
-                <div className="content-block-links">
-                  <a
-                    href="https://cvc-lab.github.io/projects/pathway-anchored-pd-clustering/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Pathway-Anchored PD Clustering
-                  </a>
-                  <a
-                    href="https://cvc-lab.github.io/projects/integrated-pd-precision-stratification/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Integrated PD Precision Stratification
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="content-block content-block--media">
-              <button
-                type="button"
-                className="content-block-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("subgroup")}
-                aria-label="View Subgroup Discovery image larger"
-              >
-                <StaticImage
-                  src="../images/subgroup-discovery-replacement.jpg"
-                  alt="Subgroup Discovery thumbnail"
-                  className="content-block-thumb-media"
-                  imgClassName="content-block-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={16 / 9}
-                />
-              </button>
-              <div className="content-block-copy">
-                <h3>Subgroup Discovery</h3>
-                <p>
-                  An advanced AI framework analyzes this integrated data to reveal
-                  latent markers, differentiating Parkinson's disease from look-alikes
-                  and discovering meaningful patient subgroups.
-                </p>
-                <div className="content-block-links">
-                  <a
-                    href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=gyL3CZ0AAAAJ&sortby=pubdate&citation_for_view=gyL3CZ0AAAAJ:EsrhoZGmrkoC"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Citation
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="content-block content-block--media">
-              <button
-                type="button"
-                className="content-block-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("precision")}
-                aria-label="View Actionable Precision image larger"
-              >
-                <StaticImage
-                  src="../images/actionable-precision-replacement.jpg"
-                  alt="Actionable Precision thumbnail"
-                  className="content-block-thumb-media"
-                  imgClassName="content-block-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={16 / 9}
-                />
-              </button>
-              <div className="content-block-copy">
-                <h3>Actionable Precision</h3>
-                <p>
-                  Population-informed models surface patient-specific risk
-                  stratifications, subgroup context, and targeted therapeutic
-                  priorities.
-                </p>
-                <div className="content-block-links">
-                  <a
-                    href="https://cvc-lab.github.io/projects/differential-and-pointwise-control-rl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Differential &amp; Pointwise Control RL
-                  </a>
-                  <a
-                    href="https://cvc-lab.github.io/projects/phast/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    PHAST
-                  </a>
-                  <a
-                    href="https://cvc-lab.github.io/projects/protein-sidechain/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Protein Sidechain
-                  </a>
-                  <a
-                    href="https://cvc-lab.github.io/projects/grl-snam/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GRL-SNAM
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="content-block content-block--media">
-              <button
-                type="button"
-                className="content-block-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("hamiltonian")}
-                aria-label="View Port Hamiltonian Modeling image larger"
-              >
-                <StaticImage
-                  src="../images/port-hamiltonian-modeling-replacement.jpg"
-                  alt="Port Hamiltonian Modeling thumbnail"
-                  className="content-block-thumb-media"
-                  imgClassName="content-block-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={16 / 9}
-                />
-              </button>
-              <div className="content-block-copy">
-                <h3>Port Hamiltonian Modeling</h3>
-                <p>
-                  We solve the multimodal dynamics with a port-Hamiltonian
-                  formulation that preserves structure while supporting stable,
-                  interpretable patient-state inference.
-                </p>
-                <div className="content-block-links">
-                  <a
-                    href="https://cvc-lab.github.io/projects/phast/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    PHAST
-                  </a>
-                </div>
-              </div>
-            </div>
+          <h2 className="section-title">A twin a clinician can question</h2>
+          <div className="text-block">
+            <p>
+              Underneath those results sits the patient-specific digital twin the cards are
+              the substrate for. Its interpretable structured core uses an energy-like
+              storage function with terms for functional reserve, coupling between
+              subsystems, dissipation, and therapy ports. This is a structured prior for
+              how a patient&apos;s state evolves, not a claim of physical energy
+              conservation, and it updates as new visits, sensor streams, and biomarkers
+              arrive.
+            </p>
+            <p>
+              On top of the twin, multi-agent diagnostic and therapy-planning agents reason
+              over a dynamic biomedical knowledge network, arbitrating evidence so that
+              disagreement, uncertainty, and gaps are surfaced rather than smoothed over. A
+              longer-term goal is to let a clinician simulate a candidate stimulation change
+              in the twin as decision support before any change to the patient. This is a
+              prospective-validation hypothesis, not a current capability: the twin cannot
+              prescribe DBS candidacy or target. (In the DBS literature, a leading candidate
+              target is beta-band hypersynchrony in the subthalamic-cortical loop; this is
+              background motivation, not a result AI4PD demonstrates.)
+            </p>
           </div>
-        </section>
-
-        {/* What we differentiate */}
-        <section className="section">
-          <h2 className="section-title">What we differentiate</h2>
-          <ul className="differentiate-list">
-            <li className="differentiate-item">
-              <button
-                type="button"
-                className="differentiate-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("diagnosis")}
-                aria-label="View Differential diagnosis image larger"
-              >
-                <StaticImage
-                  src="../images/differential-diagnosis-thumbnail.jpg"
-                  alt="Differential diagnosis thumbnail"
-                  className="differentiate-thumb-media"
-                  imgClassName="differentiate-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={4 / 3}
-                />
-              </button>
-              <div className="differentiate-copy">
-                <span className="differentiate-label">Differential diagnosis</span>
-                <p>
-                  Seed amplification biomarkers help separate Parkinson&apos;s
-                  disease from look-alikes such as MSA, PSP, and DLB.
-                </p>
-              </div>
-            </li>
-            <li className="differentiate-item">
-              <button
-                type="button"
-                className="differentiate-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("stratification")}
-                aria-label="View Precision stratification image larger"
-              >
-                <StaticImage
-                  src="../images/precision-stratification-thumbnail.jpg"
-                  alt="Precision stratification thumbnail"
-                  className="differentiate-thumb-media"
-                  imgClassName="differentiate-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={4 / 3}
-                />
-              </button>
-              <div className="differentiate-copy">
-                <span className="differentiate-label">Precision stratification</span>
-                <p>
-                  Pathway-weighted profiles group patients into biologically
-                  distinct Parkinson&apos;s subtypes with different trajectories.
-                </p>
-              </div>
-            </li>
-            <li className="differentiate-item">
-              <button
-                type="button"
-                className="differentiate-thumb-frame thumbnail-preview-trigger"
-                onClick={() => setActivePreview("intervention")}
-                aria-label="View Optimal intervention and decision support image larger"
-              >
-                <StaticImage
-                  src="../images/nearest-neighbor-thumbnail.jpg"
-                  alt="Optimal intervention and decision support thumbnail"
-                  className="differentiate-thumb-media"
-                  imgClassName="differentiate-thumb"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  aspectRatio={4 / 3}
-                />
-              </button>
-              <div className="differentiate-copy">
-                <span className="differentiate-label">Optimal Intervention and Decision Support</span>
-                <p>
-                  Population-informed models translate subgroup context,
-                  biomarker burden, and comparable trajectories into intervention
-                  priorities and clinician-facing decision support.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        {/* Evidence highlights */}
-        <section className="section">
-          <h2 className="section-title">Evidence highlights</h2>
-          <ul className="evidence-list">
-            <li>
-              Circuit-level imaging signatures reveal patient subtypes with
-              distinct motor and cognitive profiles across six neuroanatomical
-              pathways.{" "}
-              <a
-                className="evidence-label"
-                href="https://www.biorxiv.org/content/10.64898/2025.12.15.694278v1.full.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Paper
-              </a>
-            </li>
-            <li>
-              Wearable arm-swing asymmetry and dual-task gait cost detect
-              motor-cognitive network involvement non-invasively.{" "}
-              <a
-                className="evidence-label"
-                href="https://www.medrxiv.org/content/medrxiv/early/2025/12/04/2025.12.02.25340302.full.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Paper
-              </a>
-            </li>
-            <li>
-              LRRK2 G2019S carriers show measurably higher motor severity,
-              enabling genetic risk stratification and personalized counseling.{" "}
-              <a
-                className="evidence-label"
-                href="https://www.medrxiv.org/content/medrxiv/early/2025/12/04/2025.12.02.25340302.full.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Paper
-              </a>
-            </li>
-            <li>
-              Bayesian clustering identifies four motor phenotypes with
-              transparent model selection via Evidence Lower Bound.{" "}
-              <a
-                className="evidence-label"
-                href="https://www.medrxiv.org/content/medrxiv/early/2025/12/04/2025.12.02.25340302.full.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Paper
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        {/* Sponsors */}
-        <section className="section final-callout">
-          <h2 className="section-title">Sponsors and Funding Partners</h2>
-          <ul className="tight-list donor-links">
-            {donors.map((donor) => (
-              <li key={donor.name}>
-                {donor.link ? (
-                  <a href={donor.link} target="_blank" rel="noopener noreferrer">
-                    {donor.name}
-                  </a>
-                ) : (
-                  donor.name
-                )}
-              </li>
-            ))}
-          </ul>
-          <p>
-            Strategic philanthropy, industry collaborations, and clinical trial
-            partnerships accelerate translation of multimodal biomarkers into
-            care. Visit the{" "}
-            <Link to="/partners">partners page</Link> to learn how funding and
-            clinical collaborators engage, or connect through the{" "}
-            <Link to="/resources">resources portal</Link>.
+          <p className="workflow-inline-link">
+            <Link to="/digital-twin-initiative">Read the full approach &rarr;</Link>
           </p>
         </section>
 
-        {activePreview && (
-          <div
-            className="image-preview-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label={`${previewTitles[activePreview]} image preview`}
-          >
-            <button
-              type="button"
-              className="image-preview-modal__backdrop"
-              onClick={() => setActivePreview(null)}
-              aria-label="Close image preview"
-            />
-            <div className="image-preview-modal__content">
-              <button
-                type="button"
-                className="image-preview-modal__close"
-                onClick={() => setActivePreview(null)}
-                aria-label="Close image preview"
-              >
-                ×
-              </button>
-              <div className="image-preview-modal__image">{renderPreviewImage()}</div>
-              <p>{previewTitles[activePreview]}</p>
-            </div>
+        {/* Partner call-to-action */}
+        <section className="section final-callout">
+          <h2 className="section-title">The evidence layer is the work, and the ask</h2>
+          <p>
+            AI4PD is decision support, never an autonomous prescriber, and its hardest
+            constraint is not the model. It is the multi-institution longitudinal evidence
+            layer needed to validate it. We are looking for movement-disorders neurologists
+            and institutions that govern longitudinal Parkinson&apos;s cohorts to partner on
+            clinical data and prospective validation, on terms that meet your standard of
+            proof.
+          </p>
+          <div className="hero-cta">
+            <Link className="button primary" to="/partners">
+              Partner on validation
+            </Link>
+            <Link className="button secondary" to="/partners">
+              See data-use and governance terms
+            </Link>
           </div>
-        )}
+        </section>
 
       </div>
     </Layout>
   );
 }
-
-export const query = graphql`
-  query HomePage {
-    site {
-      siteMetadata {
-        donors {
-          name
-          link
-        }
-      }
-    }
-  }
-`;

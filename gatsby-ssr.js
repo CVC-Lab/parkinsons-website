@@ -1,6 +1,6 @@
 const React = require("react");
 
-const SITE_TITLE = "Actionable Intelligence For Combating Parkinson’s";
+const SITE_TITLE = "AI4PD — Mechanism-Grounded AI for Parkinson's Care";
 
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
