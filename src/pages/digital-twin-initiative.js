@@ -205,8 +205,7 @@ export default function ApproachPage() {
         </section>
 
         {/* Section 3 — agents */}
-        <section className="section initiative-split-section initiative-split-section--agent" id="agents" style={{ scrollMarginTop: "100px" }}>
-          <div>
+        <section className="section" id="agents" style={{ scrollMarginTop: "100px" }}>
             <p className="initiative-eyebrow">Reasoning</p>
             <h2 className="section-title">Modality-specialized agents with evidence arbitration</h2>
             <p className="text-block">
@@ -239,7 +238,6 @@ export default function ApproachPage() {
                 gaps.
               </li>
             </ul>
-          </div>
           <figure className="initiative-figure">
             <StaticImage
               src="../images/ai4pd-multi-agent-architecture.jpg"

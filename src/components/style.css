@@ -2437,3 +2437,28 @@ footer {
 .ordered-steps li {
   margin-bottom: var(--spacing-3);
 }
+
+.home-evidence-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+}
+
+.home-evidence-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.evidence-details-link {
+  margin-top: auto;
+  padding-top: var(--spacing-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--ut-burnt-orange);
+}
+
+@media (min-width: 768px) {
+  .home-evidence-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
