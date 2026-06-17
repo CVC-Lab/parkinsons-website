@@ -18,7 +18,7 @@
         link: '/thrusts',
       },
       {
-        name: 'Related Papers',
+        name: 'Evidence',
         link: '/related-papers',
       },
       {

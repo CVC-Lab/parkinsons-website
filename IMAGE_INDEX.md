@@ -33,6 +33,27 @@ carry old/mismatched bar values — quote the paper prose, never the figure valu
 
 ---
 
+## Evidence page (Pass 2 — `src/pages/related-papers.js`, retitled "Evidence")
+
+| Slot | Status | Detail |
+|---|---|---|
+| Biomarkers · MoCA/UPSIT | ✅ | `03_moca_upsit_distributions.png` — verified (MoCA n=13,835 / 25.9%; UPSIT n=5,122 / 50.2%). |
+| Biomarkers · arm-swing | ✅ | `05_arm_swing_asymmetry.png` — verified (n=178, 27% above 20% threshold). |
+| Biomarkers · TUG | ✅ | `09_tug_performance.png` — verified (n=186, 29% above >12s). |
+| Biomarkers · RBD | 🟡 | `04_rbd_prevalence.png` — **HELD**: title says 37.5% but the pie slices read 40.7% / 59.3% (self-contradicting). Regenerate so slices = 37.5% / 62.5%, then wire. |
+| Motor-states + trial-enrichment | 🟡 | All figures are from in-prep manuscripts; not public, not shown. Section is text-only. |
+| Pathway · real Figs 5–6 | 🟡 | The paper's real scatter/box figures (rho/q/H on-figure) are the right asset but not in the repo. Pull from the public bioRxiv (CC-BY) and verify on-figure rho=−0.201/q=6.8e-4/H=167.15 before wiring. Slot empty for now. |
+| Co-clustering schematic | 🔧 | BUILD-BRIEF: flat block diagram — row-VAE, column-VAE, joint latent z_rc, compositional ELBO → co-clusters. No AI render. |
+| Evidence orienting graphic | 🔧 | BUILD-BRIEF: flat 4-node flow, substrate→clinical (co-clustering → pathway → biomarkers → motor-state), each node = short-title + cohort N. No brain art. |
+
+### Removed on this pass (AI art, deleted from `src/images/`)
+`fig_biomarker_fusion.jpg`, `fig_multimodal_fusion.png`, `fig_pathway_brain.jpg`,
+`fig_pathways_compact.png` — panel-confirmed AI "fusion"/brain illustrations with no data
+(one carried a synthetic patient face). `fig_subgroup_landscape.png` is also AI but is still
+used by `clinician-workflow.js`; remove it when that page is rebuilt.
+
+---
+
 ## Pending later passes (AI art still live on other pages)
 
 | Page | AI images to remove/replace |

@@ -130,7 +130,7 @@ const discoveryTimeline = [
       "This is the practical meaning of inferring the unseen: clinicians see motor and cognitive symptoms, while AI4PD points to hidden circuit-level mechanisms that may explain them.",
     links: [
       { label: "Project page", href: `${cvcBase}/projects/pathway-anchored-pd-clustering/` },
-      { label: "Paper brief", to: "/paper-pathway-clustering" },
+      { label: "Paper brief", to: "/related-papers#paper-pathway" },
       { label: "Related papers", to: "/related-papers#paper-pathway" },
     ],
   },
@@ -152,7 +152,7 @@ const discoveryTimeline = [
         label: "Project page",
         href: `${cvcBase}/projects/integrated-pd-precision-stratification/`,
       },
-      { label: "Paper brief", to: "/paper-integrated-biomarkers" },
+      { label: "Paper brief", to: "/related-papers#paper-biomarkers" },
       { label: "Related papers", to: "/related-papers#paper-biomarkers" },
     ],
   },
@@ -237,50 +237,6 @@ const fundingUses = [
   "Ablations against calibrated neural ODE and unstructured baselines, site-generalization tests, uncertainty calibration, DBS/domain review, and responsible-use documentation.",
 ];
 
-const budgetItems = [
-  {
-    amount: "$170K",
-    title: "Multi-site evidence and coordination",
-    text:
-      "Data acquisition, clinical and research coordination, data-use agreements, IRB pathways, and the first harmonized multi-site dataset.",
-  },
-  {
-    amount: "$105K",
-    title: "Secure data infrastructure",
-    text:
-      "De-identification, longitudinal patient timelines, audit trails, schema mapping, and harmonization across clinical, imaging, wearable, biomarker, medication, and DBS records.",
-  },
-  {
-    amount: "$130K",
-    title: "Twin pipeline staff",
-    text:
-      "Students, research engineers, and research scientists building the ingestion pipeline, validation workflows, and patient-specific model integration.",
-  },
-  {
-    amount: "$55K",
-    title: "Cross-site AI validation",
-    text:
-      "Ablations against calibrated neural ODE and unstructured baselines, uncertainty calibration, and site-generalization tests.",
-  },
-  {
-    amount: "$30K",
-    title: "Clinician report prototype",
-    text:
-      "A secure report interface returning diagnosis, progression, therapy-planning options, and evidence gaps for clinician review.",
-  },
-  {
-    amount: "$10K",
-    title: "External review and dissemination",
-    text:
-      "DBS/domain review, responsible-use documentation, and dissemination materials.",
-  },
-];
-
-const supportItems = [
-  "Michael J. Fox Foundation support contributed $300,132.40 toward related Parkinson's AI work from January 2023 through January 2024.",
-  "Jim Holland has given $200,000 and is adding a further $200,000; the Michael and Connie Rasor Foundation contributed $60,000.",
-  "The remaining gap is the integrated clinical data network, harmonization layer, multi-site validation process, dynamic AI-knowledge network, and clinician-facing digital twin interface.",
-];
 
 const teamCards = [
   {
@@ -638,33 +594,11 @@ export default function DigitalTwinInitiativePage() {
             ))}
           </ul>
           <p className="text-block">
-            The submitted $500,000 Hill Prize budget is direct costs only, with no
-            institutional overhead or indirect costs. The budget is designed to turn
-            the current research components into a clinically testable Texas-led AI
-            platform.
-          </p>
-          <div className="initiative-budget-grid">
-            {budgetItems.map((item) => (
-              <article key={item.title} className="initiative-budget-card">
-                <span>{item.amount}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <div className="initiative-support-note">
-            <h3>Existing support and the remaining gap</h3>
-            <ul>
-              {supportItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <p className="text-block">
-            Hill Prize support is one potential accelerator, but the initiative is
-            broader than one award: the long-term goal is a reusable, Texas-built
-            precision-medicine platform for hidden-state, progression, and intervention
-            planning across complex chronic diseases.
+            Philanthropy and research funding directed at this evidence layer is the
+            accelerator, but the initiative is broader than any single source: the
+            long-term goal is a reusable, Texas-built precision-medicine platform for
+            hidden-state, progression, and intervention planning across complex chronic
+            diseases.
           </p>
         </section>
 
