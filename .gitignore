@@ -3,7 +3,8 @@ node_modules/
 public
 .claude/
 
-# Large binary docs (keep local only)
-docs/*.pdf
-docs/*.pptx
-docs/*.docx
+# docs/ is internal source material for the site (grant proposal, donor
+# figures, biosketch, unpublished manuscripts). The repo is PUBLIC, so keep
+# the entire folder local-only. The Gatsby build reads only src/, never docs/.
+# To share a specific non-sensitive file, force-add it: git add -f docs/<file>
+docs/
