@@ -217,6 +217,13 @@ function BiomarkerFigures() {
   );
 }
 
+const badgeFor = {
+  "paper-motor-states": "In preparation",
+  "paper-biomarkers": "Preprint",
+  "paper-pathway": "Preprint",
+  "paper-coclustering": "Preprint",
+};
+
 export default function EvidencePage() {
   return (
     <Layout>
@@ -239,6 +246,9 @@ export default function EvidencePage() {
             className="section evidence-paper"
             style={{ scrollMarginTop: "100px" }}
           >
+            <p className="evidence-badge-row">
+              <span className="paper-badge preprint">{badgeFor[p.id]}</span>
+            </p>
             <h2 className="section-title">{p.title}</h2>
             <p className="evidence-lead text-block">{p.lead}</p>
             <p className="paper-authors">

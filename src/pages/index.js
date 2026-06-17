@@ -53,6 +53,19 @@ export default function IndexPage() {
           </figure>
         </section>
 
+        {/* Trust + honest-status strip */}
+        <div className="home-trust">
+          <p className="home-trust-strip">
+            Oden Institute · The University of Texas at Austin · CVC Lab · TACC
+            infrastructure · Supported by the Michael J. Fox Foundation
+          </p>
+          <div className="home-status-chips">
+            <span className="status-chip">Retrospective evidence base</span>
+            <span className="status-chip">Decision support only</span>
+            <span className="status-chip">Seeking prospective validation partners</span>
+          </div>
+        </div>
+
         {/* Evidence band — page center of gravity */}
         <section className="section">
           <p className="initiative-eyebrow">Evidence to date (retrospective)</p>
@@ -119,6 +132,9 @@ export default function IndexPage() {
               </Link>
             </article>
           </div>
+          <p className="home-evidence-cta">
+            <Link to="/partners">Partner on validation &rarr;</Link>
+          </p>
         </section>
 
         {/* How it works teaser */}
@@ -126,24 +142,19 @@ export default function IndexPage() {
           <h2 className="section-title">A twin a clinician can question</h2>
           <div className="text-block">
             <p>
-              Underneath those results sits the patient-specific digital twin the cards are
-              the substrate for. Its interpretable structured core uses an energy-like
-              storage function with terms for functional reserve, coupling between
-              subsystems, dissipation, and therapy ports. This is a structured prior for
-              how a patient&apos;s state evolves, not a claim of physical energy
-              conservation, and it updates as new visits, sensor streams, and biomarkers
-              arrive.
+              Underneath those results sits the patient-specific digital twin. Its
+              interpretable core is a structured prior for how a patient&apos;s state
+              evolves — functional reserve, coupling between subsystems, dissipation, and
+              therapy ports — not a claim of physical energy conservation, and it updates as
+              new visits, sensors, and biomarkers arrive.
             </p>
             <p>
               On top of the twin, multi-agent diagnostic and therapy-planning agents reason
-              over a dynamic biomedical knowledge network, arbitrating evidence so that
-              disagreement, uncertainty, and gaps are surfaced rather than smoothed over. A
-              longer-term goal is to let a clinician simulate a candidate stimulation change
-              in the twin as decision support before any change to the patient. This is a
-              prospective-validation hypothesis, not a current capability: the twin cannot
-              prescribe DBS candidacy or target. (In the DBS literature, a leading candidate
-              target is beta-band hypersynchrony in the subthalamic-cortical loop; this is
-              background motivation, not a result AI4PD demonstrates.)
+              over a dynamic knowledge network, surfacing disagreement, uncertainty, and
+              gaps rather than smoothing them over. Letting a clinician simulate a candidate
+              DBS change in the twin before changing patient settings is a
+              prospective-validation hypothesis, not a current capability — the twin does
+              not prescribe DBS candidacy or targets.
             </p>
           </div>
           <p className="workflow-inline-link">

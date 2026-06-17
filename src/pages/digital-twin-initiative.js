@@ -115,11 +115,6 @@ export default function ApproachPage() {
                 Review the evidence base
               </Link>
             </div>
-            <p className="approach-jump">
-              On this page: <a href="#twin-core">the twin core</a> ·{" "}
-              <a href="#thrusts">inputs</a> · <a href="#agents">reasoning</a> ·{" "}
-              <a href="#dbs">DBS</a> · <a href="#clinician-view">clinician view</a>
-            </p>
           </div>
           <figure className="initiative-figure initiative-figure--wide">
             <StaticImage
@@ -137,6 +132,12 @@ export default function ApproachPage() {
             </figcaption>
           </figure>
         </section>
+
+        <nav className="approach-jump">
+          On this page: <a href="#twin-core">the twin core</a> ·{" "}
+          <a href="#thrusts">inputs</a> · <a href="#agents">reasoning</a> ·{" "}
+          <a href="#dbs">DBS</a> · <a href="#clinician-view">clinician view</a>
+        </nav>
 
         {/* Section 1 — the twin core */}
         <section className="section" id="twin-core" style={{ scrollMarginTop: "100px" }}>

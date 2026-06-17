@@ -87,6 +87,10 @@ export default function PartnerPage({ data }) {
               records, under a signed agreement, on UT Austin secure infrastructure. Your site
               keeps ownership, and you keep the validation evidence your cohort helps produce.
             </p>
+            <p className="partner-contact-line">
+              We partner with movement-disorders neurologists and cohort custodians —{" "}
+              <a href="mailto:bajaj@cs.utexas.edu">bajaj@cs.utexas.edu</a>.
+            </p>
           </div>
         </section>
 

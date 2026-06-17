@@ -18,6 +18,10 @@
         link: '/related-papers',
       },
       {
+        name: 'Team',
+        link: '/team',
+      },
+      {
         name: 'Partners',
         link: '/partners',
       },

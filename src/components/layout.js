@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
             <h4>Quick Links</h4>
             <Link to="/">Home</Link>
             <Link to="/clinician-workflow">Clinician Workflow</Link>
-            <Link to="/thrusts">Domain Thrusts</Link>
+            <Link to="/thrusts">Methods</Link>
             <Link to="/partners">Partners</Link>
             <Link to="/digital-twin-initiative">Approach</Link>
             <Link to="/team">Team</Link>
@@ -55,7 +55,8 @@ const Layout = ({ children }) => {
             <h4>Connect</h4>
             <a href="https://cvc-lab.github.io/">&larr; Back to CVC Projects</a>
             <a href="https://www.oden.utexas.edu">Oden Institute</a>
-            <a href="mailto:bajaj@cs.utexas.edu">Contact: Prof. Bajaj</a>
+            <a href="mailto:bajaj@cs.utexas.edu">Prof. Chandrajit Bajaj — bajaj@cs.utexas.edu</a>
+            <a href="https://www.oden.utexas.edu/contact/" target="_blank" rel="noopener noreferrer">Oden contact portal</a>
           </div>
         </div>
         <div className="footer-bottom">

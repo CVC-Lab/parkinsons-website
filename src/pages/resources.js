@@ -124,7 +124,7 @@ export default function ResourcesPage() {
               <h3>SegFormer deployment scripts</h3>
               <p>
                 Containerized pipelines for MRI preprocessing, segmentation, DaT-SPECT alignment,
-                and SBR extraction. Repository release planned December 2025.
+                and SBR extraction. Repository in preparation.
               </p>
             </article>
             <article className="dense-brief">

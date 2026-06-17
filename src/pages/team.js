@@ -6,7 +6,8 @@ import { Link } from "gatsby";
 const faculty = [
   {
     name: "Chandrajit Bajaj, Ph.D.",
-    title: "Professor of Computer Science",
+    title: "Professor of Computer Science, Oden Institute, UT Austin",
+    profile: "https://www.cs.utexas.edu/~bajaj/",
   },
 ];
 
@@ -63,6 +64,13 @@ export default function TeamPage() {
               <li key={member.name}>
                 <strong>{member.name}</strong>
                 {member.title && <span>{member.title}</span>}
+                {member.profile && (
+                  <span>
+                    <a href={member.profile} target="_blank" rel="noopener noreferrer">
+                      Faculty profile
+                    </a>
+                  </span>
+                )}
               </li>
             ))}
           </ul>
@@ -70,6 +78,10 @@ export default function TeamPage() {
 
         <section className="section team-block">
           <h2 className="section-title">Graduate and undergraduate researchers</h2>
+          <p className="text-block">
+            Bajaj Lab, Oden Institute and Department of Computer Science, The University
+            of Texas at Austin.
+          </p>
           <ul className="team-list">
             {researchers.map((member) => (
               <li key={member.name}>

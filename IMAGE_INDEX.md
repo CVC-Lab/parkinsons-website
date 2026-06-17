@@ -61,4 +61,20 @@ used by `clinician-workflow.js`; remove it when that page is rebuilt.
 | ~~Approach (`digital-twin-initiative.js`)~~ ✅ **Done (Pass 3)** | Figure 1 wired to the hero; Figure 2 (`ai4pd-multi-agent-architecture.jpg`, clean/name-free) kept for the agents section; `ai4pd-collaboration-architecture.jpg` (stale name-bearing dup) + `deep-brain-control.png` (AI brain render) **deleted**. **One build-brief open** → a port-Hamiltonian core schematic: ẋ = (J−R)∇H(x) + Gu with H/J/R + therapy-port labels, the three coupled subsystems (motor/autonomic/cognitive), and the measure→estimate→simulate→select→update loop. Flat line art, no brain renders. |
 | Thrusts (`thrusts.js`) | `thrust-imaging-thumbnail.jpg`, `thrust-diffusion-thumbnail.jpg`, `thrust-wearable-thumbnail.jpg`, `thrust-mechanism-thumbnail.jpg`. |
 | ~~Partners (`partners.js`)~~ ✅ **Done (Pass 4)** | `tagline.png` (philanthropy AI-ish hero) **deleted**; Partner + Team pages are now text-only. **Build-briefs open:** (1) a multi-site validation pipeline diagram — site → DUA/IRB → de-identify at site → joint harmonization → clinician review → cross-site validation (flat, non-AI); (2) a real cross-site calibration figure for "validation evidence" — use a real plot once it exists, never a mock-up. |
-| Clinician workflow (`clinician-workflow.js`) | `clinician-picture.png` (verify whether AI or real before deciding). |
+| Clinician workflow (`clinician-workflow.js`) | `clinician-picture.png` (AI hero with baked-in marketing text — remove in its hedging pass), `fig_subgroup_landscape.png` (AI), `fig_dashboard.png` (concept mockup). |
+
+---
+
+## Build-brief from the colleague review (R3 — optional, Ryan to draw, never AI)
+
+A **simplified homepage architecture graphic** as an *optional* alternative to the detailed
+Figure 1 in the home hero (keep the detailed Figure 1 on the Approach page regardless). One
+horizontal three-stage flow, flat vector, white/charcoal/limestone with a single burnt-orange
+accent on the twin box:
+- **Left:** stacked inputs — "Cohorts · wearables/sensors · imaging (MRI/DaT-SPECT) · EHR".
+- **Center:** one box — "Patient-specific digital twin (uncertainty-aware, updated each visit)".
+- **Right:** a clinician receiving "evidence + explicit uncertainty + named gaps", labeled
+  "decision support, physician first".
+
+Arrows left-to-right only. No brain renders, no AI art. Only swap it onto the homepage if you
+make it and prefer it to Figure 1.
