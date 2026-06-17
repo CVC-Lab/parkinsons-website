@@ -165,10 +165,13 @@ export default function ResourcesPage() {
         <section className="section final-callout">
           <h2 className="section-title">Responsible data stewardship</h2>
           <p>
-            All collaborations comply with HIPAA, GDPR, and sponsor-specific
-            requirements. We utilize secure UT Austin data enclaves, audited
-            access logs, and federated learning when raw data sharing is
-            constrained.
+            Collaborations are structured to meet HIPAA and applicable
+            data-protection and sponsor requirements through signed data-use
+            agreements and IRB review. De-identified data resides on UT Austin
+            secure computing infrastructure approved for restricted data, with
+            audit trails; where raw-data sharing is constrained, we scope
+            data-minimizing or no-egress alternatives per site. Full governance
+            terms are on the partners page.
           </p>
         </section>
       </div>

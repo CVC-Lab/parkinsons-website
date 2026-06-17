@@ -2429,3 +2429,11 @@ footer {
 .approach-jump a {
   color: var(--ut-burnt-orange);
 }
+
+.ordered-steps {
+  padding-left: var(--spacing-6);
+}
+
+.ordered-steps li {
+  margin-bottom: var(--spacing-3);
+}

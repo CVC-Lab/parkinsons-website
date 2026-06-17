@@ -11,46 +11,27 @@ const faculty = [
 ];
 
 const researchers = [
-  {
-    name: "Aaron Dominick",
-  },
-  {
-    name: "Ashwin Vinod",
-  },
-  {
-    name: "Aditya Sai",
-  },
-  {
-    name: "Aparna Dev",
-  },
-  {
-    name: "Shubham Bhardwaj",
-  },
-  {
-    name: "Jasmine Khalil",
-  },
-  {
-    name: "Priyanshi Yadav",
-  },
-  {
-    name: "Ojas Phirke",
-  },
-  {
-    name: "Thribhuvan Rapolu",
-  },
-  {
-    name: "Aditya Rajnarayan",
-  },
-  {
-    name: "Harsh Tirhekar",
-  },
+  { name: "Aaron Dominick" },
+  { name: "Ashwin Vinod" },
+  { name: "Aditya Sai" },
+  { name: "Aparna Dev" },
+  { name: "Shubham Bhardwaj" },
+  { name: "Jasmine Khalil" },
+  { name: "Priyanshi Yadav" },
+  { name: "Ojas Phirke" },
+  { name: "Thribhuvan Rapolu" },
+  { name: "Aditya Rajnarayan" },
+  { name: "Harsh Tirhekar" },
 ];
 
 const collaborators = [
   {
     name: "Dr. Conor Fearon, MD PhD",
-    affiliation:
-      "Mater Misericordiae University Hospital, Dublin, Ireland",
+    affiliation: "Mater Misericordiae University Hospital, Dublin, Ireland",
+  },
+  {
+    name: "Dr. Barbara Marebwa",
+    affiliation: "Senior Scientist, Michael J. Fox Foundation",
   },
   {
     name: "Oden Institute Research Computing",
@@ -64,17 +45,13 @@ export default function TeamPage() {
       <div className="page-container team-page">
         <section className="hero-section team-hero">
           <div className="hero-text">
-            <h1>The Parkinson’s Biomarker Team</h1>
+            <h1>The AI4PD Team</h1>
             <p>
-              We unite computational scientists, engineers, and clinicians at
-              the Oden Institute to advance multimodal biomarker-driven care for
-              Parkinson’s disease. Our culture emphasizes reproducible science,
-              clinical partnership, and ethically grounded deployment.
-            </p>
-            <p className="hero-subtext">
-              Weekly stand-ups coordinate imaging, wearable, and clinical
-              integration tracks, keeping our work aligned with frontline
-              neurologist needs.
+              Computational scientists, engineers, and clinicians at the Oden Institute
+              building a clinician-facing Parkinson's digital twin. We develop and validate
+              these tools alongside the clinical cohorts that generate the data, with
+              reproducible methods and cross-site validation, and every decision-support
+              output goes to the physician first.
             </p>
           </div>
         </section>
@@ -117,9 +94,10 @@ export default function TeamPage() {
         <section className="section final-callout">
           <h2 className="section-title">Join the lab</h2>
           <p>
-            We host visiting scholars, capstone students, and industry fellows.
-            Share your interests via the collaboration links on our{" "}
-            <Link to="/resources">resources page</Link>.
+            We host visiting scholars, capstone students, and research fellows. To work with
+            us, or for clinical-validation and data-sharing inquiries, write to Prof.
+            Chandrajit Bajaj at <a href="mailto:bajaj@cs.utexas.edu">bajaj@cs.utexas.edu</a>,
+            or use the collaboration links on our <Link to="/resources">resources page</Link>.
           </p>
         </section>
       </div>
