@@ -21,7 +21,7 @@ export default function ClinicianWorkflowPage() {
             <div className="hero-cta">
               <a
                 className="button primary"
-                href="https://cvc-lab.github.io/parkinson-viz/"
+                href="https://ai4pd-portal.secure.cvc-lab.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -150,7 +150,7 @@ export default function ClinicianWorkflowPage() {
           <p className="workflow-inline-link">
             Explore the interactive workflow in the{" "}
             <a
-              href="https://cvc-lab.github.io/parkinson-viz/"
+              href="https://ai4pd-portal.secure.cvc-lab.org/"
               target="_blank"
               rel="noopener noreferrer"
             >

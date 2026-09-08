@@ -30,7 +30,7 @@ export default function IndexPage() {
               </Link>
               <a
                 className="button secondary"
-                href="https://cvc-lab.github.io/parkinson-viz/"
+                href="https://ai4pd-portal.secure.cvc-lab.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -306,7 +306,7 @@ export default function ApproachPage() {
           <p className="text-block">
             Interactive view:{" "}
             <a
-              href="https://cvc-lab.github.io/parkinson-viz/"
+              href="https://ai4pd-portal.secure.cvc-lab.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
