@@ -1,42 +1,13 @@
-## Parkinson's Website
+## AI4PD site: moved
 
-## Installation
+The AI4PD program site now lives inside the CVC website:
 
-1. Ensure you have Node.js and NPM installed. You can check by running:
-```
-node --version
-npm --version
-```
-2. Clone this repository to your local machine:
-```
-git clone https://github.com/CVC-Lab/parkinsons-website.git
-```
-3. Navigate to the project directory and install the required dependencies:
-```
-cd parkinsons-website
-npm install
-```
+**https://cvc-lab.github.io/projects/ai4pd/**
 
+This repository only serves redirects. `redirects/` holds one small HTML page per
+former route that forwards to the matching page on the CVC site (preserving `#anchors`),
+and `npm run deploy` publishes that folder to the `gh-pages` branch.
 
-## Development
-
-To start the development server, run the following command in the project directory:
-```
-npm run develop
-```
-
-This will start a local development server at `http://localhost:8000/`.
-
-## Build and Deployment
-
-To build the project for production, run:
-```
-npm run build
-```
-
-This command generates a `public` folder with the optimized website.
-
-To deploy the website to GitHub Pages, run:
-```
-npm run deploy
-```
+The previous Gatsby source is kept in git history (see the commits before this one) and
+its content was migrated to `src/pages/projects/ai4pd/` and `src/markdown/projects/ai4pd/`
+in the `CVC-Lab/cvc-lab.github.io` repository.
